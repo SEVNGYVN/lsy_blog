@@ -13,15 +13,15 @@ export default function Blog() {
   return (
     <div className="section">
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
-        <h1 className="title">Thoughts & <span className="text-gradient">Writings</span></h1>
+        <h1 className="title">생각 & <span className="text-gradient">글쓰기</span></h1>
         <p className="subtitle" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          Welcome to my blog. Here I share tutorials, stories, and thoughts about modern web development.
+          제 블로그에 오신 것을 환영합니다. 여기에서는 최신 웹 개발에 대한 튜토리얼, 이야기 및 생각을 공유합니다.
         </p>
       </header>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '800px', margin: '0 auto' }}>
         {allPostsData.length === 0 ? (
-          <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>No posts found.</p>
+          <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>게시물이 없습니다.</p>
         ) : (
           allPostsData.map(({ id, date, title, description, tags }) => (
             <Link href={`/blog/${id}`} key={id}>
@@ -42,7 +42,7 @@ export default function Blog() {
                 </time>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>{description}</p>
                 <div style={{ marginTop: '1.5rem', color: 'var(--accent)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  Read More <span>→</span>
+                  더 읽어보기 <span>→</span>
                 </div>
               </article>
             </Link>

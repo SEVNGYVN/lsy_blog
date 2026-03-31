@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "Blog", path: "/blog" },
-  { name: "Projects", path: "/projects" },
+  { name: "홈", path: "/" },
+  { name: "블로그", path: "/blog" },
+  { name: "프로젝트", path: "/projects" },
 ];
 
 export default function Header() {

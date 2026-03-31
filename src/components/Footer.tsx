@@ -8,7 +8,7 @@ export default function Footer() {
       color: "var(--text-secondary)"
     }}>
       <p style={{ fontSize: "0.9rem" }}>
-        © {new Date().getFullYear()} LS Portfolio & Blog. Built with Next.js & Vanilla CSS.
+        © {new Date().getFullYear()} LS 포트폴리오 및 블로그. Next.js와 Vanilla CSS로 제작되었습니다.
       </p>
     </footer>
   );
