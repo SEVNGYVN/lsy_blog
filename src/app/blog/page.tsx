@@ -1,4 +1,4 @@
-"use client";
+
 import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 import { format, parseISO } from 'date-fns';
