@@ -3,11 +3,6 @@ import Link from 'next/link';
 import { getSortedPostsData } from '@/lib/posts';
 import { format, parseISO } from 'date-fns';
 
-export const metadata = {
-  title: 'Blog | LS. Portfolio',
-  description: 'Writing about software engineering, design, and life.',
-};
-
 export default function Blog() {
   const allPostsData = getSortedPostsData();
 
