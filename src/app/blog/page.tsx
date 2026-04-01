@@ -22,8 +22,7 @@ export default function Blog() {
           allPostsData.map(({ id, date, title, description, tags }) => (
             <Link href={`/blog/${id}`} key={id}>
               <article className="glass" style={{ padding: '2rem', transition: 'all 0.3s ease', cursor: 'pointer' }} 
-                onMouseOver={(e) => { e.currentTarget.style.transform = 'translateX(10px)'; e.currentTarget.style.borderColor = 'var(--accent)'; }}
-                onMouseOut={(e) => { e.currentTarget.style.transform = 'translateX(0)'; e.currentTarget.style.borderColor = 'var(--border)'; }}
+               
               >
                 <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
                   {tags?.map((tag: string) => (
