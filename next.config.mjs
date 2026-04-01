@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/lsy_blog',
+//  output: 'export',
+// basePath: '/lsy_blog',
   images: {
     unoptimized: true,
   },
