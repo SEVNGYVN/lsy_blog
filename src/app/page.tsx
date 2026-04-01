@@ -35,8 +35,8 @@ export default function Home() {
             </span>
           </motion.div>
           <motion.h1 variants={item} className="title">
-            안녕하세요, <span className="text-gradient">LS</span>입니다.<br />
-            놀라운 경험을 만들어갑니다.
+            안녕하세요, <span className="text-gradient">이승윤</span>입니다.<br />
+            배움을 통하여 성장합니다.
           </motion.h1>
           <motion.p variants={item} className="subtitle" style={{ maxWidth: "600px", marginBottom: "3rem" }}>
             사용자 중심의 프리미엄 디자인과 깔끔하고 성능이 뛰어난 웹 애플리케이션을 제작하는 데 열정을 다하는 소프트웨어 엔지니어입니다.
