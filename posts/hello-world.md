@@ -5,9 +5,8 @@ description: "이 게시물은 새로운 포트폴리오 플랫폼에 대한 저
 tags: ["nextjs", "blog", "portfolio"]
 ---
 
-Welcome to my new digital garden! 
 
-I built this space using **Next.js** and **Vanilla CSS**. It's designed to be fast, beautiful, and completely customized.
+저는 **Next.js**와 **Vanilla CSS**를 사용하여 이 공간을 만들었습니다. 빠르고, 아름답고, 완전히 맞춤화되도록 설계되었습니다.
 
 ## Why this stack?
 
