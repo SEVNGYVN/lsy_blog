@@ -126,7 +126,7 @@ export default function Blog() {
         <footer className="w-full mt-20 bg-[#efedf2] dark:bg-[#1a1b1f]">
           <div className="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto border-t border-[#c0c7d6]/15">
             <div className="text-xs font-['Inter'] text-[#5e5e62] uppercase tracking-widest mb-8 md:mb-0">
-                © 2024 F1 에디토리얼. All rights reserved.
+                © 2026 F1 에디토리얼. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center gap-8">
               <a className="text-xs font-['Inter'] text-[#5e5e62] uppercase tracking-widest hover:text-[#1E90FF] transition-colors" href="#">Twitter</a>
