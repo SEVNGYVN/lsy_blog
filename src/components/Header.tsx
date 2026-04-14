@@ -9,6 +9,7 @@ const navItems = [
   { name: "홈", path: "/" },
   { name: "블로그", path: "/blog" },
   { name: "프로젝트", path: "/projects" },
+  { name: "F1 리뷰", path: "/f1" },
 ];
 
 export default function Header() {
@@ -21,7 +22,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+  return pathname.startsWith("/f1") ? null : (
     <header className={`nav-header ${scrolled ? "glass" : ""}`}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
         <Link href="/" style={{ fontSize: "1.5rem", fontWeight: 800, letterSpacing: "-0.05em" }}>
