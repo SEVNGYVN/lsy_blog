@@ -1,5 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
-  return (
+  const pathname = usePathname();
+
+  return pathname.startsWith("/f1") ? null : (
     <footer style={{
       padding: "4rem 2rem",
       textAlign: "center",
