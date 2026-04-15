@@ -26,9 +26,9 @@ export async function generateStaticParams() {
 // 상세 페이지 화면 렌더링
 // 폴더명 → 돌아갈 주소 및 버튼 이름 매핑 테이블
 const backLinkMap: Record<string, { href: string; label: string }> = {
-  driver:  { href: '/f1/drivers',   label: 'F1 그리드 드라이버로 돌아가기' },
-  team:    { href: '/f1/teams',     label: '팀 목록으로 돌아가기' },
-  circuit: { href: '/f1/circuits',  label: '서킷 목록으로 돌아가기' },
+  driver:  { href: '/f1/drivers',   label: 'F1 드라이버' },
+  team:    { href: '/f1/teams',     label: '팀 목록' },
+  circuit: { href: '/f1/circuits',  label: '서킷 목록' },
 };
 
 export default async function F1Post(context: any) {
@@ -41,7 +41,7 @@ export default async function F1Post(context: any) {
     const parentFolder = slugArray.length > 1 ? slugArray[0] : null;
     const backLink = (parentFolder && backLinkMap[parentFolder]) 
       ? backLinkMap[parentFolder] 
-      : { href: '/f1', label: 'F1 메뉴로 돌아가기' };
+      : { href: '/f1', label: 'F1 메뉴' };
     
     return (
       <article className="section" style={{ maxWidth: '800px', margin: '0 auto', paddingTop: '4rem' }}>
