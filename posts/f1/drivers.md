@@ -11,15 +11,15 @@ category: "정보"
 
 ## 막스 베르스타펜 (Max Verstappen)
 ![막스 사진](/R_VER.png)
-<div align="center">
-<img src="/R_VER.png" style="width: 25%;" /> </div>
+<img src="/R_VER.jpg" style="width: 100%; border-radius: 16px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" alt="막스 베르스타펜 배너" />  
+
 
 - **소속팀**: 레드불 레이싱
 - **엔트리 번호**: 1
 - **특징**: 압도적인 페이스와 공격적인 드라이빙 스타일의 월드 챔피언
 
 ## 카를로스 사인츠 (Carlos Sainz)
-- **소속팀**: 아우디 F1
+- **소속팀**: 월리엄스 F1
 - **엔트리 번호**: 55
 - **특징**: 스무스 오퍼레이터(Smooth Operator), 뛰어난 차량 피드백 능력
 
