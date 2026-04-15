@@ -206,21 +206,22 @@ a:hover {
 /* 굵은 글씨와 링크 포인트 디자인 */
 .prose strong { 
   color: var(--text-primary); 
-  font-weight: 700; 
-  /* 굵은 글씨 밑에 에메랄드/파란색 형광펜 효과 추가 */
-  background: linear-gradient(120deg, rgba(30, 144, 255, 0.1) 0%, transparent 100%);
+  font-weight: 800; /* 파란 배경색을 없애고, 대신 굵기를 살짝 더 진하게 해서 돋보이게 합니다 */
 }
+
 .prose a { 
-  color: var(--accent); 
+  color: var(--text-primary); /* 링크 텍스트의 파란색을 없애고 일반 글씨 색상과 맞춥니다 */
   text-decoration: none; 
-  border-bottom: 2px solid var(--accent-glow); 
+  border-bottom: 2px solid var(--border); /* 밑줄만 은은한 연회색으로 긋습니다 */
   transition: all 0.2s ease; 
   font-weight: 600;
 }
+
 .prose a:hover { 
-  border-bottom-color: var(--accent); 
-  background-color: var(--accent-glow);
+  border-bottom-color: var(--text-primary); /* 마우스를 올리면 밑줄만 진한 회색/검은색으로 변형됩니다 */
+  background-color: transparent; /* 마우스 올렸을 때의 파란 배경도 없앴습니다 */
 }
+
 
 /* 리스트 간격 조정 */
 .prose ul, .prose ol { margin-bottom: 1.75rem; padding-left: 1.5rem; }
