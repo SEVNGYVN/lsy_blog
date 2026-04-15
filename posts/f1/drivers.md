@@ -12,7 +12,7 @@ category: "정보"
 ## 막스 베르스타펜 (Max Verstappen)
 ![막스 사진](/R_VER.png)
 <div align="center">
-<img src="/R_VER.png" style="width: 50%;" />
+<img src="/R_VER.png" style="width: 25%;" />
 
 - **소속팀**: 레드불 레이싱
 - **엔트리 번호**: 1
