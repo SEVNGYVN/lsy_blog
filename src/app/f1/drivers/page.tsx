@@ -1,6 +1,7 @@
+"use client";
+
 import Link from 'next/link';
 
-// ✏️ 여기가 사용자님이 직접 드라이버 정보를 수정하는 곳!
 const drivers = [
   { slug: 'driver/RUS', firstName: 'George', lastName: 'Russell', team: 'Mercedes', number: 63, color: '#00A19C', image: '/RUS.png' },
   { slug: 'driver/ANT', firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', number: 12, color: '#00A19C', image: '/ANT.png' },
@@ -18,16 +19,10 @@ const drivers = [
   { slug: 'driver/ALB', firstName: 'Alexander', lastName: 'Albon', team: 'Williams', number: 23, color: '#37BEDD', image: '/ALB.png' },
 ];
 
-export const metadata = {
-  title: 'F1 드라이버 | F1 에디토리얼',
-  description: '2026 F1 그리드 전체 드라이버 목록',
-};
-
 export default function DriversPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#f0f0f0', paddingTop: '80px' }}>
-      {/* F1 스타일 상단 헤더 */}
-      <div style={{ background: '#e10600', padding: '3rem 2rem', textAlign: 'center' }}>
+      <div style={{ background: '#12121A', padding: '3rem 2rem', textAlign: 'center' }}>
         <Link href="/f1" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           ← F1 에디토리얼
         </Link>
@@ -36,7 +31,6 @@ export default function DriversPage() {
         </h1>
       </div>
 
-      {/* 드라이버 카드 그리드 (2열) */}
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
@@ -59,23 +53,13 @@ export default function DriversPage() {
               overflow: 'hidden',
               cursor: 'pointer',
               transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-            }}
-            onMouseEnter={e => {
-              (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
-              (e.currentTarget as HTMLElement).style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)';
-            }}
-            onMouseLeave={e => {
-              (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-              (e.currentTarget as HTMLElement).style.boxShadow = 'none';
             }}>
-              {/* 배경 육각형 패턴 효과 */}
               <div style={{
                 position: 'absolute', inset: 0, opacity: 0.1,
                 backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
                 backgroundSize: '20px 20px',
               }} />
               
-              {/* 왼쪽: 이름 + 팀 + 번호 */}
               <div style={{ zIndex: 1 }}>
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem', fontWeight: 500, margin: 0 }}>
                   {driver.firstName}
@@ -86,13 +70,11 @@ export default function DriversPage() {
                 <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.8rem', fontWeight: 500, margin: '0 0 1.25rem 0' }}>
                   {driver.team}
                 </p>
-                {/* 드라이버 번호 */}
                 <p style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900, fontStyle: 'italic', opacity: 0.9, margin: 0, lineHeight: 1 }}>
                   {driver.number}
                 </p>
               </div>
 
-              {/* 오른쪽: 드라이버 사진 */}
               <img
                 src={driver.image}
                 alt={`${driver.firstName} ${driver.lastName}`}
