@@ -11,6 +11,9 @@ category: "정보"
 
 ## 막스 베르스타펜 (Max Verstappen)
 ![막스 사진](/R_VER.png)
+<div align="center">
+<img src="/R_VER.png" style="width: 50%;" />
+
 - **소속팀**: 레드불 레이싱
 - **엔트리 번호**: 1
 - **특징**: 압도적인 페이스와 공격적인 드라이빙 스타일의 월드 챔피언
