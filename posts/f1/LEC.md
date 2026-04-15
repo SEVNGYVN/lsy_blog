@@ -1,6 +1,5 @@
 ---
 title: "샤를 르클레르"
-date:
 description: "샤를 르클레르의 개별 프로필 페이지입니다."
 category: "정보"
 ---

@@ -45,9 +45,12 @@ export default async function F1Post(context: any) {
             {postData.title}
           </h1>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-            <time style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
-              {format(parseISO(postData.date), 'LLLL d, yyyy')}
-            </time>
+            {postData.category !== '정보' && (
+  <time style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
+    {format(parseISO(postData.date), 'LLLL d, yyyy')}
+  </time>
+)}
+
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <span style={{ fontSize: '0.75rem', padding: '0.25rem 0.75rem', backgroundColor: '#e0dfe3', border: '1px solid var(--border)', borderRadius: '99px', color: '#1a1b1f', fontWeight: 600 }}>
                 {postData.category}
