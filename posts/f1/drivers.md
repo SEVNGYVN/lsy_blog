@@ -6,7 +6,7 @@ category: "정보"
 
 # F1 드라이버 프로필
 
-## [샤를 르클레르](/driver/LEC) (Charles Leclerc)
+## [샤를 르클레르](/f1/driver/LEC) (Charles Leclerc)
 ![르클레르 사진](/F_LEC.png)
 <img src="/F_LEC.png" style="width: 100%; border-radius: 16px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" alt="샤를 르클레르 배너" />
 

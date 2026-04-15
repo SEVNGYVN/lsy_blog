@@ -7,7 +7,7 @@ import Link from 'next/link';
 export async function generateMetadata(context: any) {
   try {
     const params = await context.params;
-    const postData = await getF1PostData(params.slug);
+    const postData = await getF1PostData(params.slug); // 여러 단계의 폴더 경로가 들어와도 처리됨!
     return {
       title: `${postData.title} | F1 에디토리얼`,
       description: postData.description,
@@ -20,7 +20,7 @@ export async function generateMetadata(context: any) {
 // Next.js URL Path Generator
 export async function generateStaticParams() {
   const paths = getAllF1PostSlugs();
-  return paths.map((id) => ({ slug: id }));
+  return paths.map((slugArray) => ({ slug: slugArray }));
 }
 
 // 상세 페이지 화면 렌더링
@@ -46,11 +46,10 @@ export default async function F1Post(context: any) {
           </h1>
           <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
             {postData.category !== '정보' && (
-  <time style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
-    {format(parseISO(postData.date), 'LLLL d, yyyy')}
-  </time>
-)}
-
+              <time style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>
+                {format(parseISO(postData.date), 'LLLL d, yyyy')}
+              </time>
+            )}
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               <span style={{ fontSize: '0.75rem', padding: '0.25rem 0.75rem', backgroundColor: '#e0dfe3', border: '1px solid var(--border)', borderRadius: '99px', color: '#1a1b1f', fontWeight: 600 }}>
                 {postData.category}
@@ -63,7 +62,6 @@ export default async function F1Post(context: any) {
             </div>
           </div>
         </header>
-        {/* 기존 블로그와 똑같은 prose 스타일을 여기서 사용합니다 */}
         <div className="prose" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     );
