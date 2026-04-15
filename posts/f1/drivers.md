@@ -1,5 +1,6 @@
 ---
 title: "2026 F1 그리드 드라이버"
+date:
 description: "현역 F1 드라이버들의 프로필과 상세 정보입니다."
 category: "정보"
 ---
