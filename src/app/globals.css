@@ -186,6 +186,16 @@ a:hover {
   word-break: keep-all; /* 한국어 단어가 중간에 끊기지 않고 예쁘게 줄바꿈됨 (핵심!) */
 }
 
+/* 마크다운 안 이미지 기본 스타일 고정 */
+.prose img {
+  max-width: 100%;        /* 화면 밖으로 삐져나가지 않게 */
+  height: auto;           /* 비율 자동 유지 */
+  border-radius: 12px;    /* 기본 모서리 살짝 둥글게 */
+  display: block;         /* 이미지 아래 생기는 이상한 여백 제거 */
+  margin: 1.5rem auto;    /* 위아래 여백 + 가운데 정렬 기본 적용 */
+}
+
+
 /* 제목 깔끔하게 */
 .prose h1, .prose h2, .prose h3 {
   color: var(--text-primary);
