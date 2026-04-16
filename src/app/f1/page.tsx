@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 
+import { articles } from './articles/data';
+
+
 export default function Blog() {
   const handleAlert = (e: React.MouseEvent, msg: string) => {
     e.preventDefault();
@@ -42,30 +45,6 @@ export default function Blog() {
       title: '2026 일본 그랑프리 하이라이트',
       url: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
       thumbnail: 'https://img.youtube.com/vi/oAtYfF0_4-I/maxresdefault.jpg', 
-    },
-  ];
-
-  const articles = [
-    {
-      category: '기술 분석',
-      title: '2026 레귤레이션: 액티브 에어로가 바꿀 F1의 미래',
-      description: '새로운 그라운드 이펙트 규정과 액티브 에어로다이나믹스가 팀 전략과 차량 디자인에 미치는 영향을 심층 분석합니다.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBymjmQj-fsTVt8KfX0ETURgaA5iaR22As_Ew1TCeS7570aTrY4uWqnH-SyhZ3ieiEYhcpzq-hxMrOUHWE7FxVBIoTL5KrQJE6dqctv_qUE_n5oe5UMp4FXCTnA0iFCBWe50_3VhzaOb9yb3T12epSL6K0oSgPB2ri_DlUiKZaOpjK84ttfBgJ_N96iko26egl0OF6KMQBFLzZm-JVbzwQnPSFGTqw8Kfckt40E5LBiGv_SvBs_JQzItL3wag_k0aaqGkgI6cDYlC31',
-      readTime: '8분',
-    },
-    {
-      category: '드라이버 마켓',
-      title: '2027 시트 쟁탈전: 누가 어디로 가는가?',
-      description: '주요 드라이버 계약 만료 시점과 팀 이적 루머를 정리하고, 가능한 시나리오를 예측합니다.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
-      readTime: '6분',
-    },
-    {
-      category: '레이스 리뷰',
-      title: '일본 GP 리뷰: 스즈카에서의 전략 대결',
-      description: 'Round 3 일본 그랑프리의 핵심 전략 분석과 드라이버별 퍼포먼스를 되짚어 봅니다.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
-      readTime: '5분',
     },
   ];
 
@@ -407,27 +386,26 @@ export default function Blog() {
                 <span className="text-secondary uppercase tracking-widest text-xs font-semibold mb-2 block">에디토리얼</span>
                 <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#1a1b1f' }}>최신 분석 아티클</h2>
               </div>
-              <a
-                onClick={(e) => handleAlert(e, "전체 아카이브 페이지는 준비 중입니다!")}
-                style={{
-                  color: '#005cab', border: '1px solid #005cab',
-                  padding: '0.5rem 1.4rem', borderRadius: '999px',
-                  fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none',
-                  cursor: 'pointer', transition: 'all 0.2s',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.background = '#005cab'; e.currentTarget.style.color = 'white'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#005cab'; }}
-              >
-                전체 보기
-              </a>
+              <Link
+  href="/f1/articles"
+  style={{
+    color: '#005cab', border: '1px solid #005cab',
+    padding: '0.5rem 1.4rem', borderRadius: '999px',
+    fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none',
+    cursor: 'pointer', transition: 'all 0.2s',
+  }}
+  onMouseEnter={e => { e.currentTarget.style.background = '#005cab'; e.currentTarget.style.color = 'white'; }}
+  onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#005cab'; }}
+>
+  전체 보기
+</Link>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {articles.map((article, i) => (
-                <div
-                  key={i}
-                  onClick={(e) => handleAlert(e, "아티클 상세 페이지는 준비 중입니다!")}
-                  style={{
+  <Link key={i} href={`/f1/articles/${article.slug}`} style={{ textDecoration: 'none' }}>
+    <div
+      style={{
                     borderRadius: '16px', overflow: 'hidden', cursor: 'pointer',
                     background: 'white', border: '1px solid #e3e2e6',
                     transition: 'transform 0.2s, box-shadow 0.2s',
@@ -463,8 +441,10 @@ export default function Blog() {
                     <p style={{ color: '#707785', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>{article.description}</p>
                   </div>
                 </div>
+              </Link>
               ))}
             </div>
+          
           </section>
 
         </main>
