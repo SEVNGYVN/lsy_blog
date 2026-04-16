@@ -52,22 +52,25 @@ export default function DriversPage() {
             <div style={{
               background: `linear-gradient(135deg, ${driver.color} 0%, ${driver.color}cc 60%, ${driver.color}88 100%)`,
               borderRadius: '12px',
-              padding: '2rem',
+              padding: '1.5rem 1.75rem',
               display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'flex-end',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              alignItems: 'flex-start',
               minHeight: '200px',
               position: 'relative',
               overflow: 'hidden',
               cursor: 'pointer',
               transition: 'transform 0.2s ease, box-shadow 0.2s ease',
             }}>
+              {/* 도트 패턴 배경 */}
               <div style={{
                 position: 'absolute', inset: 0, opacity: 0.1,
                 backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
                 backgroundSize: '20px 20px',
               }} />
-              
+
+              {/* 텍스트 정보 (좌측 하단) */}
               <div style={{ zIndex: 1 }}>
                 <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.9rem', fontWeight: 500, margin: 0 }}>
                   {driver.firstName}
@@ -83,15 +86,36 @@ export default function DriversPage() {
                 </p>
               </div>
 
+              {/* 번호 워터마크 (우측 배경) */}
+              <div style={{
+                position: 'absolute',
+                top: '-10px',
+                right: '10px',
+                fontSize: '8rem',
+                fontWeight: 900,
+                fontStyle: 'italic',
+                color: 'rgba(255,255,255,0.12)',
+                lineHeight: 1,
+                userSelect: 'none',
+                pointerEvents: 'none',
+                zIndex: 0,
+              }}>
+                {driver.number}
+              </div>
+
+              {/* 드라이버 사진 (우측 하단, absolute) */}
               <img
                 src={driver.image}
                 alt={`${driver.firstName} ${driver.lastName}`}
                 style={{
-                  height: '160px',
+                  position: 'absolute',
+                  right: 0,
+                  bottom: 0,
+                  height: '185px',
                   objectFit: 'contain',
-                  objectPosition: 'bottom',
-                  zIndex: 1,
-                  filter: 'drop-shadow(2px 4px 12px rgba(0,0,0,0.4))',
+                  objectPosition: 'bottom center',
+                  zIndex: 2,
+                  filter: 'drop-shadow(-4px 0px 8px rgba(0,0,0,0.3))',
                 }}
                 onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
               />
