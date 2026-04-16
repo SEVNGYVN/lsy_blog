@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { articles } from './data';
+import Navbar from '../components/Navbar';
 
 export default function ArticlesPage() {
   return (

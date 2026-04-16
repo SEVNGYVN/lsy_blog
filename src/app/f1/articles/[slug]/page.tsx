@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { articles } from '../data';
+import Navbar from '../../components/Navbar';
 
 export default function ArticleDetailPage() {
   const params = useParams();

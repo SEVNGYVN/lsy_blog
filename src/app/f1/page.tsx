@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-
+import Navbar from './components/Navbar';
 import { articles } from './articles/data';
 
 
@@ -106,19 +106,7 @@ export default function Blog() {
       <div className="f1-blog light bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed" style={{ minHeight: '100vh', marginTop: '-80px' }}>
 
         {/* Nav */}
-        <nav className="fixed top-0 w-full z-50 bg-[#faf9fd]/80 dark:bg-[#1a1b1f]/80 backdrop-blur-xl">
-          <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <Link href="/blog" className="text-xl font-bold tracking-tighter text-[#1E90FF]">F1 에디토리얼</Link>
-            <div className="hidden md:flex items-center space-x-8 font-['Inter'] tracking-tight">
-              <Link href="/f1/teams" className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors">팀</Link>
-              <Link href="/f1/drivers" className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors">드라이버</Link>
-              <a onClick={(e) => handleAlert(e, "서킷 정보 페이지는 개발 중입니다!")} className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors cursor-pointer">서킷</a>
-              <a onClick={(e) => handleAlert(e, "시즌 순위 페이지는 개발 중입니다!")} className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors cursor-pointer">순위</a>
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors" href="/">포트폴리오 돌아가기</Link>
-            </div>
-            
-          </div>
-        </nav>
+        <Navbar />
 
         <main className="pt-24 pb-20">
 

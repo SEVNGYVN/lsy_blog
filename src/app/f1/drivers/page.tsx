@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 const drivers = [
   { slug: 'driver/LEC', firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', number: 16, color: '#DC0000', image: '/F_LEC.png' },

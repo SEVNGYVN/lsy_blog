@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Navbar from '../components/Navbar';
 
 const teams = [
   { slug: 'F',  name: 'Ferrari',           color: '#DC0000', image: '/F_CAR.png' },
