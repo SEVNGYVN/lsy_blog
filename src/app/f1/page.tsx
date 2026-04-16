@@ -376,6 +376,7 @@ export default function Blog() {
                       <div key={c.pos} style={{
                         display: 'flex', alignItems: 'center', gap: '12px',
                         padding: '10px 14px', borderRadius: '10px',
+                        minHeight: '56px',
                         background: c.pos === 1 ? 'rgba(255,255,255,0.06)' : 'transparent',
                         transition: 'background 0.2s',
                       }}>
