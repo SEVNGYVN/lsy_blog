@@ -111,7 +111,7 @@ category: "정보"
 - **소속팀**: 비자 캐시 앱 레이싱 불스 포뮬러 원 팀
 - **엔트리 번호**: 30
 
-## [아비드 린드블라드](/f1/driver/LIN) (Liam Lawson)
+## [아비드 린드블라드](/f1/driver/LIN) (Arvid Lindblad)
 ![린드블라드 사진](/RB_LIN.png)
 <img src="/RB_LIN.png" style="width: 100%; border-radius: 16px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" alt="아비드 린드블라드 배너" />  
 
