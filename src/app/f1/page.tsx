@@ -11,37 +11,37 @@ export default function Blog() {
   const schedule = {
     previous: {
       round: 3, name: 'Japan', dates: '27 – 29 MAR',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBymjmQj-fsTVt8KfX0ETURgaA5iaR22As_Ew1TCeS7570aTrY4uWqnH-SyhZ3ieiEYhcpzq-hxMrOUHWE7FxVBIoTL5KrQJE6dqctv_qUE_n5oe5UMp4FXCTnA0iFCBWe50_3VhzaOb9yb3T12epSL6K0oSgPB2ri_DlUiKZaOpjK84ttfBgJ_N96iko26egl0OF6KMQBFLzZm-JVbzwQnPSFGTqw8Kfckt40E5LBiGv_SvBs_JQzItL3wag_k0aaqGkgI6cDYlC31',
-      highlightUrl: 'https://www.youtube.com/results?search_query=2026+Japanese+Grand+Prix+F1+Highlights',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Japan.webp',
+      highlightUrl: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
     },
     next: {
       round: 4, name: 'Miami', dates: '01 – 03 MAY',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
     },
     upcoming: {
       round: 5, name: 'Canada', dates: '22 – 24 MAY',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
     },
   };
 
   const highlights = [
     {
-      round: 'Round 3 · Suzuka',
-      title: '2026 일본 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/results?search_query=2026+Japanese+Grand+Prix+F1+Highlights',
-      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS',
+      round: 'Round 1 · Melbourne',
+      title: '2026 호주 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/watch?v=lL_d84cN1UY',
+      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
     },
     {
       round: 'Round 2 · Shanghai',
       title: '2026 중국 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/results?search_query=2026+Chinese+Grand+Prix+F1+Highlights',
+      url: 'https://www.youtube.com/watch?v=t8HpVlineX4',
       thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
     },
     {
-      round: 'Round 1 · Melbourne',
-      title: '2026 호주 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/results?search_query=2026+Australian+Grand+Prix+F1+Highlights',
-      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
+     round: 'Round 3 · Suzuka',
+      title: '2026 일본 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
+      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS', 
     },
   ];
 
@@ -481,45 +481,6 @@ export default function Blog() {
                   </div>
                 </div>
               ))}
-            </div>
-          </section>
-
-          {/* ── Newsletter CTA ── */}
-          <section style={{ background: 'linear-gradient(135deg, #005cab 0%, #0075d6 50%, #1E90FF 100%)', padding: '5rem 0' }}>
-            <div className="max-w-7xl mx-auto px-8 text-center">
-              <h2 style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.03em', marginBottom: '1rem' }}>
-                매주 금요일, 패독의 핵심을 받아보세요.
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', maxWidth: '500px', margin: '0 auto 2rem auto', lineHeight: 1.7 }}>
-                기술 분석, 드라이버 인사이트, 그리고 레이스 프리뷰를 뉴스레터로 전달합니다.
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', maxWidth: '480px', margin: '0 auto' }}>
-                <input
-                  type="email"
-                  placeholder="이메일 주소를 입력하세요"
-                  style={{
-                    flex: 1, padding: '0.8rem 1.2rem', borderRadius: '12px',
-                    border: 'none', outline: 'none', fontSize: '0.9rem',
-                    background: 'rgba(255,255,255,0.15)', color: 'white',
-                    backdropFilter: 'blur(10px)',
-                  }}
-                  onFocus={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.25)')}
-                  onBlur={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
-                />
-                <button
-                  onClick={(e) => handleAlert(e, "뉴스레터 구독 기능은 곧 오픈됩니다!")}
-                  style={{
-                    padding: '0.8rem 2rem', borderRadius: '12px',
-                    background: 'white', color: '#005cab',
-                    fontSize: '0.9rem', fontWeight: 700, border: 'none',
-                    cursor: 'pointer', transition: 'transform 0.2s',
-                  }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
-                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-                >
-                  구독하기
-                </button>
-              </div>
             </div>
           </section>
 
