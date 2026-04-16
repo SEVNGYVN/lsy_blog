@@ -11,7 +11,7 @@ import Navbar from '../components/Navbar';
    - flag: 국기 이모지 (포디움 카드에 표시)
    ─────────────────────────────────────────── */
 const driverStandings = [
-  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#27F4D2', image: '/M_ANT_NB.png', flag: '🇮🇹' },
+  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#33d4ba', image: '/M_ANT_NB.png', flag: '🇮🇹' },
   { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#27F4D2', image: '/M_RUS.png', flag: '🇬🇧' },
   { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC.png', flag: '🇲🇨' },
   { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM.png', flag: '🇬🇧' },
