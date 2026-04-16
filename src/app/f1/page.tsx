@@ -35,13 +35,13 @@ export default function Blog() {
       round: 'Round 2 · Shanghai',
       title: '2026 중국 그랑프리 하이라이트',
       url: 'https://www.youtube.com/watch?v=t8HpVlineX4',
-      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
+      thumbnail: 'https://img.youtube.com/vi/t8HpVlineX4/maxresdefault.jpg',
     },
     {
      round: 'Round 3 · Suzuka',
       title: '2026 일본 그랑프리 하이라이트',
       url: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
-      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS', 
+      thumbnail: 'https://img.youtube.com/vi/oAtYfF0_4-I/maxresdefault.jpg', 
     },
   ];
 
@@ -71,11 +71,11 @@ export default function Blog() {
 
   const standings = {
     drivers: [
-      { pos: 1, name: 'M. Verstappen', team: 'Red Bull Racing', points: 76, color: '#3671C6' },
-      { pos: 2, name: 'L. Norris', team: 'McLaren', points: 62, color: '#FF8000' },
-      { pos: 3, name: 'C. Leclerc', team: 'Ferrari', points: 55, color: '#E8002D' },
-      { pos: 4, name: 'L. Hamilton', team: 'Ferrari', points: 48, color: '#E8002D' },
-      { pos: 5, name: 'O. Piastri', team: 'McLaren', points: 45, color: '#FF8000' },
+      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 72, color: '#00A19C' },
+      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 63, color: '#00A19C' },
+      { pos: 3, name: 'Charles Leclerc', team: 'Ferrari', points: 49, color: '#E8002D' },
+      { pos: 4, name: 'Lewis Hamilton', team: 'Ferrari', points: 41, color: '#E8002D' },
+      { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 25, color: '#FF8000' },
     ],
     constructors: [
       { pos: 1, name: 'McLaren', points: 107, color: '#FF8000' },
@@ -137,14 +137,7 @@ export default function Blog() {
               <a onClick={(e) => handleAlert(e, "시즌 순위 페이지는 개발 중입니다!")} className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors cursor-pointer">순위</a>
               <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors" href="/">포트폴리오 돌아가기</Link>
             </div>
-            <div className="flex items-center space-x-6">
-              <button onClick={(e) => handleAlert(e, "로그인 기능은 준비 중입니다.")} className="text-on-surface-variant hover:opacity-80 transition-opacity">
-                <span className="material-symbols-outlined">account_circle</span>
-              </button>
-              <button onClick={(e) => handleAlert(e, "구독 서비스는 아직 오픈되지 않았습니다!")} className="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity">
-                구독하기
-              </button>
-            </div>
+            
           </div>
         </nav>
 
