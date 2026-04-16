@@ -29,7 +29,7 @@ export default function Blog() {
       round: 'Round 1 · Melbourne',
       title: '2026 호주 그랑프리 하이라이트',
       url: 'https://www.youtube.com/watch?v=lL_d84cN1UY',
-      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
+      thumbnail: 'https://img.youtube.com/vi/lL_d84cN1UY/maxresdefault.jpg',
     },
     {
       round: 'Round 2 · Shanghai',
@@ -158,7 +158,7 @@ export default function Blog() {
                 모터스포츠의 <span className="text-primary">정점</span>을 향한 깊이 있는 분석.
               </h1>
               <p className="text-on-surface-variant text-lg max-w-sm font-medium leading-relaxed">
-                모든 코너, 모든 기술적 혁신, 그리고 패독의 모든 루머를 분석합니다.
+                F1과 관련한 정보를 공유합니다.
               </p>
             </div>
           </div>
