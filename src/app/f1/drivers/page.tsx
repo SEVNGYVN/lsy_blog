@@ -49,99 +49,39 @@ export default function DriversPage() {
       }}>
         {drivers.map((driver) => (
           <Link key={driver.slug} href={`/f1/${driver.slug}`} style={{ textDecoration: 'none' }}>
-            <div style={{
-              borderRadius: '16px',
-              overflow: 'hidden',
-              position: 'relative',
-              aspectRatio: '16 / 9',
-              cursor: 'pointer',
-              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
-            }}
+            <div
+              style={{
+                borderRadius: '16px',
+                overflow: 'hidden',
+                aspectRatio: '16 / 9',
+                cursor: 'pointer',
+                transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+                background: driver.color,
+              }}
               onMouseEnter={e => {
-                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 12px 32px rgba(0,0,0,0.25)';
+                (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-6px)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 16px 40px rgba(0,0,0,0.22)';
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 20px rgba(0,0,0,0.15)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 16px rgba(0,0,0,0.12)';
               }}
             >
-              {/* 드라이버 사진 - 카드 전체를 꽉 채움 */}
               <img
                 src={driver.image}
                 alt={`${driver.firstName} ${driver.lastName}`}
                 style={{
-                  position: 'absolute',
-                  inset: 0,
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'top center',
+                  display: 'block',
                 }}
                 onError={(e) => {
-                  // 사진 없으면 팀 컬러 배경으로 대체
                   (e.currentTarget as HTMLImageElement).style.display = 'none';
                 }}
               />
-
-              {/* 사진 없을 때 팀 컬러 fallback 배경 */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: `linear-gradient(135deg, ${driver.color} 0%, ${driver.color}99 100%)`,
-                zIndex: 0,
-              }} />
-
-              {/* 하단 그라디언트 오버레이 (텍스트 가독성) */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: `linear-gradient(to top, ${driver.color}ee 0%, ${driver.color}88 35%, transparent 65%)`,
-                zIndex: 1,
-              }} />
-
-              {/* 번호 워터마크 */}
-              <div style={{
-                position: 'absolute',
-                top: '-8px',
-                right: '12px',
-                fontSize: '7rem',
-                fontWeight: 900,
-                fontStyle: 'italic',
-                color: 'rgba(255,255,255,0.15)',
-                lineHeight: 1,
-                userSelect: 'none',
-                pointerEvents: 'none',
-                zIndex: 2,
-              }}>
-                {driver.number}
-              </div>
-
-              {/* 텍스트 정보 (하단 오버레이) */}
-              <div style={{
-                position: 'absolute',
-                bottom: 0,
-                left: 0,
-                right: 0,
-                padding: '1.25rem 1.5rem',
-                zIndex: 3,
-              }}>
-                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.8rem', fontWeight: 500, margin: 0 }}>
-                  {driver.firstName}
-                </p>
-                <p style={{ color: 'white', fontSize: '1.6rem', fontWeight: 900, letterSpacing: '-0.02em', margin: '0 0 0.2rem 0', lineHeight: 1 }}>
-                  {driver.lastName}
-                </p>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.75rem', fontWeight: 500, margin: 0 }}>
-                    {driver.team}
-                  </p>
-                  <p style={{ color: 'white', fontSize: '1.8rem', fontWeight: 900, fontStyle: 'italic', margin: 0, lineHeight: 1 }}>
-                    {driver.number}
-                  </p>
-                </div>
-              </div>
             </div>
           </Link>
         ))}
