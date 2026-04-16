@@ -53,7 +53,7 @@ export default function DriversPage() {
               style={{
                 borderRadius: '16px',
                 overflow: 'hidden',
-                aspectRatio: '16 / 9',
+                aspectRatio: '33 / 14',
                 cursor: 'pointer',
                 transition: 'transform 0.25s ease, box-shadow 0.25s ease',
                 boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
