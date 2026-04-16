@@ -38,6 +38,7 @@ export default function ArticlesPage() {
           position: 'fixed', top: 0, width: '100%', zIndex: 50,
           background: 'rgba(250,249,253,0.8)', backdropFilter: 'blur(20px)',
         }}>
+          <Navbar />
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem', maxWidth: '1280px', margin: '0 auto' }}>
             <Link href="/f1" style={{ fontSize: '1.25rem', fontWeight: 700, letterSpacing: '-0.04em', color: '#1E90FF', textDecoration: 'none' }}>F1 에디토리얼</Link>
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>

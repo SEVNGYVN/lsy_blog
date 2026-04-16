@@ -13,6 +13,7 @@ export default function ArticleDetailPage() {
   if (!article) {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter, sans-serif', background: '#faf9fd' }}>
+        <Navbar />
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '2rem', fontWeight: 900, color: '#1a1b1f', marginBottom: '1rem' }}>기사를 찾을 수 없습니다</h1>
           <p style={{ color: '#707785', marginBottom: '2rem' }}>요청하신 기사가 존재하지 않거나 삭제되었습니다.</p>

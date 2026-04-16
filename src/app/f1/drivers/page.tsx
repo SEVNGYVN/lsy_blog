@@ -31,6 +31,7 @@ const drivers = [
 export default function DriversPage() {
   return (
     <div style={{ minHeight: '100vh', background: '#f0f0f0', paddingTop: '80px' }}>
+      <Navbar />
       <div style={{ background: '#12121A', padding: '3rem 2rem', textAlign: 'center' }}>
         <Link href="/f1" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           ← F1 에디토리얼
