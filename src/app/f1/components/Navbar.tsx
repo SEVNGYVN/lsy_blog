@@ -9,6 +9,7 @@ const navItems = [
   { label: '서킷', href: '/f1/circuits' },
   { label: '순위', href: '/f1/standings' },
   { label: '뉴스', href: '/f1/articles' },
+  { label: '포트폴리오로 돌아가기', href: '/'}
 ];
 
 export default function Navbar() {
