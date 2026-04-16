@@ -172,8 +172,8 @@ export default function StandingsPage() {
 
                   {/* 드라이버 이미지 */}
                   <div style={{
-                    position: 'absolute', bottom: '40px', right: '-10px',
-                    width: '70%', height: '75%',
+                    position: 'absolute', bottom: '0', right: '0',
+                    width: '100%', height: '100%',
                     display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end',
                   }}>
                     <img
@@ -181,7 +181,8 @@ export default function StandingsPage() {
                       alt={`${driver.firstName} ${driver.lastName}`}
                       style={{
                         width: '100%', height: '100%',
-                        objectFit: 'contain', objectPosition: 'bottom right',
+                        objectFit: 'cover',        // contain → cover
+                        objectPosition: 'top center',
                       }}
                       onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                     />
