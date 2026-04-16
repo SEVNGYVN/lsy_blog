@@ -108,21 +108,6 @@ export default function Blog() {
         {/* Nav */}
         <Navbar />
 
-        <div style={{ 
-  position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 49,
-  background: 'rgba(0,92,171,0.9)', 
-  backdropFilter: 'blur(10px)',
-  padding: '8px 2rem',
-  textAlign: 'center',
-}}>
-  <Link href="/" style={{ 
-    color: 'white', fontSize: '0.8rem', fontWeight: 600, 
-    textDecoration: 'none', letterSpacing: '0.05em',
-  }}>
-    ← 포트폴리오로 돌아가기
-  </Link>
-</div>
-
         <main className="pt-24 pb-20">
 
           {/* Hero */}
