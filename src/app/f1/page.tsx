@@ -78,11 +78,11 @@ export default function Blog() {
       { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 25, color: '#FF8000' },
     ],
     constructors: [
-      { pos: 1, name: 'McLaren', points: 107, color: '#FF8000' },
-      { pos: 2, name: 'Ferrari', points: 103, color: '#E8002D' },
-      { pos: 3, name: 'Red Bull Racing', points: 98, color: '#3671C6' },
-      { pos: 4, name: 'Mercedes', points: 65, color: '#27F4D2' },
-      { pos: 5, name: 'Aston Martin', points: 30, color: '#229971' },
+      { pos: 1, name: 'Mercedes', points: 135, color: '#27F4D2' },
+      { pos: 2, name: 'Ferrari', points: 90, color: '#E8002D' },
+      { pos: 3, name: 'McLaren', points: 46, color: '#FF8000' },
+      { pos: 4, name: 'Haas F1 Team', points: 18, color: '#5E6D75' },
+      { pos: 5, name: 'Alpine', points: 16, color: '#005073' },
     ],
   };
 
@@ -539,7 +539,7 @@ export default function Blog() {
             {/* Divider & Copyright */}
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
-                &copy; 2026 F1 에디토리얼. 모든 권리 보유. 이 사이트는 Formula 1과 공식적으로 관련이 없습니다.
+                &copy; 2026 F1 에디토리얼. 모든 권리 보유. F1CREW로부터 컨텐츠 사용 허가. 이 사이트는 Formula 1과 공식적으로 관련이 없습니다.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
                 포트폴리오 프로젝트
