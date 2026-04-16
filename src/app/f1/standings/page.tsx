@@ -11,8 +11,8 @@ import Navbar from '../components/Navbar';
    - flag: 국기 이모지 (포디움 카드에 표시)
    ─────────────────────────────────────────── */
 const driverStandings = [
-  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#33d4ba', image: '/M_ANT_NB.png', flag: '🇮🇹' },
-  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#27F4D2', image: '/M_RUS.png', flag: '🇬🇧' },
+  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: '🇮🇹' },
+  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS.png', flag: '🇬🇧' },
   { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC.png', flag: '🇲🇨' },
   { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM.png', flag: '🇬🇧' },
   { pos: 5, firstName: 'Lando', lastName: 'Norris', team: 'McLaren', points: 25, color: '#FF8000', image: '/ML_NOR.png', flag: '🇬🇧' },
@@ -39,7 +39,7 @@ const driverStandings = [
    팀(컨스트럭터) 순위 데이터 (1~11위)
    ─────────────────────────────────────────── */
 const teamStandings = [
-  { pos: 1, name: 'Mercedes', points: 135, color: '#27F4D2', image: '/M_CAR.png', drivers: 'Antonelli · Russell' },
+  { pos: 1, name: 'Mercedes', points: 135, color: '#38d2b8', image: '/M_CAR.png', drivers: 'Antonelli · Russell' },
   { pos: 2, name: 'Ferrari', points: 90, color: '#DC0000', image: '/F_CAR.png', drivers: 'Leclerc · Hamilton' },
   { pos: 3, name: 'McLaren', points: 46, color: '#FF8000', image: '/ML_CAR.png', drivers: 'Norris · Piastri' },
   { pos: 4, name: 'Aston Martin', points: 30, color: '#358C75', image: '/AM_CAR.png', drivers: 'Alonso · Stroll' },
