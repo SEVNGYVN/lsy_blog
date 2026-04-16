@@ -388,12 +388,12 @@ export default function Blog() {
                           <p style={{ color: 'white', fontSize: '0.9rem', fontWeight: 700, margin: 0 }}>{c.name}</p>
                         </div>
                         <span style={{ color: 'white', fontSize: '1rem', fontWeight: 800 }}>{c.points}</span>
-
                         <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', fontWeight: 600 }}>PTS</span>
                       </div>
                     ))}
                   </div>
                 </div>
+
 
               </div>
             </div>
