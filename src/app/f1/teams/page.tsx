@@ -3,17 +3,17 @@
 import Link from 'next/link';
 
 const teams = [
-  { slug: 'A',  name: 'Alpine',            color: '#005073', image: '/A_CAR.png' },
-  { slug: 'AD', name: 'Audi',              color: '#7D1600', image: '/AD_CAR.png' },
-  { slug: 'AM', name: 'Aston Martin',      color: '#358C75', image: '/AM_CAR.png' },
-  { slug: 'C',  name: 'Cadillac',          color: '#4B4C53', image: '/C_CAR.png' },
   { slug: 'F',  name: 'Ferrari',           color: '#DC0000', image: '/F_CAR.png' },
-  { slug: 'H',  name: 'Haas F1 Team',      color: '#5E6D75', image: '/H_CAR.png' },
   { slug: 'M',  name: 'Mercedes',          color: '#00A19C', image: '/M_CAR.png' },
   { slug: 'ML', name: 'McLaren',           color: '#FF8000', image: '/ML_CAR.png' },
   { slug: 'R',  name: 'Red Bull Racing',   color: '#152E52', image: '/R_CAR.png' },
-  { slug: 'RB', name: 'Racing Bulls',      color: '#003BD1', image: '/RB_CAR.png' },
+  { slug: 'A',  name: 'Alpine',            color: '#005073', image: '/A_CAR.png' },
   { slug: 'W',  name: 'Williams',          color: '#061D3D', image: '/W_CAR.png' },
+  { slug: 'H',  name: 'Haas F1 Team',      color: '#5E6D75', image: '/H_CAR.png' },
+  { slug: 'RB', name: 'Racing Bulls',      color: '#003BD1', image: '/RB_CAR.png' },
+  { slug: 'AD', name: 'Audi',              color: '#7D1600', image: '/AD_CAR.png' },
+  { slug: 'AM', name: 'Aston Martin',      color: '#358C75', image: '/AM_CAR.png' },
+  { slug: 'C',  name: 'Cadillac',          color: '#4B4C53', image: '/C_CAR.png' },
 ];
 
 export default function TeamsPage() {
@@ -24,7 +24,7 @@ export default function TeamsPage() {
           ← F1 에디토리얼
         </Link>
         <h1 style={{ color: 'white', fontSize: '3rem', fontWeight: 900, letterSpacing: '-0.02em', marginTop: '1rem' }}>
-          2026 TEAMS
+          2026 F1 TEAMS
         </h1>
       </div>
 
