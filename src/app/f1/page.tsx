@@ -127,7 +127,7 @@ export default function Blog() {
           <section style={{ background: '#12121A', padding: '4rem 0' }}>
             <div className="max-w-7xl mx-auto px-8">
               <div className="flex items-center justify-between mb-8">
-                <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 레이스 캘린더</h2>
+                <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 F1 레이스 캘린더</h2>
                 <a
                   href="https://www.formula1.com/en/racing/2026.html"
                   target="_blank"
@@ -141,7 +141,7 @@ export default function Blog() {
                   onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
                   onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                 >
-                  Full Schedule
+                  전체 일정
                 </a>
               </div>
 
