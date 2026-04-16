@@ -35,7 +35,7 @@ export default function DriversPage() {
           ← F1 에디토리얼
         </Link>
         <h1 style={{ color: 'white', fontSize: '3rem', fontWeight: 900, letterSpacing: '-0.02em', marginTop: '1rem' }}>
-          2026 DRIVERS
+          F1 DRIVERS 2026
         </h1>
       </div>
 
