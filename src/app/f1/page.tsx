@@ -1,19 +1,90 @@
-import Link from 'next/link';
-import { getSortedF1PostsData } from '@/lib/f1-posts';
+"use client";
 
-export const metadata = {
-  title: 'F1 Editorial Blog',
-  description: '모터스포츠의 정점을 향한 깊이 있는 분석',
-};
+import Link from 'next/link';
 
 export default function Blog() {
-  const rawPostsData = getSortedF1PostsData();
-  
-  // 마크다운의 카테고리가 '정보'인 글은 메인 뉴스 피드에서 제외합니다! (팀, 드라이버 글 등)
-  const allPostsData = rawPostsData.filter(post => post.category !== '정보');
-  
-  const mainPost = allPostsData[0]; // 가장 최신 기사 1개
-  const subPosts = allPostsData.slice(1, 4); // 두번째 기사부터 (사이드바)
+  const handleAlert = (e: React.MouseEvent, msg: string) => {
+    e.preventDefault();
+    alert(msg);
+  };
+
+  const schedule = {
+    previous: {
+      round: 3, name: 'Japan', dates: '27 – 29 MAR',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBymjmQj-fsTVt8KfX0ETURgaA5iaR22As_Ew1TCeS7570aTrY4uWqnH-SyhZ3ieiEYhcpzq-hxMrOUHWE7FxVBIoTL5KrQJE6dqctv_qUE_n5oe5UMp4FXCTnA0iFCBWe50_3VhzaOb9yb3T12epSL6K0oSgPB2ri_DlUiKZaOpjK84ttfBgJ_N96iko26egl0OF6KMQBFLzZm-JVbzwQnPSFGTqw8Kfckt40E5LBiGv_SvBs_JQzItL3wag_k0aaqGkgI6cDYlC31',
+      highlightUrl: 'https://www.youtube.com/results?search_query=2026+Japanese+Grand+Prix+F1+Highlights',
+    },
+    next: {
+      round: 4, name: 'Miami', dates: '01 – 03 MAY',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS',
+    },
+    upcoming: {
+      round: 5, name: 'Canada', dates: '22 – 24 MAY',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
+    },
+  };
+
+  const highlights = [
+    {
+      round: 'Round 3 · Suzuka',
+      title: '2026 일본 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/results?search_query=2026+Japanese+Grand+Prix+F1+Highlights',
+      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS',
+    },
+    {
+      round: 'Round 2 · Shanghai',
+      title: '2026 중국 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/results?search_query=2026+Chinese+Grand+Prix+F1+Highlights',
+      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
+    },
+    {
+      round: 'Round 1 · Melbourne',
+      title: '2026 호주 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/results?search_query=2026+Australian+Grand+Prix+F1+Highlights',
+      thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
+    },
+  ];
+
+  const articles = [
+    {
+      category: '기술 분석',
+      title: '2026 레귤레이션: 액티브 에어로가 바꿀 F1의 미래',
+      description: '새로운 그라운드 이펙트 규정과 액티브 에어로다이나믹스가 팀 전략과 차량 디자인에 미치는 영향을 심층 분석합니다.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBymjmQj-fsTVt8KfX0ETURgaA5iaR22As_Ew1TCeS7570aTrY4uWqnH-SyhZ3ieiEYhcpzq-hxMrOUHWE7FxVBIoTL5KrQJE6dqctv_qUE_n5oe5UMp4FXCTnA0iFCBWe50_3VhzaOb9yb3T12epSL6K0oSgPB2ri_DlUiKZaOpjK84ttfBgJ_N96iko26egl0OF6KMQBFLzZm-JVbzwQnPSFGTqw8Kfckt40E5LBiGv_SvBs_JQzItL3wag_k0aaqGkgI6cDYlC31',
+      readTime: '8분',
+    },
+    {
+      category: '드라이버 마켓',
+      title: '2027 시트 쟁탈전: 누가 어디로 가는가?',
+      description: '주요 드라이버 계약 만료 시점과 팀 이적 루머를 정리하고, 가능한 시나리오를 예측합니다.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
+      readTime: '6분',
+    },
+    {
+      category: '레이스 리뷰',
+      title: '일본 GP 리뷰: 스즈카에서의 전략 대결',
+      description: 'Round 3 일본 그랑프리의 핵심 전략 분석과 드라이버별 퍼포먼스를 되짚어 봅니다.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
+      readTime: '5분',
+    },
+  ];
+
+  const standings = {
+    drivers: [
+      { pos: 1, name: 'M. Verstappen', team: 'Red Bull Racing', points: 76, color: '#3671C6' },
+      { pos: 2, name: 'L. Norris', team: 'McLaren', points: 62, color: '#FF8000' },
+      { pos: 3, name: 'C. Leclerc', team: 'Ferrari', points: 55, color: '#E8002D' },
+      { pos: 4, name: 'L. Hamilton', team: 'Ferrari', points: 48, color: '#E8002D' },
+      { pos: 5, name: 'O. Piastri', team: 'McLaren', points: 45, color: '#FF8000' },
+    ],
+    constructors: [
+      { pos: 1, name: 'McLaren', points: 107, color: '#FF8000' },
+      { pos: 2, name: 'Ferrari', points: 103, color: '#E8002D' },
+      { pos: 3, name: 'Red Bull Racing', points: 98, color: '#3671C6' },
+      { pos: 4, name: 'Mercedes', points: 65, color: '#27F4D2' },
+      { pos: 5, name: 'Aston Martin', points: 30, color: '#229971' },
+    ],
+  };
 
   return (
     <>
@@ -22,73 +93,518 @@ export default function Blog() {
       <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" async></script>
       <script dangerouslySetInnerHTML={{
         __html: `
-          window.tailwind = {
+          window.tailwind = window.tailwind || {};
+          window.tailwind.config = {
             darkMode: "class",
-            theme: { extend: { colors: {
-              "primary": "#005cab", "on-background": "#1a1b1f", "background": "#faf9fd",
-              "secondary": "#5e5e62", "on-surface-variant": "#404753", "outline": "#707785"
-            }}}
+            theme: {
+              extend: {
+                colors: {
+                  "on-surface-variant": "#404753", "on-secondary-fixed-variant": "#46464a",
+                  "tertiary": "#5a5c5e", "on-primary": "#ffffff", "on-primary-fixed-variant": "#004786",
+                  "surface-dim": "#dbd9de", "inverse-surface": "#2f3034", "secondary-fixed-dim": "#c7c6ca",
+                  "primary": "#005cab", "on-error-container": "#93000a", "on-secondary": "#ffffff",
+                  "on-background": "#1a1b1f", "surface-variant": "#e3e2e6", "surface-container-low": "#f4f3f7",
+                  "tertiary-container": "#737576", "secondary": "#5e5e62", "primary-container": "#0075d6",
+                  "background": "#faf9fd", "surface-container-lowest": "#ffffff", "secondary-fixed": "#e3e2e6",
+                  "on-primary-fixed": "#001c3a", "inverse-primary": "#a5c8ff", "secondary-container": "#e0dfe3",
+                  "primary-fixed-dim": "#a5c8ff", "tertiary-fixed": "#e2e2e4", "surface-container": "#efedf2",
+                  "surface-bright": "#faf9fd", "on-secondary-container": "#626266", "surface-container-high": "#e9e7ec",
+                  "on-tertiary-fixed": "#1a1c1d", "outline": "#707785", "surface-container-highest": "#e3e2e6",
+                  "error-container": "#ffdad6", "on-error": "#ffffff", "error": "#ba1a1a",
+                  "tertiary-fixed-dim": "#c6c6c8", "surface-tint": "#005faf", "on-tertiary-container": "#fcfcfe",
+                  "on-secondary-fixed": "#1a1b1f", "surface": "#faf9fd", "inverse-on-surface": "#f2f0f4",
+                  "on-tertiary-fixed-variant": "#454749", "on-surface": "#1a1b1f", "primary-fixed": "#d4e3ff",
+                  "on-primary-container": "#fefcff", "outline-variant": "#c0c7d6", "on-tertiary": "#ffffff"
+                },
+                borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+                fontFamily: { headline: ["Inter"], body: ["Inter"], label: ["Inter"] }
+              }
+            }
           };
         `
       }} />
 
-      <div className="f1-blog light bg-background text-on-background" style={{ minHeight: '100vh', marginTop: '-80px' }}>
-        <nav className="fixed top-0 w-full z-50 bg-[#faf9fd]/80 backdrop-blur-xl border-b border-[#c0c7d6]/20">
+      <div className="f1-blog light bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed" style={{ minHeight: '100vh', marginTop: '-80px' }}>
+
+        {/* Nav */}
+        <nav className="fixed top-0 w-full z-50 bg-[#faf9fd]/80 dark:bg-[#1a1b1f]/80 backdrop-blur-xl">
           <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <Link href="/f1" className="text-xl font-bold tracking-tighter text-[#1E90FF]">F1 에디토리얼</Link>
+            <Link href="/blog" className="text-xl font-bold tracking-tighter text-[#1E90FF]">F1 에디토리얼</Link>
             <div className="hidden md:flex items-center space-x-8 font-['Inter'] tracking-tight">
-              {/* 여기에 사용자님이 원하셨던 클릭 가능한 탭 연결 링크를 부활시켰습니다! */}
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors font-medium" href="/f1/teams">팀</Link>
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors font-medium" href="/f1/drivers">드라이버</Link>
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors font-medium" href="/f1/circuits">서킷</Link>
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors font-medium" href="/f1/standings">순위</Link>
-              {/* 구분선 추가 */}
-              <div style={{ width: '1px', height: '16px', backgroundColor: '#e3e2e6' }}></div>
-              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors font-semibold" href="/">포트폴리오 돌아가기</Link>
+              <Link href="/f1/teams" className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors">팀</Link>
+              <Link href="/f1/drivers" className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors">드라이버</Link>
+              <a onClick={(e) => handleAlert(e, "서킷 정보 페이지는 개발 중입니다!")} className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors cursor-pointer">서킷</a>
+              <a onClick={(e) => handleAlert(e, "시즌 순위 페이지는 개발 중입니다!")} className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors cursor-pointer">순위</a>
+              <Link className="text-[#5e5e62] hover:text-[#1E90FF] transition-colors" href="/">포트폴리오 돌아가기</Link>
+            </div>
+            <div className="flex items-center space-x-6">
+              <button onClick={(e) => handleAlert(e, "로그인 기능은 준비 중입니다.")} className="text-on-surface-variant hover:opacity-80 transition-opacity">
+                <span className="material-symbols-outlined">account_circle</span>
+              </button>
+              <button onClick={(e) => handleAlert(e, "구독 서비스는 아직 오픈되지 않았습니다!")} className="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity">
+                구독하기
+              </button>
             </div>
           </div>
         </nav>
 
-        <main className="pt-32 pb-20 max-w-7xl mx-auto px-8">
-          <header className="mb-16">
+        <main className="pt-24 pb-20">
+
+          {/* Hero */}
+          <div className="max-w-7xl mx-auto px-8 mb-16">
             <span className="text-secondary label-md uppercase tracking-widest text-xs font-semibold mb-4 block">뉴스룸</span>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight max-w-3xl leading-[1.1]" style={{ letterSpacing: '-0.02em', color: 'black' }}>
-                  모터스포츠의 <span className="text-primary">정점</span>을 향한 분석.
+                모터스포츠의 <span className="text-primary">정점</span>을 향한 깊이 있는 분석.
               </h1>
-            </div>
-          </header>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mt-12">
-            {/* 메인 기사 (가장 최신 글) */}
-            {mainPost ? (
-              <Link href={`/f1/${mainPost.slug}`} className="md:col-span-8 group cursor-pointer transition-transform hover:-translate-y-1 block">
-                <div className="aspect-[21/9] rounded-3xl overflow-hidden mb-6 relative">
-                  <img style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="transition-transform duration-700 group-hover:scale-105" alt="커버" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbXh0Hu1Aj4Dwnk3dq9lC4j_a8J7Mq66XarDPUiyrzu8taMzQaDvSL6h48pttaqudSFOBF6PDWweGBeKJFeFeL6Ccj1GsIla-LT1Xeao0CUhKBmkI4uCkApNsnnyEzXfeK42xnRN6nCE5i5oBqMdi2jfdD8u3QMaZZsW_5KecZR5KYUTG6UgIY-VLN4hTBq902GIBAweOwGgmGQy5o_pBGrkIK9gzm6nbaD9YcIfCeZmU42U1Ib644m067U94IyYePG1gf3To0DtlS" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                    <span className="bg-primary text-white px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">{mainPost.category}</span>
-                  </div>
-                </div>
-                <h2 className="text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors text-[#1a1b1f]">{mainPost.title}</h2>
-                <p className="text-secondary text-lg leading-relaxed mb-6 max-w-2xl">{mainPost.description}</p>
-              </Link>
-            ) : (
-               <div className="md:col-span-8"><p className="text-secondary text-lg">아직 작성된 에디토리얼 글이 없습니다.</p></div>
-            )}
-
-            {/* 사이드바 기사들 (2, 3번째 글) */}
-            <div className="md:col-span-4 space-y-8">
-              <h3 className="text-xl font-bold border-b border-gray-200 pb-4 text-black">다른 기사 보기</h3>
-              {subPosts.map(post => (
-                <Link href={`/f1/${post.slug}`} key={post.slug} className="group cursor-pointer transition-transform hover:-translate-y-1 block">
-                  <span className="text-primary text-xs font-bold uppercase tracking-widest mb-1 block">{post.category}</span>
-                  <h4 className="font-bold text-lg leading-snug group-hover:text-primary transition-colors mb-2 text-black">{post.title}</h4>
-                  <p className="text-outline text-sm text-gray-500">{post.readTime} 소요 • {post.date}</p>
-                </Link>
-              ))}
+              <p className="text-on-surface-variant text-lg max-w-sm font-medium leading-relaxed">
+                모든 코너, 모든 기술적 혁신, 그리고 패독의 모든 루머를 분석합니다.
+              </p>
             </div>
           </div>
+
+          {/* ── Race Schedule Section ── */}
+          <section style={{ background: '#12121A', padding: '4rem 0' }}>
+            <div className="max-w-7xl mx-auto px-8">
+              <div className="flex items-center justify-between mb-8">
+                <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 레이스 캘린더</h2>
+                <a
+                  href="https://www.formula1.com/en/racing/2026.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: 'white', border: '1px solid rgba(255,255,255,0.3)',
+                    padding: '0.4rem 1.2rem', borderRadius: '999px',
+                    fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none',
+                    transition: 'background 0.2s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                >
+                  Full Schedule
+                </a>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr 1fr', gap: '16px', alignItems: 'center' }}>
+
+                {/* Previous */}
+                <a
+                  href={schedule.previous.highlightUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <div style={{
+                    position: 'relative', borderRadius: '14px', overflow: 'hidden',
+                    aspectRatio: '4/3', cursor: 'pointer', opacity: 0.75,
+                    transition: 'opacity 0.2s, transform 0.2s',
+                  }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
+                  >
+                    <img src={schedule.previous.image} alt="Japan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
+                    <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                      <div>
+                        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>Previous</p>
+                        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', margin: '2px 0 0 0' }}>ROUND {schedule.previous.round}</p>
+                      </div>
+                      <div>
+                        <p style={{ color: 'white', fontSize: '1.6rem', fontWeight: 900, letterSpacing: '-0.02em', margin: 0, lineHeight: 1 }}>{schedule.previous.name}</p>
+                        <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 600, margin: '4px 0 0 0' }}>{schedule.previous.dates}</p>
+                      </div>
+                    </div>
+                    {/* Highlight badge */}
+                    <div style={{
+                      position: 'absolute', top: '12px', right: '12px',
+                      background: '#FF0000', color: 'white',
+                      fontSize: '0.6rem', fontWeight: 800, letterSpacing: '0.05em',
+                      padding: '3px 8px', borderRadius: '4px',
+                    }}>▶ 하이라이트</div>
+                  </div>
+                </a>
+
+                {/* Next (Featured - larger) */}
+                <div style={{
+                  position: 'relative', borderRadius: '16px', overflow: 'hidden',
+                  aspectRatio: '4/3', cursor: 'default',
+                  boxShadow: '0 0 0 3px #E10600, 0 20px 60px rgba(225,6,0,0.3)',
+                }}>
+                  <img src={schedule.next.image} alt="Miami" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.4rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <p style={{ color: '#E10600', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', margin: 0 }}>Next Race</p>
+                      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', margin: '2px 0 0 0' }}>ROUND {schedule.next.round}</p>
+                    </div>
+                    <div>
+                      <p style={{ color: 'white', fontSize: '2.2rem', fontWeight: 900, letterSpacing: '-0.03em', margin: 0, lineHeight: 1 }}>{schedule.next.name}</p>
+                      <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', fontWeight: 600, margin: '6px 0 0 0' }}>{schedule.next.dates}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Upcoming */}
+                <div style={{
+                  position: 'relative', borderRadius: '14px', overflow: 'hidden',
+                  aspectRatio: '4/3', opacity: 0.75,
+                  transition: 'opacity 0.2s, transform 0.2s',
+                }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
+                >
+                  <img src={schedule.upcoming.image} alt="Canada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
+                  <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>Upcoming</p>
+                      <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.1em', margin: '2px 0 0 0' }}>ROUND {schedule.upcoming.round}</p>
+                    </div>
+                    <div>
+                      <p style={{ color: 'white', fontSize: '1.6rem', fontWeight: 900, letterSpacing: '-0.02em', margin: 0, lineHeight: 1 }}>{schedule.upcoming.name}</p>
+                      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 600, margin: '4px 0 0 0' }}>{schedule.upcoming.dates}</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* ── Highlights Section ── */}
+          <section style={{ background: '#1a1a24', padding: '4rem 0' }}>
+            <div className="max-w-7xl mx-auto px-8">
+              <div className="flex items-center justify-between mb-8">
+                <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>
+                  레이스 하이라이트
+                </h2>
+                <a
+                  href="https://www.youtube.com/@Formula1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: '#FF0000', fontSize: '0.8rem', fontWeight: 700,
+                    textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px',
+                  }}
+                >
+                  ▶ F1 공식 유튜브
+                </a>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+                {highlights.map((item, i) => (
+                  <a
+                    key={i}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div style={{
+                      borderRadius: '14px', overflow: 'hidden',
+                      background: '#252530', cursor: 'pointer',
+                      transition: 'transform 0.2s, box-shadow 0.2s',
+                    }}
+                      onMouseEnter={e => {
+                        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
+                        (e.currentTarget as HTMLDivElement).style.boxShadow = '0 12px 40px rgba(255,0,0,0.15)';
+                      }}
+                      onMouseLeave={e => {
+                        (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                        (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+                      }}
+                    >
+                      <div style={{ position: 'relative', aspectRatio: '16/9' }}>
+                        <img src={item.thumbnail} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.25)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <div style={{
+                            width: '48px', height: '48px', borderRadius: '50%',
+                            background: 'rgba(255,0,0,0.9)', display: 'flex',
+                            alignItems: 'center', justifyContent: 'center',
+                            backdropFilter: 'blur(4px)',
+                          }}>
+                            <span style={{ color: 'white', fontSize: '1.2rem', marginLeft: '3px' }}>▶</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ padding: '1rem 1.2rem' }}>
+                        <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', margin: '0 0 4px 0' }}>{item.round}</p>
+                        <p style={{ color: 'white', fontSize: '0.95rem', fontWeight: 700, margin: 0, lineHeight: 1.3 }}>{item.title}</p>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* ── Standings Snapshot ── */}
+          <section style={{ background: '#12121A', padding: '4rem 0' }}>
+            <div className="max-w-7xl mx-auto px-8">
+              <div className="flex items-center justify-between mb-8">
+                <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 챔피언십 순위</h2>
+                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Round 3 이후 기준</span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+
+                {/* Drivers */}
+                <div style={{ background: '#1e1e2a', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.06)' }}>
+                  <h3 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: '0 0 1rem 0' }}>드라이버 순위</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {standings.drivers.map((d) => (
+                      <div key={d.pos} style={{
+                        display: 'flex', alignItems: 'center', gap: '12px',
+                        padding: '10px 14px', borderRadius: '10px',
+                        background: d.pos === 1 ? 'rgba(255,255,255,0.06)' : 'transparent',
+                        transition: 'background 0.2s',
+                      }}>
+                        <span style={{
+                          color: d.pos <= 3 ? 'white' : 'rgba(255,255,255,0.4)',
+                          fontSize: '1rem', fontWeight: 900, width: '24px', textAlign: 'center',
+                        }}>{d.pos}</span>
+                        <div style={{ width: '4px', height: '28px', borderRadius: '2px', background: d.color }} />
+                        <div style={{ flex: 1 }}>
+                          <p style={{ color: 'white', fontSize: '0.9rem', fontWeight: 700, margin: 0 }}>{d.name}</p>
+                          <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', fontWeight: 500, margin: '1px 0 0 0' }}>{d.team}</p>
+                        </div>
+                        <span style={{ color: 'white', fontSize: '1rem', fontWeight: 800 }}>{d.points}</span>
+                        <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', fontWeight: 600 }}>PTS</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Constructors */}
+                <div style={{ background: '#1e1e2a', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.06)' }}>
+                  <h3 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: '0 0 1rem 0' }}>컨스트럭터 순위</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {standings.constructors.map((c) => (
+                      <div key={c.pos} style={{
+                        display: 'flex', alignItems: 'center', gap: '12px',
+                        padding: '10px 14px', borderRadius: '10px',
+                        background: c.pos === 1 ? 'rgba(255,255,255,0.06)' : 'transparent',
+                        transition: 'background 0.2s',
+                      }}>
+                        <span style={{
+                          color: c.pos <= 3 ? 'white' : 'rgba(255,255,255,0.4)',
+                          fontSize: '1rem', fontWeight: 900, width: '24px', textAlign: 'center',
+                        }}>{c.pos}</span>
+                        <div style={{ width: '4px', height: '28px', borderRadius: '2px', background: c.color }} />
+                        <div style={{ flex: 1 }}>
+                          <p style={{ color: 'white', fontSize: '0.9rem', fontWeight: 700, margin: 0 }}>{c.name}</p>
+                        </div>
+                        <div style={{
+                          flex: 1, height: '6px', borderRadius: '3px',
+                          background: 'rgba(255,255,255,0.08)',
+                          overflow: 'hidden',
+                        }}>
+                          <div style={{
+                            height: '100%', borderRadius: '3px',
+                            background: c.color,
+                            width: `${(c.points / standings.constructors[0].points) * 100}%`,
+                            transition: 'width 0.6s ease',
+                          }} />
+                        </div>
+                        <span style={{ color: 'white', fontSize: '1rem', fontWeight: 800, minWidth: '36px', textAlign: 'right' }}>{c.points}</span>
+                        <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', fontWeight: 600 }}>PTS</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          {/* ── Editorial Articles Section ── */}
+          <section className="max-w-7xl mx-auto px-8 py-20">
+            <div className="flex items-center justify-between mb-12">
+              <div>
+                <span className="text-secondary uppercase tracking-widest text-xs font-semibold mb-2 block">에디토리얼</span>
+                <h2 style={{ fontSize: '2rem', fontWeight: 800, letterSpacing: '-0.02em', color: '#1a1b1f' }}>최신 분석 아티클</h2>
+              </div>
+              <a
+                onClick={(e) => handleAlert(e, "전체 아카이브 페이지는 준비 중입니다!")}
+                style={{
+                  color: '#005cab', border: '1px solid #005cab',
+                  padding: '0.5rem 1.4rem', borderRadius: '999px',
+                  fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none',
+                  cursor: 'pointer', transition: 'all 0.2s',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#005cab'; e.currentTarget.style.color = 'white'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#005cab'; }}
+              >
+                전체 보기
+              </a>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              {articles.map((article, i) => (
+                <div
+                  key={i}
+                  onClick={(e) => handleAlert(e, "아티클 상세 페이지는 준비 중입니다!")}
+                  style={{
+                    borderRadius: '16px', overflow: 'hidden', cursor: 'pointer',
+                    background: 'white', border: '1px solid #e3e2e6',
+                    transition: 'transform 0.2s, box-shadow 0.2s',
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-6px)';
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = '0 20px 60px rgba(0,0,0,0.08)';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+                  }}
+                >
+                  <div style={{ aspectRatio: '16/10', overflow: 'hidden' }}>
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
+                      onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                      onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+                    />
+                  </div>
+                  <div style={{ padding: '1.4rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+                      <span style={{
+                        background: '#005cab', color: 'white',
+                        fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.06em',
+                        padding: '3px 10px', borderRadius: '999px', textTransform: 'uppercase',
+                      }}>{article.category}</span>
+                      <span style={{ color: '#707785', fontSize: '0.7rem', fontWeight: 500 }}>{article.readTime} 읽기</span>
+                    </div>
+                    <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#1a1b1f', margin: '0 0 8px 0', lineHeight: 1.3, letterSpacing: '-0.01em' }}>{article.title}</h3>
+                    <p style={{ color: '#707785', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>{article.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Newsletter CTA ── */}
+          <section style={{ background: 'linear-gradient(135deg, #005cab 0%, #0075d6 50%, #1E90FF 100%)', padding: '5rem 0' }}>
+            <div className="max-w-7xl mx-auto px-8 text-center">
+              <h2 style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.03em', marginBottom: '1rem' }}>
+                매주 금요일, 패독의 핵심을 받아보세요.
+              </h2>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.05rem', maxWidth: '500px', margin: '0 auto 2rem auto', lineHeight: 1.7 }}>
+                기술 분석, 드라이버 인사이트, 그리고 레이스 프리뷰를 뉴스레터로 전달합니다.
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', maxWidth: '480px', margin: '0 auto' }}>
+                <input
+                  type="email"
+                  placeholder="이메일 주소를 입력하세요"
+                  style={{
+                    flex: 1, padding: '0.8rem 1.2rem', borderRadius: '12px',
+                    border: 'none', outline: 'none', fontSize: '0.9rem',
+                    background: 'rgba(255,255,255,0.15)', color: 'white',
+                    backdropFilter: 'blur(10px)',
+                  }}
+                  onFocus={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.25)')}
+                  onBlur={e => (e.currentTarget.style.background = 'rgba(255,255,255,0.15)')}
+                />
+                <button
+                  onClick={(e) => handleAlert(e, "뉴스레터 구독 기능은 곧 오픈됩니다!")}
+                  style={{
+                    padding: '0.8rem 2rem', borderRadius: '12px',
+                    background: 'white', color: '#005cab',
+                    fontSize: '0.9rem', fontWeight: 700, border: 'none',
+                    cursor: 'pointer', transition: 'transform 0.2s',
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
+                  onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+                >
+                  구독하기
+                </button>
+              </div>
+            </div>
+          </section>
+
         </main>
+
+        {/* Footer */}
+        <footer style={{ background: '#0a0a10', padding: '3rem 0 2rem 0' }}>
+          <div className="max-w-7xl mx-auto px-8">
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', marginBottom: '2rem' }}>
+
+              {/* Brand */}
+              <div>
+                <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>F1 에디토리얼</p>
+                <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: 1.7 }}>
+                  모터스포츠의 정점을 향한 깊이 있는 분석과 인사이트를 제공합니다.
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.8rem' }}>바로가기</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {['팀', '드라이버', '서킷', '순위'].map((label) => (
+                    <a key={label} onClick={(e) => handleAlert(e, `${label} 페이지는 준비 중입니다!`)} style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}
+                      onMouseEnter={e => (e.currentTarget.style.color = 'white')}
+                      onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
+                    >{label}</a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Resources */}
+              <div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.8rem' }}>리소스</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {[
+                    { label: 'F1 공식 사이트', url: 'https://www.formula1.com' },
+                    { label: 'FIA 규정', url: 'https://www.fia.com/regulation/category/110' },
+                    { label: 'F1 유튜브', url: 'https://www.youtube.com/@Formula1' },
+                  ].map((link) => (
+                    <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                      onMouseEnter={e => (e.currentTarget.style.color = 'white')}
+                      onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
+                    >{link.label}</a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Social */}
+              <div>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.8rem' }}>소셜</p>
+                <div style={{ display: 'flex', gap: '12px' }}>
+                  {[
+                    { icon: '𝕏', url: 'https://twitter.com/F1' },
+                    { icon: 'IG', url: 'https://www.instagram.com/f1/' },
+                    { icon: 'YT', url: 'https://www.youtube.com/@Formula1' },
+                  ].map((social) => (
+                    <a key={social.icon} href={social.url} target="_blank" rel="noopener noreferrer" style={{
+                      width: '36px', height: '36px', borderRadius: '10px',
+                      background: 'rgba(255,255,255,0.08)', display: 'flex',
+                      alignItems: 'center', justifyContent: 'center',
+                      color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', fontWeight: 800,
+                      textDecoration: 'none', transition: 'all 0.2s',
+                    }}
+                      onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = 'white'; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
+                    >{social.icon}</a>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Divider & Copyright */}
+            <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
+                &copy; 2026 F1 에디토리얼. 모든 권리 보유. 이 사이트는 Formula 1과 공식적으로 관련이 없습니다.
+              </p>
+              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
+                포트폴리오 프로젝트
+              </p>
+            </div>
+          </div>
+        </footer>
+
       </div>
     </>
   );
