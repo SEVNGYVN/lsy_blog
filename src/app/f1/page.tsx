@@ -71,8 +71,8 @@ export default function Blog() {
 
   const standings = {
     drivers: [
-      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 72, color: '#00A19C' },
-      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 63, color: '#00A19C' },
+      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 72, color: '#27F4D2' },
+      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 63, color: '#27F4D2' },
       { pos: 3, name: 'Charles Leclerc', team: 'Ferrari', points: 49, color: '#E8002D' },
       { pos: 4, name: 'Lewis Hamilton', team: 'Ferrari', points: 41, color: '#E8002D' },
       { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 25, color: '#FF8000' },
@@ -387,19 +387,8 @@ export default function Blog() {
                         <div style={{ flex: 1 }}>
                           <p style={{ color: 'white', fontSize: '0.9rem', fontWeight: 700, margin: 0 }}>{c.name}</p>
                         </div>
-                        <div style={{
-                          flex: 1, height: '6px', borderRadius: '3px',
-                          background: 'rgba(255,255,255,0.08)',
-                          overflow: 'hidden',
-                        }}>
-                          <div style={{
-                            height: '100%', borderRadius: '3px',
-                            background: c.color,
-                            width: `${(c.points / standings.constructors[0].points) * 100}%`,
-                            transition: 'width 0.6s ease',
-                          }} />
-                        </div>
-                        <span style={{ color: 'white', fontSize: '1rem', fontWeight: 800, minWidth: '36px', textAlign: 'right' }}>{c.points}</span>
+                        <span style={{ color: 'white', fontSize: '1rem', fontWeight: 800 }}>{c.points}</span>
+
                         <span style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.65rem', fontWeight: 600 }}>PTS</span>
                       </div>
                     ))}
