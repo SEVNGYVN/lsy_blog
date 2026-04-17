@@ -321,7 +321,7 @@ export default function StandingsPage() {
                   {/* 팀 차량 이미지 */}
                   <div style={{
                     position: 'absolute', bottom: '0', right: '0',
-                    width: '100%', height: '100%',
+                    width: '90%', height: '60%',
                     display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end',
                   }}>
                     <img
@@ -329,7 +329,7 @@ export default function StandingsPage() {
                       alt={team.name}
                       style={{
                         width: '100%', height: '100%',
-                        objectFit: 'cover',        // contain → cover
+                        objectFit: 'contain',        // contain → cover
                         objectPosition: 'bottom right',
                       }}
                       onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
