@@ -129,7 +129,7 @@ export default function Blog() {
               <div className="flex items-center justify-between mb-8">
                 <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 F1 레이스 캘린더</h2>
                 <a
-                  href="https://www.formula1.com/en/racing/2026.html"
+                  href='/f1/circuits'
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{

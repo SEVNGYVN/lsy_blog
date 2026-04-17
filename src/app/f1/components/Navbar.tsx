@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 const navItems = [
   { label: '팀', href: '/f1/teams' },
   { label: '드라이버', href: '/f1/drivers' },
-  { label: '서킷', href: '/f1/circuits' },
+  { label: '일정', href: '/f1/circuits' },
   { label: '순위', href: '/f1/standings' },
   { label: '뉴스', href: '/f1/articles' },
   { label: '포트폴리오로 돌아가기', href: '/'}
