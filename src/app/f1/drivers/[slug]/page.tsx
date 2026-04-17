@@ -228,8 +228,9 @@ function StatCell({ label, value }: { label: string; value: string | number }) {
 /* ───────────────────────────────────────────
    메인 페이지
 ─────────────────────────────────────────── */
-export default function DriverDetailPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug.toUpperCase();
+export default async function DriverDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug: rawSlug } = await params;
+  const slug = rawSlug.toUpperCase();
   const driver = driversData[slug];
 
   if (!driver) {
