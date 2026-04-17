@@ -30,13 +30,17 @@ const drivers = [
 
 export default function DriversPage() {
   return (
+    
     <div style={{ minHeight: '100vh', background: '#f0f0f0', paddingTop: '80px' }}>
       <Navbar />
-      <div style={{ background: '#12121A', padding: '3rem 2rem', textAlign: 'center' }}>
+      <div style={{ background: '#12121A', padding: '3rem 2rem 1rem 2rem', maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ borderTop: '4px solid #e10600', marginBottom: '2rem' }} />
         {/*<Link href="/f1" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           ← F1 에디토리얼
         </Link>*/}
-        <h1 style={{ color: 'white', fontSize: '3rem', fontWeight: 900, letterSpacing: '-0.02em', marginTop: '1rem' }}>
+        <h1 style={{
+    color: 'white', fontSize: '3rem', fontWeight: 900,
+    letterSpacing: '-0.03em', margin: '0 0 2rem 0', fontFamily: "'Inter', sans-serif",}}>
           2026 F1 DRIVERS
         </h1>
       </div>
