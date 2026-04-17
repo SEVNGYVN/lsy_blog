@@ -36,7 +36,7 @@ export default function TeamsPage() {
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gap: '12px',
-        padding: '12px',
+        padding: '2rem',
         maxWidth: '1100px',
         margin: '0 auto',
       }}>
