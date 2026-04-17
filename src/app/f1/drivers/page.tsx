@@ -31,7 +31,7 @@ const drivers = [
 export default function DriversPage() {
   return (
     
-    <div style={{ minHeight: '100vh', background: '#f0f0f0', paddingTop: '80px' }}>
+    <div style={{ minHeight: '100vh', background: '#0e0e16', paddingTop: '64px' }}>
       <Navbar />
       <div style={{ background: '#12121A', padding: '3rem 2rem 1rem 2rem', maxWidth: '1280px', margin: '0 auto' }}>
         <div style={{ borderTop: '4px solid #e10600', marginBottom: '2rem' }} />
