@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../components/Navbar';
 
 const drivers = [
-  { slug: 'driver/LEC', firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', number: 16, color: '#DC0000', image: '/F_LEC.png' },
+  { slug: 'drivers/[slug]/page.tsx', firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', number: 16, color: '#DC0000', image: '/F_LEC.png' },
   { slug: 'driver/HAM', firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', number: 44, color: '#DC0000', image: '/F_HAM.png' },
   { slug: 'driver/RUS', firstName: 'George', lastName: 'Russell', team: 'Mercedes', number: 63, color: '#00A19C', image: '/M_RUS.png' },
   { slug: 'driver/ANT', firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', number: 12, color: '#00A19C', image: '/M_ANT.png' },
