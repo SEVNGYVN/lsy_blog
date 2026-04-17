@@ -12,8 +12,8 @@ import Navbar from '../components/Navbar';
    ─────────────────────────────────────────── */
 const driverStandings = [
   { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: '🇮🇹' },
-  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS.png', flag: '🇬🇧' },
-  { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC.png', flag: '🇲🇨' },
+  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS_NB.png', flag: '🇬🇧' },
+  { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC_NB.png', flag: '🇲🇨' },
   { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM.png', flag: '🇬🇧' },
   { pos: 5, firstName: 'Lando', lastName: 'Norris', team: 'McLaren', points: 25, color: '#FF8000', image: '/ML_NOR.png', flag: '🇬🇧' },
   { pos: 6, firstName: 'Oscar', lastName: 'Piastri', team: 'McLaren', points: 21, color: '#FF8000', image: '/ML_PIA.png', flag: '🇦🇺' },
@@ -286,7 +286,7 @@ export default function StandingsPage() {
               const isFirst = team.pos === 1;
               return (
                 <div key={team.pos} style={{
-                  background: `linear-gradient(135deg, ${team.color} 0%, #0e0e16 100%)`,
+                  background: `linear-gradient(180deg, ${driver.color} 0%, #0e0e16 100%)`,
                   borderRadius: '20px',
                   overflow: 'hidden',
                   position: 'relative',
