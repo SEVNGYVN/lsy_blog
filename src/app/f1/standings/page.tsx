@@ -320,7 +320,7 @@ export default function StandingsPage() {
 
                   {/* 팀 차량 이미지 */}
                   <div style={{
-                    position: 'absolute', bottom: '30px', right: '-10px',
+                    position: 'absolute', bottom: '50px', right: '5px',
                     width: '90%', height: '60%',
                     display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end',
                   }}>
