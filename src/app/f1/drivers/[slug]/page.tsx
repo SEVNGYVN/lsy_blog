@@ -60,14 +60,14 @@ const driversData: Record<string, {
   },
   RUS: {
     firstName: 'George', lastName: 'Russell',
-    team: 'Mercedes', number: 63, color: '#00A19C',
+    team: 'Mercedes', number: 63, color: '#38d2b8',
     image: '/M_RUS.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '2nd', points: 63, races: 3, gpPoints: 53, wins: 1, podiums: 2, poles: 1, top10s: 3, fastestLaps: 0, dnfs: 0, sprintRaces: 1, sprintPoints: 10, sprintWins: 1, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 120, careerPoints: 1021, highestRaceFinish: '1 (x11)', podiums: 28, highestGridPosition: '1 (x10)', polePositions: 10, worldChampionships: 0, dnfs: 12 },
   },
   ANT: {
     firstName: 'Kimi', lastName: 'Antonelli',
-    team: 'Mercedes', number: 12, color: '#00A19C',
+    team: 'Mercedes', number: 12, color: '#38d2b8',
     image: '/M_ANT.png', flag: '🇮🇹', nationality: 'Italian',
     season: { position: '1st', points: 72, races: 3, gpPoints: 62, wins: 2, podiums: 3, poles: 1, top10s: 3, fastestLaps: 1, dnfs: 0, sprintRaces: 1, sprintPoints: 10, sprintWins: 1, sprintPodiums: 1, sprintPoles: 1, sprintTop10s: 1 },
     career: { grandPrixEntered: 3, careerPoints: 72, highestRaceFinish: '1 (x2)', podiums: 3, highestGridPosition: '1 (x1)', polePositions: 1, worldChampionships: 0, dnfs: 0 },
@@ -88,7 +88,7 @@ const driversData: Record<string, {
   },
   VER: {
     firstName: 'Max', lastName: 'Verstappen',
-    team: 'Red Bull Racing', number: 3, color: '#152E52',
+    team: 'Red Bull Racing', number: 3, color: '#3671C6',
     image: '/R_VER.png', flag: '🇳🇱', nationality: 'Dutch',
     season: { position: '7th', points: 18, races: 3, gpPoints: 11, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 1, dnfs: 0, sprintRaces: 1, sprintPoints: 7, sprintWins: 0, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 212, careerPoints: 3014, highestRaceFinish: '1 (x62)', podiums: 112, highestGridPosition: '1 (x40)', polePositions: 40, worldChampionships: 4, dnfs: 22 },
@@ -102,7 +102,7 @@ const driversData: Record<string, {
   },
   GAS: {
     firstName: 'Pierre', lastName: 'Gasly',
-    team: 'Alpine', number: 10, color: '#005073',
+    team: 'Alpine', number: 10, color: '#0090FF',
     image: '/A_GAS.png', flag: '🇫🇷', nationality: 'French',
     season: { position: '10th', points: 12, races: 3, gpPoints: 12, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 0, dnfs: 0, sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 170, careerPoints: 432, highestRaceFinish: '1 (x1)', podiums: 4, highestGridPosition: '1 (x1)', polePositions: 1, worldChampionships: 0, dnfs: 19 },

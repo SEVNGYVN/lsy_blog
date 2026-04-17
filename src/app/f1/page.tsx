@@ -61,7 +61,7 @@ export default function Blog() {
       { pos: 2, name: 'Ferrari', points: 90, color: '#E8002D' },
       { pos: 3, name: 'McLaren', points: 46, color: '#FF8000' },
       { pos: 4, name: 'Haas F1 Team', points: 18, color: '#5E6D75' },
-      { pos: 5, name: 'Alpine', points: 16, color: '#005073' },
+      { pos: 5, name: 'Alpine', points: 16, color: '#0090FF' },
     ],
   };
 
