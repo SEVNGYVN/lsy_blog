@@ -54,7 +54,7 @@ export default function DriversPage() {
         margin: '0 auto',
       }}>
         {drivers.map((driver) => (
-          <Link key={driver.slug} href={`/f1/${driver.slug}`} style={{ textDecoration: 'none' }}>
+          <Link key={driver.slug} href={`/f1/driver/${driver.slug}`} style={{ textDecoration: 'none' }}>
             <div
               style={{
                 borderRadius: '16px',
