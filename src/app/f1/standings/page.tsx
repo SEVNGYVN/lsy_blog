@@ -137,7 +137,7 @@ export default function StandingsPage() {
               const isFirst = driver.pos === 1;
               return (
                 <div key={driver.pos} style={{
-                  background: driver.color,
+                  background: `linear-gradient(135deg, ${driver.color} 0%, #0e0e16 100%)`,
                   borderRadius: '20px',
                   overflow: 'hidden',
                   position: 'relative',
