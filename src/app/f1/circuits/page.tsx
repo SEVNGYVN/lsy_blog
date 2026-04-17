@@ -189,7 +189,7 @@ export default function CircuitPage() {
           color: 'white', fontSize: '3rem', fontWeight: 900,
           letterSpacing: '-0.03em', margin: '0 0 0.5rem 0',
         }}>
-          2026 RACE CALENDAR
+          2026 F1 RACE CALENDAR
         </h1>
         <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', fontWeight: 600, margin: '0 0 2rem 0' }}>
           21 ROUNDS · 2026 SEASON
