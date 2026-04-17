@@ -286,7 +286,7 @@ export default function StandingsPage() {
               const isFirst = team.pos === 1;
               return (
                 <div key={team.pos} style={{
-                  background: `linear-gradient(180deg, ${driver.color} 0%, #0e0e16 100%)`,
+                  background: `linear-gradient(180deg, ${team.color} 0%, #0e0e16 100%)`,
                   borderRadius: '20px',
                   overflow: 'hidden',
                   position: 'relative',
