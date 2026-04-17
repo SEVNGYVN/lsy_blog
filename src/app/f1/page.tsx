@@ -128,8 +128,8 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-8">
               <div className="flex items-center justify-between mb-8">
                 <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 F1 레이스 캘린더</h2>
-                <a
-                  href='/f1/circuits'
+                <Link
+                  href="/f1/circuits"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -142,7 +142,7 @@ export default function Blog() {
                   onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
                 >
                   전체 일정
-                </a>
+                </Link>
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr 1fr', gap: '16px', alignItems: 'center' }}>
