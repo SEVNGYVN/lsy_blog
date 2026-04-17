@@ -39,17 +39,17 @@ const driverStandings = [
    팀(컨스트럭터) 순위 데이터 (1~11위)
    ─────────────────────────────────────────── */
 const teamStandings = [
-  { pos: 1, name: 'Mercedes', points: 135, color: '#38d2b8', image: '/M_CAR.png', drivers: 'Antonelli · Russell' },
-  { pos: 2, name: 'Ferrari', points: 90, color: '#DC0000', image: '/F_CAR.png', drivers: 'Leclerc · Hamilton' },
-  { pos: 3, name: 'McLaren', points: 46, color: '#FF8000', image: '/ML_CAR.png', drivers: 'Norris · Piastri' },
-  { pos: 4, name: 'Haas F1 Team', points: 18, color: '#5E6D75', image: '/H_CAR.png', drivers: 'Ocon · Bearman' },
-  { pos: 5, name: 'Alpine', points: 16, color: '#005073', image: '/A_CAR.png', drivers: 'Gasly · Colapinto' },
-  { pos: 6, name: 'Red Bull Racing', points: 16, color: '#152E52', image: '/R_CAR.png', drivers: 'Verstappen · Hadjar' },
-  { pos: 7, name: 'Racing Bulls', points: 14, color: '#003BD1', image: '/RB_CAR.png', drivers: 'Lawson · Lindblad' },
-  { pos: 8, name: 'Audi', points: 2, color: '#7D1600', image: '/AD_CAR.png', drivers: 'Hülkenberg · Bortoleto' },
-  { pos: 9, name: 'Williams', points: 2, color: '#061D3D', image: '/W_CAR.png', drivers: 'Sainz · Albon' },
-  { pos: 10, name: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_CAR.png', drivers: 'Pérez · Bottas' },
-  { pos: 11, name: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_CAR.png', drivers: 'Alonso · Stroll' },
+  { pos: 1, name: 'Mercedes', points: 135, color: '#38d2b8', image: '/M_CAR_NB.png', drivers: 'Antonelli · Russell' },
+  { pos: 2, name: 'Ferrari', points: 90, color: '#DC0000', image: '/F_CAR_NB.png', drivers: 'Leclerc · Hamilton' },
+  { pos: 3, name: 'McLaren', points: 46, color: '#FF8000', image: '/ML_CAR_NB.png', drivers: 'Norris · Piastri' },
+  { pos: 4, name: 'Haas F1 Team', points: 18, color: '#5E6D75', image: '/H_CAR_NB.png', drivers: 'Ocon · Bearman' },
+  { pos: 5, name: 'Alpine', points: 16, color: '#0090FF', image: '/A_CAR_NB.png', drivers: 'Gasly · Colapinto' },
+  { pos: 6, name: 'Red Bull Racing', points: 16, color: '#3671C6', image: '/R_CAR_NB.png', drivers: 'Verstappen · Hadjar' },
+  { pos: 7, name: 'Racing Bulls', points: 14, color: '#003BD1', image: '/RB_CAR_NB.png', drivers: 'Lawson · Lindblad' },
+  { pos: 8, name: 'Audi', points: 2, color: '#7D1600', image: '/AD_CAR_NB.png', drivers: 'Hülkenberg · Bortoleto' },
+  { pos: 9, name: 'Williams', points: 2, color: '#041E3C', image: '/W_CAR_NB.png', drivers: 'Sainz · Albon' },
+  { pos: 10, name: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_CAR_NB.png', drivers: 'Pérez · Bottas' },
+  { pos: 11, name: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_CAR_NB.png', drivers: 'Alonso · Stroll' },
 ];
 
 /* ───────────────────────────────────────────
@@ -320,8 +320,8 @@ export default function StandingsPage() {
 
                   {/* 팀 차량 이미지 */}
                   <div style={{
-                    position: 'absolute', bottom: '50px', right: '-20px',
-                    width: '80%', height: '50%',
+                    position: 'absolute', bottom: '0', right: '0',
+                    width: '100%', height: '100%',
                     display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end',
                   }}>
                     <img
@@ -329,7 +329,8 @@ export default function StandingsPage() {
                       alt={team.name}
                       style={{
                         width: '100%', height: '100%',
-                        objectFit: 'contain', objectPosition: 'bottom right',
+                        objectFit: 'cover',        // contain → cover
+                        objectPosition: 'bottom right',
                       }}
                       onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                     />
