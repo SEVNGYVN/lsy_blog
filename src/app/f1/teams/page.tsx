@@ -22,6 +22,7 @@ export default function TeamsPage() {
     <div style={{ minHeight: '100vh', background: '#f0f0f0', paddingTop: '64px' }}>
       <Navbar />
       <div style={{ background: '#12121A', padding: '3rem 2rem 1rem 2rem', maxWidth: '1280px', margin: '0 auto' }}>
+        <div style={{ borderTop: '4px solid #e10600', marginBottom: '2rem' }} />
         {/*<Link href="/f1" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', textDecoration: 'none', letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           ← F1 에디토리얼
         </Link>*/}
