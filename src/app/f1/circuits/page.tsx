@@ -50,7 +50,7 @@ const races = [
   {
     round: 5, name: 'Canada', flag: '🇨🇦',
     fullName: 'FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026',
-    dates: '22 – 24 MAY', status: 'next',
+    dates: '22 – 24 MAY', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
     podium: null,
   },
