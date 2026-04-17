@@ -130,8 +130,6 @@ export default function Blog() {
                 <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 F1 레이스 캘린더</h2>
                 <Link
                   href="/f1/circuits"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   style={{
                     color: 'white', border: '1px solid rgba(255,255,255,0.3)',
                     padding: '0.4rem 1.2rem', borderRadius: '999px',
