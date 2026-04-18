@@ -1,20 +1,11 @@
 "use client";
 
 import { useState } from 'react';
+import { use } from 'react';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import { raceEvents } from '../data';
-
-const sessionIcons: Record<string, string> = {
-  'PRACTICE 1': '🏎',
-  'PRACTICE 2': '🏎',
-  'PRACTICE 3': '🏎',
-  'SPRINT QUALIFYING': '⚡',
-  'SPRINT': '⚡',
-  'QUALIFYING': '⏱',
-  'RACE': '🏁',
-};
 
 const resultTypeLabels: Record<string, string> = {
   race: 'Race Result',
@@ -22,9 +13,13 @@ const resultTypeLabels: Record<string, string> = {
   sprint: 'Sprint',
 };
 
-export default function RaceDetailPage({ params }: { params: { slug: string } }) {
-  const event = raceEvents.find(e => e.slug === params.slug);
-  if (!event) notFound();
+export default function RaceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = use(params);
+  const pathname = usePathname();
+
+  // slug를 params에서 가져오거나, 안 되면 pathname에서 추출
+  const slug = resolvedParams?.slug || pathname?.split('/').pop() || '';
+  const event = raceEvents.find(e => e.slug === slug);
 
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     schedule: true,
@@ -38,6 +33,21 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
   const toggleSection = (key: string) => {
     setOpenSections(prev => ({ ...prev, [key]: !prev[key] }));
   };
+
+  if (!event) {
+    return (
+      <>
+        <Navbar />
+        <div style={{ minHeight: '100vh', background: '#f5f5f0', fontFamily: 'Inter, sans-serif', display: 'flex', alignItems: 'center', justifyContent: 'center', paddingTop: '64px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h1 style={{ fontSize: '2rem', fontWeight: 900, color: '#1a1b1f', marginBottom: '1rem' }}>레이스를 찾을 수 없습니다</h1>
+            <p style={{ color: '#707785', marginBottom: '2rem' }}>해당 레이스 데이터가 아직 준비되지 않았습니다.</p>
+            <Link href="/f1/schedule" style={{ color: '#005cab', fontWeight: 700, textDecoration: 'none' }}>← 일정으로 돌아가기</Link>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   const availableResultTypes = event.results
     ? (Object.keys(event.results) as ('race' | 'qualifying' | 'sprint')[])
@@ -124,7 +134,6 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
             background: 'white', borderRadius: '20px', overflow: 'hidden',
             boxShadow: '0 2px 20px rgba(0,0,0,0.06)', marginBottom: '1.5rem',
           }}>
-            {/* 섹션 헤더 (클릭으로 접기/펼치기) */}
             <button
               onClick={() => toggleSection('schedule')}
               style={{
@@ -153,7 +162,6 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                     padding: '1.25rem 2rem',
                     borderBottom: i < event.sessions.length - 1 ? '1px solid #f5f5f5' : 'none',
                   }}>
-                    {/* 날짜 */}
                     <div style={{ minWidth: '60px', marginRight: '1.5rem' }}>
                       <div style={{ fontSize: '1.5rem', fontWeight: 900, color: '#1a1b1f', lineHeight: 1 }}>
                         {session.day}
@@ -162,14 +170,8 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                         {session.month}
                       </div>
                     </div>
-
-                    {/* 구분선 */}
                     <div style={{ width: '1px', height: '40px', background: '#e3e2e6', marginRight: '1.5rem' }} />
-
-                    {/* 체커기 아이콘 */}
                     <div style={{ fontSize: '1.1rem', marginRight: '1rem', opacity: 0.6 }}>🏁</div>
-
-                    {/* 세션명 + 시간 */}
                     <div style={{ flex: 1 }}>
                       <div style={{
                         fontSize: '1rem', fontWeight: 800, color: '#1a1b1f',
@@ -214,11 +216,8 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
 
             {openSections.circuit && (
               <div>
-                {/* 빨간 줄 장식 */}
                 <div style={{ height: '4px', background: 'linear-gradient(90deg, #DC0000 0%, #ff4444 80%, transparent 100%)', margin: '0 2rem' }} />
-
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0', padding: '2rem' }}>
-                  {/* 서킷 이미지 */}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
                     <img
                       src={event.circuit.image}
@@ -233,18 +232,13 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                       }}
                     />
                   </div>
-
-                  {/* 서킷 스탯 */}
                   <div style={{ borderLeft: '1px solid #f0f0f0', paddingLeft: '2rem' }}>
-                    {/* Circuit Length */}
                     <div style={{ marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid #f5f5f5' }}>
                       <div style={{ fontSize: '0.75rem', color: '#707785', fontWeight: 600, marginBottom: '6px' }}>Circuit Length</div>
                       <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#1a1b1f', letterSpacing: '-0.02em' }}>
                         {event.circuit.length}
                       </div>
                     </div>
-
-                    {/* First GP + Laps */}
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: '1px solid #f5f5f5' }}>
                       <div>
                         <div style={{ fontSize: '0.75rem', color: '#707785', fontWeight: 600, marginBottom: '6px' }}>First Grand Prix</div>
@@ -255,8 +249,6 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                         <div style={{ fontSize: '1.6rem', fontWeight: 900, color: '#1a1b1f' }}>{event.circuit.numberOfLaps}</div>
                       </div>
                     </div>
-
-                    {/* Fastest Lap + Race Distance */}
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                       <div>
                         <div style={{ fontSize: '0.75rem', color: '#707785', fontWeight: 600, marginBottom: '6px' }}>Fastest lap time</div>
@@ -304,7 +296,6 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
 
               {openSections.results && (
                 <div>
-                  {/* 결과 타입 탭 */}
                   <div style={{ padding: '1rem 2rem 0', display: 'flex', justifyContent: 'flex-end' }}>
                     <div style={{
                       display: 'inline-flex', background: '#f5f5f0', borderRadius: '999px',
@@ -329,10 +320,8 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                     </div>
                   </div>
 
-                  {/* 결과 테이블 */}
                   <div style={{ padding: '1rem 2rem 0' }}>
                     <div style={{ background: '#fafafa', borderRadius: '16px', overflow: 'hidden', border: '1px solid #f0f0f0' }}>
-                      {/* 헤더 */}
                       <div style={{
                         display: 'grid', gridTemplateColumns: '60px 1fr 160px 80px',
                         padding: '0.75rem 1.5rem', borderBottom: '1px solid #e8e8e8',
@@ -341,12 +330,11 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                           <div key={i} style={{
                             fontSize: '0.7rem', fontWeight: 700, color: '#aaa',
                             letterSpacing: '0.08em',
-                            textAlign: i >= 2 ? 'right' : 'left',
+                            textAlign: i >= 2 ? 'right' as const : 'left' as const,
                           }}>{h}</div>
                         ))}
                       </div>
 
-                      {/* 결과 행 */}
                       {displayedResults.map((result, i) => (
                         <div key={i} style={{
                           display: 'grid', gridTemplateColumns: '60px 1fr 160px 80px',
@@ -360,7 +348,6 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                           }}>{result.pos}</div>
 
                           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            {/* 팀 컬러 인디케이터 */}
                             <div style={{
                               width: '4px', height: '32px', borderRadius: '2px',
                               background: result.teamColor,
@@ -377,20 +364,19 @@ export default function RaceDetailPage({ params }: { params: { slug: string } })
                           </div>
 
                           <div style={{
-                            fontSize: '0.9rem', fontWeight: 600, 
-                            textAlign: 'right',
+                            fontSize: '0.9rem', fontWeight: 600,
+                            textAlign: 'right' as const,
                             color: result.time === 'DNF' ? '#DC0000' : '#1a1b1f',
                           }}>{result.time}</div>
 
                           <div style={{
                             fontSize: '1rem', fontWeight: 800, color: '#1a1b1f',
-                            textAlign: 'right',
+                            textAlign: 'right' as const,
                           }}>{result.points > 0 ? result.points : '-'}</div>
                         </div>
                       ))}
                     </div>
 
-                    {/* Show all 버튼 */}
                     {currentResults.length > 5 && (
                       <div style={{ display: 'flex', justifyContent: 'center', padding: '1.5rem 0' }}>
                         <button
