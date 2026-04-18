@@ -58,7 +58,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Frédéric Vasseur',
     powerUnit: 'Ferrari',
     firstEntry: 1950,
-    carImage: '/F_CAR.png',
+    carImage: '/F_CAR_NB.png',
     drivers: [
       { slug: 'LEC', firstName: 'Charles', lastName: 'Leclerc', number: 16, image: '/F_LEC.png', flag: '🇲🇨', nationality: 'Monégasque' },
       { slug: 'HAM', firstName: 'Lewis', lastName: 'Hamilton', number: 44, image: '/F_HAM.png', flag: '🇬🇧', nationality: 'British' },
@@ -75,7 +75,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Toto Wolff',
     powerUnit: 'Mercedes',
     firstEntry: 1970,
-    carImage: '/M_CAR.png',
+    carImage: '/M_CAR_NB.png',
     drivers: [
       { slug: 'RUS', firstName: 'George', lastName: 'Russell', number: 63, image: '/M_RUS.png', flag: '🇬🇧', nationality: 'British' },
       { slug: 'ANT', firstName: 'Kimi', lastName: 'Antonelli', number: 12, image: '/M_ANT.png', flag: '🇮🇹', nationality: 'Italian' },
@@ -92,7 +92,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Andrea Stella',
     powerUnit: 'Mercedes',
     firstEntry: 1966,
-    carImage: '/ML_CAR.png',
+    carImage: '/ML_CAR_NB.png',
     drivers: [
       { slug: 'NOR', firstName: 'Lando', lastName: 'Norris', number: 4, image: '/ML_NOR.png', flag: '🇬🇧', nationality: 'British' },
       { slug: 'PIA', firstName: 'Oscar', lastName: 'Piastri', number: 81, image: '/ML_PIA.png', flag: '🇦🇺', nationality: 'Australian' },
@@ -109,7 +109,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Laurent Mekies',
     powerUnit: 'Red Bull Ford',
     firstEntry: 1997,
-    carImage: '/R_CAR.png',
+    carImage: '/R_CAR_NB.png',
     drivers: [
       { slug: 'VER', firstName: 'Max', lastName: 'Verstappen', number: 3, image: '/R_VER.png', flag: '🇳🇱', nationality: 'Dutch' },
       { slug: 'HAD', firstName: 'Isack', lastName: 'Hadjar', number: 6, image: '/R_HAD.png', flag: '🇫🇷', nationality: 'French' },
@@ -126,7 +126,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Flavio Briatore',
     powerUnit: 'Mercedes',
     firstEntry: 1986,
-    carImage: '/A_CAR.png',
+    carImage: '/A_CAR_NB.png',
     drivers: [
       { slug: 'GAS', firstName: 'Pierre', lastName: 'Gasly', number: 10, image: '/A_GAS.png', flag: '🇫🇷', nationality: 'French' },
       { slug: 'COL', firstName: 'Franco', lastName: 'Colapinto', number: 43, image: '/A_COL.png', flag: '🇦🇷', nationality: 'Argentine' },
@@ -143,7 +143,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'James Vowles',
     powerUnit: 'Mercedes',
     firstEntry: 1978,
-    carImage: '/W_CAR.png',
+    carImage: '/W_CAR_NB.png',
     drivers: [
       { slug: 'SAI', firstName: 'Carlos', lastName: 'Sainz', number: 55, image: '/W_SAI.png', flag: '🇪🇸', nationality: 'Spanish' },
       { slug: 'ALB', firstName: 'Alexander', lastName: 'Albon', number: 23, image: '/W_ALB.png', flag: '🇹🇭', nationality: 'Thai' },
@@ -160,7 +160,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Ayao Komatsu',
     powerUnit: 'Ferrari',
     firstEntry: 2016,
-    carImage: '/H_CAR.png',
+    carImage: '/H_CAR_NB.png',
     drivers: [
       { slug: 'OCO', firstName: 'Esteban', lastName: 'Ocon', number: 31, image: '/H_OCO.png', flag: '🇫🇷', nationality: 'French' },
       { slug: 'BEA', firstName: 'Oliver', lastName: 'Bearman', number: 87, image: '/H_BEA.png', flag: '🇬🇧', nationality: 'British' },
@@ -177,7 +177,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Alan Permane',
     powerUnit: 'Red Bull Ford ',
     firstEntry: 1985,
-    carImage: '/RB_CAR.png',
+    carImage: '/RB_CAR_NB.png',
     drivers: [
       { slug: 'LAW', firstName: 'Liam', lastName: 'Lawson', number: 30, image: '/RB_LAW.png', flag: '🇳🇿', nationality: 'New Zealander' },
       { slug: 'LIN', firstName: 'Arvid', lastName: 'Lindblad', number: 41, image: '/RB_LIN.png', flag: '🇬🇧', nationality: 'British' },
@@ -194,7 +194,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Mattia Binotto',
     powerUnit: 'Audi',
     firstEntry: 2026,
-    carImage: '/AD_CAR.png',
+    carImage: '/AD_CAR_NB.png',
     drivers: [
       { slug: 'HUL', firstName: 'Nico', lastName: 'Hülkenberg', number: 27, image: '/AD_HUL.png', flag: '🇩🇪', nationality: 'German' },
       { slug: 'BOR', firstName: 'Gabriel', lastName: 'Bortoleto', number: 5, image: '/AD_BOR.png', flag: '🇧🇷', nationality: 'Brazilian' },
@@ -211,7 +211,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Adrian Newey',
     powerUnit: 'Honda',
     firstEntry: 2018  ,
-    carImage: '/AM_CAR.png',
+    carImage: '/AM_CAR_NB.png',
     drivers: [
       { slug: 'ALO', firstName: 'Fernando', lastName: 'Alonso', number: 14, image: '/AM_ALO.png', flag: '🇪🇸', nationality: 'Spanish' },
       { slug: 'STR', firstName: 'Lance', lastName: 'Stroll', number: 18, image: '/AM_STR.png', flag: '🇨🇦', nationality: 'Canadian' },
@@ -228,7 +228,7 @@ const teamsData: Record<string, {
     teamPrincipal: 'Graeme Lowdon',
     powerUnit: 'Ferrari',
     firstEntry: 2026,
-    carImage: '/C_CAR.png',
+    carImage: '/C_CAR_NB.png',
     drivers: [
       { slug: 'PER', firstName: 'Sergio', lastName: 'Pérez', number: 11, image: '/C_PER.png', flag: '🇲🇽', nationality: 'Mexican' },
       { slug: 'BOT', firstName: 'Valtteri', lastName: 'Bottas', number: 77, image: '/C_BOT.png', flag: '🇫🇮', nationality: 'Finnish' },
@@ -295,16 +295,17 @@ function DriverCard({ driver, teamColor }: {
         }}
       >
         {/* 드라이버 정보 */}
-        <div style={{ position: 'relative', zIndex: 2, padding: '1.5rem' }}>
+
+        {/*<div style={{ position: 'relative', zIndex: 2, padding: '1.5rem' }}>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.75rem', fontWeight: 500, margin: '0 0 4px 0' }}>
             {driver.firstName}
           </p>
           <p style={{ color: 'white', fontSize: '1.6rem', fontWeight: 900, margin: '0 0 4px 0', letterSpacing: '-0.02em' }}>
             {driver.lastName}
-          </p>
+          </p>*/}
 
           {/* 등번호 */}
-          <p style={{
+{/*          <p style={{
             color: 'white', fontSize: '3rem', fontWeight: 900,
             margin: '0.5rem 0 0 0', opacity: 0.9,
             letterSpacing: '-0.03em',
@@ -312,13 +313,14 @@ function DriverCard({ driver, teamColor }: {
           }}>
             {driver.number}
           </p>
-
+*/}
           {/* 국기 */}
+{/*
           <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem' }}>
             <span style={{ fontSize: '1.5rem' }}>{driver.flag}</span>
           </div>
         </div>
-
+*/}
         {/* 드라이버 이미지 */}
         <div style={{
           position: 'absolute', inset: 0, /*right: '-10px', bottom: 0,
@@ -375,11 +377,30 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ slu
 
       {/* ── 히어로 배너 ── */}
       <div style={{
-        background: `linear-gradient(135deg, ${team.color} 0%, #0e0e16 60%)`,
-        position: 'relative', overflow: 'hidden', minHeight: '320px',
+        background: `linear-gradient(180deg, ${team.color} 0%, ${team.color}99 40%, #1a0000 70%, #0e0e16 100%)`,
+        position: 'relative', overflow: 'hidden', minHeight: '420px',
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
       }}>
+        {/* 차량 이미지 - 상단 중앙 */}
+<div style={{
+  display: 'flex', justifyContent: 'center', alignItems: 'center',
+  padding: '2rem 2rem 0 2rem',
+  position: 'relative', zIndex: 2,
+}}>
+  <img
+    src={team.carImage}
+    alt={`${team.name} car`}
+    style={{
+      width: '70%', maxWidth: '800px',
+      objectFit: 'contain',
+      filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.5))',
+    }}
+    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+  />
+</div>
+        {/* 팀 이름 + 드라이버 중앙 정렬 */}
         <div style={{
-          maxWidth: '1280px', margin: '0 auto', padding: '3rem 2rem',
+          textAlign: 'center', padding: '3rem 2rem',
           position: 'relative', zIndex: 2,
         }}>
           {/* 뒤로가기 */}
@@ -395,53 +416,57 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ slu
           >
             ← 팀 목록으로
           </Link> */}
-
+          {/* 팀 이름 */}
           <h1 style={{
-            color: 'white', fontSize: '4rem', fontWeight: 900,
-            letterSpacing: '-0.03em', margin: '0', lineHeight: 1,
+            color: 'white', fontSize: '5rem', fontWeight: 900,
+            letterSpacing: '0.05em', margin: '0 0 1rem 0',
             textTransform: 'uppercase',
+            textShadow: '0 2px 20px rgba(0,0,0,0.5)',
           }}>
             {team.name}
           </h1>
 
-          {/* 팀 정보 태그 */}
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1.2rem', flexWrap: 'wrap' }}>
-            {[
-              { label: 'Base', value: team.base },
-              { label: 'Team Principal', value: team.teamPrincipal },
-              { label: 'Power Unit', value: team.powerUnit },
-              { label: 'First Entry', value: team.firstEntry },
-            ].map(item => (
-              <div key={item.label} style={{
-                background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(8px)',
-                borderRadius: '10px', padding: '0.6rem 1rem',
-              }}>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontWeight: 600, margin: '0 0 2px 0', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                  {item.label}
-                </p>
-                <p style={{ color: 'white', fontSize: '0.85rem', fontWeight: 700, margin: 0 }}>
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          {/* 드라이버 이름 */}
+          <p style={{
+            color: 'rgba(255,255,255,0.85)', fontSize: '1rem',
+            fontWeight: 500, margin: '0 0 1rem 0',
+            letterSpacing: '0.05em',
+          }}>
+            {team.drivers[0].firstName} {team.drivers[0].lastName}
+            <span style={{ margin: '0 1rem', opacity: 0.4 }}>|</span>
+            {team.drivers[1].firstName} {team.drivers[1].lastName}
+          </p>
         </div>
 
-        {/* 팀 차량 이미지 (배경) */}
-        <div style={{
-          position: 'absolute', right: '0', bottom: '-20px',
-          width: '55%', height: '120%', zIndex: 1,
-          opacity: 0.3,
-        }}>
-          <img
-            src={team.carImage}
-            alt={`${team.name} car`}
-            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center right' }}
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
-          />
-        </div>
-      </div>
+          {/* 팀 정보 태그 - 하단 */}
+   <div style={{
+     display: 'flex', justifyContent: 'center', gap: '1.5rem',
+     padding: '0 2rem 2.5rem 2rem', flexWrap: 'wrap',
+     position: 'relative', zIndex: 2,
+   }}>
+     {[
+       { label: 'Base', value: team.base },
+       { label: 'Team Principal', value: team.teamPrincipal },
+       { label: 'Power Unit', value: team.powerUnit },
+       { label: 'First Entry', value: team.firstEntry },
+     ].map(item => (
+       <div key={item.label} style={{
+         background: 'rgba(0,0,0,0.3)', backdropFilter: 'blur(8px)',
+         borderRadius: '10px', padding: '0.6rem 1rem',
+         border: '1px solid rgba(255,255,255,0.15)',
+       }}>
+         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.65rem', fontWeight: 600, margin: '0 0 2px 0', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+           {item.label}
+         </p>
+         <p style={{ color: 'white', fontSize: '0.85rem', fontWeight: 700, margin: 0 }}>
+           {item.value}
+         </p>
+       </div>
+     ))}
+  </div>
+ </div>
 
+        
       {/* ── 메인 콘텐츠 ── */}
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '3rem 2rem' }}>
 
