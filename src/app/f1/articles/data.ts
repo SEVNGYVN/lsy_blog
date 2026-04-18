@@ -15,7 +15,7 @@ export const articles: Article[] = [
     category: '오피셜 뉴스',
     title: '인천 F1 그랑프리, 경제적 타당성 적격 판정',
     description: "인천광역시가 추진해온 'F1 인천 그랑프리 기본구상 및 사전타당성조사'결과, 사업 타당성이 확보된 것으로 공식 발표됐습니다",
-    image: '/F1CREW_INCHEON.jpg',
+    image: '/F1CREW_INCHEON.png',
     date: '2026년 4월 16일',
     author: 'F1 CREW',
     content: [

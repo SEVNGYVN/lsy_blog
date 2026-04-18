@@ -53,12 +53,12 @@ export default function ArticlesPage() {
 
           {/* Header */}
           <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem', marginBottom: '3rem' }}>
-            <Link href="/f1" style={{ color: '#005cab', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px', marginBottom: '1.5rem' }}>
+            {/*<Link href="/f1" style={{ color: '#005cab', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px', marginBottom: '1.5rem' }}>
               ← 메인으로 돌아가기
-            </Link>
-            <span style={{ color: '#5e5e62', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.7rem', fontWeight: 700, display: 'block', marginBottom: '0.5rem' }}>에디토리얼</span>
+            </Link>*/}
+            <span style={{ color: '#5e5e62', textTransform: 'uppercase', letterSpacing: '0.15em', fontSize: '0.7rem', fontWeight: 700, display: 'block', marginBottom: '0.5rem' }}> </span>
             <h1 style={{ fontSize: '3rem', fontWeight: 900, letterSpacing: '-0.03em', color: '#1a1b1f', margin: '0 0 1rem 0', lineHeight: 1.1 }}>
-              분석 아티클
+              분석 뉴스
             </h1>
             <p style={{ color: '#707785', fontSize: '1.05rem', maxWidth: '600px', lineHeight: 1.7 }}>
               기술 분석, 드라이버 마켓, 레이스 리뷰까지. F1의 모든 것을 깊이 있게 다룹니다.
@@ -92,7 +92,7 @@ export default function ArticlesPage() {
                       fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.06em',
                       padding: '4px 12px', borderRadius: '999px', textTransform: 'uppercase',
                     }}>{articles[0].category}</span>
-                    <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 500 }}>{articles[0].readTime} 읽기</span>
+                    {/*<span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 500 }}>{articles[0].readTime} 읽기</span>*/}
                   </div>
                   <h2 style={{ color: 'white', fontSize: '1.8rem', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.2, margin: '0 0 1rem 0' }}>
                     {articles[0].title}
@@ -146,7 +146,7 @@ export default function ArticlesPage() {
                           fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.06em',
                           padding: '3px 10px', borderRadius: '999px', textTransform: 'uppercase',
                         }}>{article.category}</span>
-                        <span style={{ color: '#707785', fontSize: '0.7rem', fontWeight: 500 }}>{article.readTime} 읽기</span>
+                        {/*<span style={{ color: '#707785', fontSize: '0.7rem', fontWeight: 500 }}>{article.readTime} 읽기</span>*/}
                       </div>
                       <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#1a1b1f', margin: '0 0 8px 0', lineHeight: 1.3, letterSpacing: '-0.01em' }}>{article.title}</h3>
                       <p style={{ color: '#707785', fontSize: '0.85rem', lineHeight: 1.6, margin: '0 0 12px 0' }}>{article.description}</p>
