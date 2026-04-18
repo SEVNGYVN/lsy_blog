@@ -389,7 +389,13 @@ export default function Blog() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
               {articles.map((article, i) => (
-  <Link key={i} href={`/f1/articles/${article.slug}`} style={{ textDecoration: 'none' }}>
+  <Link
+  key={i}
+  href={article.externalUrl ?? `/f1/articles/${article.slug}`}
+  target={article.externalUrl ? '_blank' : undefined}
+  rel={article.externalUrl ? 'noopener noreferrer' : undefined}
+  style={{ textDecoration: 'none' }}
+>
     <div
       style={{
                     borderRadius: '16px', overflow: 'hidden', cursor: 'pointer',
@@ -421,7 +427,7 @@ export default function Blog() {
                         fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.06em',
                         padding: '3px 10px', borderRadius: '999px', textTransform: 'uppercase',
                       }}>{article.category}</span>
-                      <span style={{ color: '#707785', fontSize: '0.7rem', fontWeight: 500 }}>{article.readTime} 읽기</span>
+                      {/*<span style={{ color: '#707785', fontSize: '0.7rem', fontWeight: 500 }}>{article.readTime} 읽기</span>*/}
                     </div>
                     <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#1a1b1f', margin: '0 0 8px 0', lineHeight: 1.3, letterSpacing: '-0.01em' }}>{article.title}</h3>
                     <p style={{ color: '#707785', fontSize: '0.85rem', lineHeight: 1.6, margin: 0 }}>{article.description}</p>

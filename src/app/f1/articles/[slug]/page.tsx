@@ -75,8 +75,8 @@ export default function ArticleDetailPage() {
             <Link href="/f1/articles" style={{ color: '#005cab', fontSize: '0.8rem', fontWeight: 600, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px', marginBottom: '1.5rem' }}>
               ← 아티클 목록
             </Link>
-            <div style={{ borderRadius: '20px', overflow: 'hidden', aspectRatio: '21/9', position: 'relative' }}>
-              <img src={article.image} alt={article.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div style={{ borderRadius: '20px', overflow: 'hidden', position: 'relative' }}>
+              <img src={article.image} alt={article.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)' }} />
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '2.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.8rem' }}>
