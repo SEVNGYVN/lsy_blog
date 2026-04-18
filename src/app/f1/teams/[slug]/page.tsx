@@ -383,7 +383,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ slu
           position: 'relative', zIndex: 2,
         }}>
           {/* 뒤로가기 */}
-          <Link href="/f1/teams" style={{
+          {/*<Link href="/f1/teams" style={{
             color: 'rgba(255,255,255,0.6)', fontSize: '0.8rem', fontWeight: 600,
             textDecoration: 'none', letterSpacing: '0.05em',
             display: 'inline-flex', alignItems: 'center', gap: '6px',
@@ -394,7 +394,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ slu
             onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
           >
             ← 팀 목록으로
-          </Link>
+          </Link> */}
 
           <h1 style={{
             color: 'white', fontSize: '4rem', fontWeight: 900,
