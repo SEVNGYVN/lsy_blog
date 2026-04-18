@@ -82,8 +82,8 @@ export default function ArticlesPage() {
                   (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
                 }}
               >
-                <div style={{ aspectRatio: '16/10', overflow: 'hidden' }}>
-                  <img src={articles[0].image} alt={articles[0].title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div style={{ overflow: 'hidden', background: '#1a1a2e' }}>
+                  <img src={articles[0].image} alt={articles[0].title} style={{ width: '100%', height: 'auto', display: 'block' }} />
                 </div>
                 <div style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
@@ -130,11 +130,11 @@ export default function ArticlesPage() {
                       (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
                     }}
                   >
-                    <div style={{ aspectRatio: '16/10', overflow: 'hidden' }}>
+                    <div style={{ overflow: 'hidden', background: '#f0f0f4' }}>
                       <img
                         src={article.image}
                         alt={article.title}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s' }}
+                        style={{ width: '100%', height: 'auto', display: 'block', transition: 'transform 0.3s' }}
                         onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
                         onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
                       />
