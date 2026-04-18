@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 
 /* ───────────────────────────────────────────
@@ -8,7 +9,7 @@ import Navbar from '../components/Navbar';
 ─────────────────────────────────────────── */
 const races = [
   {
-    round: 1, name: 'Australia', flag: '🇦🇺',
+    round: 1, name: 'Australia', flag: '🇦🇺', slug: 'australia-2026',
     fullName: 'FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026',
     dates: '14 – 16 MAR', status: 'done',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Australia.webp',
@@ -19,7 +20,7 @@ const races = [
     ],
   },
   {
-    round: 2, name: 'China', flag: '🇨🇳',
+    round: 2, name: 'China', flag: '🇨🇳', slug: 'china-2026',
     fullName: 'FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026',
     dates: '21 – 23 MAR', status: 'done',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/China.webp',
@@ -30,7 +31,7 @@ const races = [
     ],
   },
   {
-    round: 3, name: 'Japan', flag: '🇯🇵',
+    round: 3, name: 'Japan', flag: '🇯🇵', slug: 'japan-2026',
     fullName: 'FORMULA 1 ARAMCO JAPANESE GRAND PRIX 2026',
     dates: '27 – 29 MAR', status: 'done',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Japan.webp',
@@ -41,126 +42,126 @@ const races = [
     ],
   },
   {
-    round: 4, name: 'Miami', flag: '🇺🇸',
+    round: 4, name: 'Miami', flag: '🇺🇸', slug: 'miami-2026',
     fullName: 'FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026',
     dates: '01 – 03 MAY', status: 'next',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
     podium: null,
   },
   {
-    round: 5, name: 'Canada', flag: '🇨🇦',
+    round: 5, name: 'Canada', flag: '🇨🇦', slug: 'canada-2026',
     fullName: 'FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026',
     dates: '22 – 24 MAY', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
     podium: null,
   },
   {
-    round: 6, name: 'Monaco', flag: '🇲🇨',
+    round: 6, name: 'Monaco', flag: '🇲🇨', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
     dates: '29 – 31 MAY', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Monaco.webp',
     podium: null,
   },
   {
-    round: 7, name: 'Spain', flag: '🇪🇸',
+    round: 7, name: 'Spain', flag: '🇪🇸', slug: 'spain-2026',
     fullName: 'FORMULA 1 ARAMCO GRAN PREMIO DE ESPAÑA 2026',
     dates: '12 – 14 JUN', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Spain.webp',
     podium: null,
   },
   {
-    round: 8, name: 'Austria', flag: '🇦🇹',
+    round: 8, name: 'Austria', flag: '🇦🇹', slug: 'austria-2026',
     fullName: 'FORMULA 1 MSC CRUISES AUSTRIAN GRAND PRIX 2026',
     dates: '26 – 28 JUN', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Austria.webp',
     podium: null,
   },
   {
-    round: 9, name: 'Great Britain', flag: '🇬🇧',
+    round: 9, name: 'Great Britain', flag: '🇬🇧', slug: 'great-britain-2026',
     fullName: 'FORMULA 1 QATAR AIRWAYS BRITISH GRAND PRIX 2026',
     dates: '03 – 05 JUL', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Great%20Britain.webp',
     podium: null,
   },
   {
-    round: 10, name: 'Belgium', flag: '🇧🇪',
+    round: 10, name: 'Belgium', flag: '🇧🇪', slug: 'belgium-2026',
     fullName: 'FORMULA 1 ROLEX BELGIAN GRAND PRIX 2026',
     dates: '24 – 26 JUL', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Belgium.webp',
     podium: null,
   },
   {
-    round: 11, name: 'Hungary', flag: '🇭🇺',
+    round: 11, name: 'Hungary', flag: '🇭🇺', slug: 'hungary-2026',
     fullName: 'FORMULA 1 HUNGARIAN GRAND PRIX 2026',
     dates: '31 JUL – 02 AUG', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Hungary.webp',
     podium: null,
   },
   {
-    round: 12, name: 'Netherlands', flag: '🇳🇱',
+    round: 12, name: 'Netherlands', flag: '🇳🇱', slug: 'netherlands-2026',
     fullName: 'FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2026',
     dates: '28 – 30 AUG', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Netherlands.webp',
     podium: null,
   },
   {
-    round: 13, name: 'Italy', flag: '🇮🇹',
+    round: 13, name: 'Italy', flag: '🇮🇹', slug: 'italy-2026',
     fullName: 'FORMULA 1 PIRELLI GRAN PREMIO D\'ITALIA 2026',
     dates: '04 – 06 SEP', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Italy.webp',
     podium: null,
   },
   {
-    round: 14, name: 'Azerbaijan', flag: '🇦🇿',
+    round: 14, name: 'Azerbaijan', flag: '🇦🇿', slug: 'azerbaijan-2026',
     fullName: 'FORMULA 1 AZERBAIJAN GRAND PRIX 2026',
     dates: '18 – 20 SEP', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Azerbaijan.webp',
     podium: null,
   },
   {
-    round: 15, name: 'Singapore', flag: '🇸🇬',
+    round: 15, name: 'Singapore', flag: '🇸🇬', slug: 'singapore-2026',
     fullName: 'FORMULA 1 SINGAPORE GRAND PRIX 2026',
     dates: '02 – 04 OCT', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Singapore.webp',
     podium: null,
   },
   {
-    round: 16, name: 'United States', flag: '🇺🇸',
+    round: 16, name: 'United States', flag: '🇺🇸', slug: 'united-states-2026',
     fullName: 'FORMULA 1 PIRELLI UNITED STATES GRAND PRIX 2026',
     dates: '16 – 18 OCT', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/USA.webp',
     podium: null,
   },
   {
-    round: 17, name: 'Mexico', flag: '🇲🇽',
+    round: 17, name: 'Mexico', flag: '🇲🇽', slug: 'mexico-2026',
     fullName: 'FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2026',
     dates: '23 – 25 OCT', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Mexico.webp',
     podium: null,
   },
   {
-    round: 18, name: 'Brazil', flag: '🇧🇷',
+    round: 18, name: 'Brazil', flag: '🇧🇷', slug: 'brazil-2026',
     fullName: 'FORMULA 1 MSC CRUISES GRANDE PRÊMIO DE SÃO PAULO 2026',
     dates: '06 – 08 NOV', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Brazil.webp',
     podium: null,
   },
   {
-    round: 19, name: 'Las Vegas', flag: '🇺🇸',
+    round: 19, name: 'Las Vegas', flag: '🇺🇸', slug: 'las-vegas-2026',
     fullName: 'FORMULA 1 HEINEKEN LAS VEGAS GRAND PRIX 2026',
     dates: '19 – 21 NOV', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Las%20Vegas.webp',
     podium: null,
   },
   {
-    round: 20, name: 'Qatar', flag: '🇶🇦',
+    round: 20, name: 'Qatar', flag: '🇶🇦', slug: 'qatar-2026',
     fullName: 'FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2026',
     dates: '28 – 30 NOV', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Qatar.webp',
     podium: null,
   },
   {
-    round: 21, name: 'Abu Dhabi', flag: '🇦🇪',
+    round: 21, name: 'Abu Dhabi', flag: '🇦🇪', slug: 'abu-dhabi-2026',
     fullName: 'FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2026',
     dates: '05 – 07 DEC', status: 'upcoming',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Abu%20Dhabi.webp',
@@ -208,8 +209,9 @@ export default function CircuitPage() {
             const isDone = race.status === 'done';
 
             return (
-              <div
+              <Link
                 key={race.round}
+                href={`/f1/schedule/${race.slug}`}
                 style={{
                   borderRadius: '16px',
                   overflow: 'hidden',
@@ -222,16 +224,21 @@ export default function CircuitPage() {
                   transition: 'transform 0.2s, box-shadow 0.2s',
                   cursor: 'pointer',
                   position: 'relative',
+                  textDecoration: 'none',
+                  display: 'block',
+                  color: 'inherit',
                 }}
                 onMouseEnter={e => {
-                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)';
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = isNext
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.transform = 'translateY(-4px)';
+                  el.style.boxShadow = isNext
                     ? '0 20px 60px rgba(225,6,0,0.4)'
                     : '0 12px 40px rgba(0,0,0,0.3)';
                 }}
                 onMouseLeave={e => {
-                  (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
-                  (e.currentTarget as HTMLDivElement).style.boxShadow = 'none';
+                  const el = e.currentTarget as HTMLElement;
+                  el.style.transform = 'translateY(0)';
+                  el.style.boxShadow = 'none';
                 }}
               >
                 {/* 배경 이미지 (done / next 카드) */}
@@ -358,7 +365,7 @@ export default function CircuitPage() {
                   )}
 
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
