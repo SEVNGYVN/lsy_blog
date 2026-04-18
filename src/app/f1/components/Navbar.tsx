@@ -34,7 +34,7 @@ export default function Navbar() {
           color: 'white', fontSize: '1.1rem', fontWeight: 900,
           letterSpacing: '-0.02em', textDecoration: 'none',
         }}>
-          F1 에디토리얼
+          F1 Overtake Lab
         </Link>
 
         {/* 메뉴 */}

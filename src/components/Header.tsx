@@ -9,7 +9,7 @@ const navItems = [
   { name: "홈", path: "/" },
   { name: "블로그", path: "/blog" },
   { name: "프로젝트", path: "/projects" },
-  { name: "F1 리뷰", path: "/f1" },
+  { name: "F1 Overtake Lab", path: "/f1" },
 ];
 
 export default function Header() {
