@@ -41,7 +41,7 @@ export default function TeamsPage() {
         margin: '0 auto',
       }}>
         {teams.map((team) => (
-          <Link key={team.slug} href={`/f1/team/${team.slug}`} style={{ textDecoration: 'none' }}>
+          <Link key={team.slug} href={`/f1/teams/${team.slug}`} style={{ textDecoration: 'none' }}>
             <div
               style={{
                 borderRadius: '16px',
