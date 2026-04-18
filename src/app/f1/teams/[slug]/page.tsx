@@ -322,7 +322,7 @@ function DriverCard({ driver, teamColor }: {
         {/* 드라이버 이미지 */}
         <div style={{
           position: 'absolute', right: '-10px', bottom: 0,
-          height: '105%', zIndex: 1,
+          height: '100%', width: '40%', zIndex: 1,
         }}>
           <img
             src={driver.image}
@@ -332,6 +332,14 @@ function DriverCard({ driver, teamColor }: {
               objectFit: 'contain',
               objectPosition: 'bottom right',
               filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.4))',
+              /*borderRadius: '16px',
+              overflow: 'hidden',
+              aspectRatio: '33 / 14',
+              cursor: 'pointer',
+              transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+              background: driver.color,*/
+
             }}
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
           />

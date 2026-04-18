@@ -321,11 +321,11 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
         </div>
 
         {/* 드라이버 이미지 */}
-        <div style={{ position: 'absolute', right: '5%', bottom: 0, height: '110%', zIndex: 1 }}>
+        <div style={{ position: 'absolute', right: '5%', bottom: 0, height: '100%', width: '35%', zIndex: 1 }}>
           <img
             src={driver.image}
             alt={`${driver.firstName} ${driver.lastName}`}
-            style={{ height: '100%', objectFit: 'contain', objectPosition: 'bottom' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center' }}
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
           />
         </div>
