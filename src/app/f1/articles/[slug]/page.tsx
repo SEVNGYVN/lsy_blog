@@ -85,7 +85,7 @@ export default function ArticleDetailPage() {
                     fontSize: '0.65rem', fontWeight: 700, letterSpacing: '0.06em',
                     padding: '4px 12px', borderRadius: '999px', textTransform: 'uppercase',
                   }}>{article.category}</span>
-                  <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 500 }}>{article.readTime} 읽기</span>
+                  {/*<span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 500 }}>{article.readTime} 읽기</span>*/}
                 </div>
                 <h1 style={{ color: 'white', fontSize: '2.5rem', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.15, margin: 0, maxWidth: '800px' }}>
                   {article.title}
@@ -173,7 +173,7 @@ export default function ArticleDetailPage() {
                             fontSize: '0.6rem', fontWeight: 700, letterSpacing: '0.06em',
                             padding: '3px 8px', borderRadius: '999px', textTransform: 'uppercase',
                           }}>{other.category}</span>
-                          <span style={{ color: '#aaa', fontSize: '0.7rem' }}>{other.readTime} 읽기</span>
+                          {/*<span style={{ color: '#aaa', fontSize: '0.7rem' }}>{other.readTime} 읽기</span>*/}
                         </div>
                         <h4 style={{ fontSize: '1rem', fontWeight: 800, color: '#1a1b1f', margin: '0 0 6px 0', lineHeight: 1.3 }}>{other.title}</h4>
                         <p style={{ color: '#707785', fontSize: '0.8rem', lineHeight: 1.5, margin: 0 }}>{other.description}</p>

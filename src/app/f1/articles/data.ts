@@ -4,7 +4,6 @@ export interface Article {
   title: string;
   description: string;
   image: string;
-  readTime: string;
   date: string;
   author: string;
   content: string[];
@@ -13,13 +12,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     slug: 'active-aero-2026',
-    category: '기술 분석',
-    title: '2026 레귤레이션: 액티브 에어로가 바꿀 F1의 미래',
-    description: '새로운 그라운드 이펙트 규정과 액티브 에어로다이나믹스가 팀 전략과 차량 디자인에 미치는 영향을 심층 분석합니다.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBymjmQj-fsTVt8KfX0ETURgaA5iaR22As_Ew1TCeS7570aTrY4uWqnH-SyhZ3ieiEYhcpzq-hxMrOUHWE7FxVBIoTL5KrQJE6dqctv_qUE_n5oe5UMp4FXCTnA0iFCBWe50_3VhzaOb9yb3T12epSL6K0oSgPB2ri_DlUiKZaOpjK84ttfBgJ_N96iko26egl0OF6KMQBFLzZm-JVbzwQnPSFGTqw8Kfckt40E5LBiGv_SvBs_JQzItL3wag_k0aaqGkgI6cDYlC31',
-    readTime: '8분',
-    date: '2026년 4월 14일',
-    author: 'F1 에디토리얼 기술팀',
+    category: '오피셜 뉴스',
+    title: '인천 F1 그랑프리, 경제적 타당성 적격 판정',
+    description: "인천광역시가 추진해온 'F1 인천 그랑프리 기본구상 및 사전타당성조사'결과, 사업 타당성이 확보된 것으로 공식 발표됐습니다",
+    image: '/F1CREW_INCHEON.jpg',
+    date: '2026년 4월 16일',
+    author: 'F1 CREW',
     content: [
       '2026 시즌은 Formula 1 역사상 가장 급진적인 기술 규정 변화를 맞이합니다. FIA가 발표한 새로운 레귤레이션의 핵심은 액티브 에어로다이나믹스의 전면 도입입니다. 이는 단순한 규정 변경이 아니라, F1 머신의 근본적인 설계 철학을 뒤바꾸는 혁명적 전환점입니다.',
       '액티브 에어로다이나믹스란 주행 상황에 따라 차량의 공기역학적 요소가 실시간으로 변형되는 시스템을 말합니다. 2026 규정에서는 프론트 윙과 리어 윙 모두에 가변 요소가 허용되며, 이를 통해 직선 구간에서는 드래그를 최소화하고 코너에서는 다운포스를 극대화할 수 있습니다.',
@@ -35,7 +33,6 @@ export const articles: Article[] = [
     title: '2027 시트 쟁탈전: 누가 어디로 가는가?',
     description: '주요 드라이버 계약 만료 시점과 팀 이적 루머를 정리하고, 가능한 시나리오를 예측합니다.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDzAgyQ4LOXqIULXKmApKNMZw1crNYycBmZulDScxcEG4l9IuZ3X8yPLRPOmjK1QeSukPMklCDYcgdTH7Q7r7UT7RKwkfCU9FyN-YpBYIAx4-cSLttMG5-PSUzTnMDMozlBbEx5AtHtSq8it1s-SQC1bmgXJqmYAtgqjZJFiKVomBfMQO9fks2dxOebVPBg3e7hqVF8VpKGHPvBV3PxjpfHuOd6JV8zpTZYHBpa_yXBi3tmyvTwz-y_yJgoiDO8-n1o_I1TiZbNU88L',
-    readTime: '6분',
     date: '2026년 4월 12일',
     author: 'F1 에디토리얼 패독팀',
     content: [
@@ -53,7 +50,6 @@ export const articles: Article[] = [
     title: '일본 GP 리뷰: 스즈카에서의 전략 대결',
     description: 'Round 3 일본 그랑프리의 핵심 전략 분석과 드라이버별 퍼포먼스를 되짚어 봅니다.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAODdHenYMXq92eh8xvg-EkrpcbNPsheeYNOf-IpkVOfAv-vystn_k7NAyWdnKW4JGO1QqHBKXYOthfsXqqHqQf1bXSYTCxDq4MpBvubU5IDCYuoNWjfKZEJUvMT64JZsuKZ9Rz4dth6svUGjQyOJ-5EUbNjyMpNsnvfZdR-bnSLkdEpgaLYl-B0CEVatj_KVOByYwkvEGyW5Ej8VTx0-WHl4sR7xlRdgtdeBB-aJbckVUMVCZZ7gtWRes_jq2azM6ztw276wrNkc0W',
-    readTime: '5분',
     date: '2026년 3월 30일',
     author: 'F1 에디토리얼 분석팀',
     content: [
