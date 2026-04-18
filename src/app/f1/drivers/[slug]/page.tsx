@@ -292,7 +292,7 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
 
       {/* ── 히어로 배너 ── */}
       <div style={{
-        background: `linear-gradient(135deg, ${driver.color} 0%, #0e0e16 60%)`,
+        background: `linear-gradient(180deg, ${driver.color} 0%, #0e0e16 100%)`,
         position: 'relative', overflow: 'hidden', minHeight: '320px',
       }}>
         <div style={{
