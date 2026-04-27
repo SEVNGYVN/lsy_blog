@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${postData.title} | LS. Blog`,
       description: postData.description,
     };
-  } catch (e) {
+  } catch {
     return { title: 'Post Not Found' };
   }
 }
@@ -67,7 +67,7 @@ export default async function Post({ params }: Props) {
         <div className="prose" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }

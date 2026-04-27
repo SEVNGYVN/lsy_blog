@@ -4,7 +4,7 @@ import { format, parseISO } from 'date-fns';
 import Link from 'next/link';
 
 // Next.js MetaData Generator
-export async function generateMetadata(context: any) {
+export async function generateMetadata(context: { params: Promise<{ slug: string[] }> }) {
   try {
     const params = await context.params;
     const postData = await getF1PostData(params.slug); // 여러 단계의 폴더 경로가 들어와도 처리됨!
@@ -12,7 +12,7 @@ export async function generateMetadata(context: any) {
       title: `${postData.title} | F1 에디토리얼`,
       description: postData.description,
     };
-  } catch (e) {
+  } catch {
     return { title: 'Post Not Found' };
   }
 }
@@ -31,7 +31,7 @@ const backLinkMap: Record<string, { href: string; label: string }> = {
   circuit: { href: '/f1/circuits',  label: '서킷 목록' },
 };
 
-export default async function F1Post(context: any) {
+export default async function F1Post(context: { params: Promise<{ slug: string[] }> }) {
   try {
     const params = await context.params;
     const postData = await getF1PostData(params.slug);
@@ -80,7 +80,7 @@ export default async function F1Post(context: any) {
         <div className="prose" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
