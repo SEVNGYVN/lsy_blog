@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const drivers = [
   { slug: 'LEC', firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', number: 16, color: '#DC0000', image: '/F_LEC.png' },
@@ -92,6 +93,7 @@ export default function DriversPage() {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
