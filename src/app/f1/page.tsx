@@ -459,12 +459,19 @@ export default function Blog() {
               <div>
                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '0.8rem' }}>바로가기</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  {['팀', '드라이버', '서킷', '순위'].map((label) => (
-                    <a key={label} onClick={(e) => handleAlert(e, `${label} 페이지는 준비 중입니다!`)} style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.2s' }}
-                      onMouseEnter={e => (e.currentTarget.style.color = 'white')}
-                      onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
-                    >{label}</a>
-                  ))}
+
+                  {[
+                    { label: '팀', href: '/f1/teams' },
+                    { label: '드라이버', href: '/f1/drivers' },
+                    { label: '일정', href: '/f1/schedule' },
+                    { label: '순위', href: '/f1/standings' },
+                    { label: '뉴스', href: '/f1/articles' },  // ← 추가
+                  ].map(({ label, href }) => (
+                <Link key={label} href={href} style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                   onMouseEnter={e => (e.currentTarget.style.color = 'white')}
+                  onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
+                >{label}</Link>
+              ))}
                 </div>
               </div>
 
