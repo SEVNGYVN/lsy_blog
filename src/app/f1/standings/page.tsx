@@ -12,28 +12,28 @@ import Footer from '../components/Footer';
    - flag: 국기 이모지 (포디움 카드에 표시)
    ─────────────────────────────────────────── */
 const driverStandings = [
-  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: 'By <a href="//commons.wikimedia.org/wiki/User:Zscout370" title="User:Zscout370">Zscout370</a> - Own work based on: <a rel="nofollow" class="external free" href="https://www.nstda.or.th/th/nstda-knowledge/11557-thaiflag-color">https://www.nstda.or.th/th/nstda-knowledge/11557-thaiflag-color</a><a href="//commons.wikimedia.org/wiki/File:Flag_of_Thailand_(construction).svg" class="mw-file-description"></a>Construction sheet of the flag of Thailand, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=381489">Link</a>' },
-  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS_NB.png', flag: '🇬🇧' },
-  { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC_NB.png', flag: '🇲🇨' },
-  { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM_NB.png', flag: '🇬🇧' },
-  { pos: 5, firstName: 'Lando', lastName: 'Norris', team: 'McLaren', points: 25, color: '#FF8000', image: '/ML_NOR_NB.png', flag: '🇬🇧' },
-  { pos: 6, firstName: 'Oscar', lastName: 'Piastri', team: 'McLaren', points: 21, color: '#FF8000', image: '/ML_PIA_NB.png', flag: '🇦🇺' },
-  { pos: 7, firstName: 'Oliver', lastName: 'Bearman', team: 'Haas F1 Team', points: 17, color: '#5E6D75', image: '/H_BEA_NB.png', flag: '🇬🇧' },
-  { pos: 8, firstName: 'Pierre', lastName: 'Gasly', team: 'Alpine', points: 15, color: '#0090FF', image: '/A_GAS_NB.png', flag: '🇫🇷' },
-  { pos: 9, firstName: 'Max', lastName: 'Verstappen', team: 'Red Bull Racing', points: 12, color: '#3671C6', image: '/R_VER_NB.png', flag: '🇳🇱' },
-  { pos: 10, firstName: 'Liam', lastName: 'Lawson', team: 'Racing Bulls', points: 10, color: '#003BD1', image: '/RB_LAW_NB.png', flag: '🇳🇿' },
-  { pos: 11, firstName: 'Arvid', lastName: 'Lindblad', team: 'Racing Bulls', points: 4, color: '#003BD1', image: '/RB_LIN_NB.png', flag: '🇬🇧' },
-  { pos: 12, firstName: 'Isack', lastName: 'Hadjar', team: 'Red Bull Racing', points: 4, color: '#3671C6', image: '/R_HAD_NB.png', flag: '🇫🇷' },
-  { pos: 13, firstName: 'Gabriel', lastName: 'Bortoleto', team: 'Audi', points: 2, color: '#7D1600', image: '/AD_BOR_NB.png', flag: '🇧🇷' },
-  { pos: 14, firstName: 'Carlos', lastName: 'Sainz', team: 'Williams', points: 2, color: '#041E3C', image: '/W_SAI_NB.png', flag: '🇪🇸' },
-  { pos: 15, firstName: 'Esteban', lastName: 'Ocon', team: 'Haas F1 Team', points: 1, color: '#5E6D75', image: '/H_OCO_NB.png', flag: '🇫🇷' },
-  { pos: 16, firstName: 'Franco', lastName: 'Colapinto', team: 'Alpine', points: 1, color: '#0090FF', image: '/A_COL_NB.png', flag: '🇦🇷' },
-  { pos: 17, firstName: 'Nico', lastName: 'Hülkenberg', team: 'Audi', points: 0, color: '#7D1600', image: '/AD_HUL_NB.png', flag: '🇩🇪' },
-  { pos: 18, firstName: 'Alexander', lastName: 'Albon', team: 'Williams', points: 0, color: '#041E3C', image: '/W_ALB_NB.png', flag: '🇹🇭' },
-  { pos: 19, firstName: 'Valtteri', lastName: 'Bottas', team: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_BOT_NB.png', flag: '🇫🇮' },
-  { pos: 20, firstName: 'Sergio', lastName: 'Pérez', team: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_PER_NB.png', flag: '🇲🇽' },
-  { pos: 21, firstName: 'Fernando', lastName: 'Alonso', team: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_ALO_NB.png', flag: '🇪🇸' },
-  { pos: 22, firstName: 'Lance', lastName: 'Stroll', team: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_STR_NB.png', flag: '🇨🇦' },
+  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: 'it' },
+  { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS_NB.png', flag: 'gb' },
+  { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC_NB.png', flag: 'mc' },
+  { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM_NB.png', flag: 'gb' },
+  { pos: 5, firstName: 'Lando', lastName: 'Norris', team: 'McLaren', points: 25, color: '#FF8000', image: '/ML_NOR_NB.png', flag: 'gb' },
+  { pos: 6, firstName: 'Oscar', lastName: 'Piastri', team: 'McLaren', points: 21, color: '#FF8000', image: '/ML_PIA_NB.png', flag: 'au' },
+  { pos: 7, firstName: 'Oliver', lastName: 'Bearman', team: 'Haas F1 Team', points: 17, color: '#5E6D75', image: '/H_BEA_NB.png', flag: 'gb' },
+  { pos: 8, firstName: 'Pierre', lastName: 'Gasly', team: 'Alpine', points: 15, color: '#0090FF', image: '/A_GAS_NB.png', flag: 'fr' },
+  { pos: 9, firstName: 'Max', lastName: 'Verstappen', team: 'Red Bull Racing', points: 12, color: '#3671C6', image: '/R_VER_NB.png', flag: 'nl' },
+  { pos: 10, firstName: 'Liam', lastName: 'Lawson', team: 'Racing Bulls', points: 10, color: '#003BD1', image: '/RB_LAW_NB.png', flag: 'nz' },
+  { pos: 11, firstName: 'Arvid', lastName: 'Lindblad', team: 'Racing Bulls', points: 4, color: '#003BD1', image: '/RB_LIN_NB.png', flag: 'gb' },
+  { pos: 12, firstName: 'Isack', lastName: 'Hadjar', team: 'Red Bull Racing', points: 4, color: '#3671C6', image: '/R_HAD_NB.png', flag: 'fr' },
+  { pos: 13, firstName: 'Gabriel', lastName: 'Bortoleto', team: 'Audi', points: 2, color: '#7D1600', image: '/AD_BOR_NB.png', flag: 'br' },
+  { pos: 14, firstName: 'Carlos', lastName: 'Sainz', team: 'Williams', points: 2, color: '#041E3C', image: '/W_SAI_NB.png', flag: 'es' },
+  { pos: 15, firstName: 'Esteban', lastName: 'Ocon', team: 'Haas F1 Team', points: 1, color: '#5E6D75', image: '/H_OCO_NB.png', flag: 'fr' },
+  { pos: 16, firstName: 'Franco', lastName: 'Colapinto', team: 'Alpine', points: 1, color: '#0090FF', image: '/A_COL_NB.png', flag: 'ar' },
+  { pos: 17, firstName: 'Nico', lastName: 'Hülkenberg', team: 'Audi', points: 0, color: '#7D1600', image: '/AD_HUL_NB.png', flag: 'de' },
+  { pos: 18, firstName: 'Alexander', lastName: 'Albon', team: 'Williams', points: 0, color: '#041E3C', image: '/W_ALB_NB.png', flag: 'th' },
+  { pos: 19, firstName: 'Valtteri', lastName: 'Bottas', team: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_BOT_NB.png', flag: 'fi' },
+  { pos: 20, firstName: 'Sergio', lastName: 'Pérez', team: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_PER_NB.png', flag: 'mx' },
+  { pos: 21, firstName: 'Fernando', lastName: 'Alonso', team: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_ALO_NB.png', flag: 'es' },
+  { pos: 22, firstName: 'Lance', lastName: 'Stroll', team: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_STR_NB.png', flag: 'ca' },
 ];
 
 /* ───────────────────────────────────────────
@@ -168,7 +168,11 @@ export default function StandingsPage() {
                     <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.85rem', fontWeight: 600, margin: '0 0 8px 0' }}>
                       {driver.team}
                     </p>
-                    <span style={{ fontSize: '1.5rem' }}>{driver.flag}</span>
+                    <img
+                      src={`https://flagcdn.com/w40/${driver.flag}.png`}
+                      alt={driver.firstName}
+                      style={{ width: '26px', height: 'auto', borderRadius: '3px', display: 'block', marginTop: '4px' }}
+                    />
                   </div>
 
                   {/* 드라이버 이미지 */}
@@ -258,6 +262,13 @@ export default function StandingsPage() {
                     {driver.team}
                   </p>
                 </div>
+
+                {/* 국기 */}
+                <img
+                  src={`https://flagcdn.com/w40/${driver.flag}.png`}
+                  alt={driver.firstName}
+                  style={{ width: '22px', height: 'auto', borderRadius: '2px', flexShrink: 0 }}
+                />
 
                 {/* 포인트 */}
                 <span style={{ color: 'white', fontSize: '1.05rem', fontWeight: 800 }}>{driver.points}</span>
