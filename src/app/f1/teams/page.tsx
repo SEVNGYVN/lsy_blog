@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const teams = [
   { slug: 'F',  name: 'Ferrari',           color: '#DC0000', image: '/F_CAR.png' },
@@ -79,6 +80,7 @@ export default function TeamsPage() {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

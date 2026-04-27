@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { articles } from './articles/data';
 
 
@@ -527,7 +528,7 @@ export default function Blog() {
               </p>
             </div>
           </div>
-        </footer>
+        <Footer />
 
       </div>
     </>
