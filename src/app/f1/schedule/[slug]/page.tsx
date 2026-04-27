@@ -5,7 +5,7 @@ import { use } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Navbar from '../../components/Navbar';
-import { raceEvents } from '../data';
+import { raceEvents, resolveDriverName, resolveTeamName, resolveTeamColor } from '../data';
 import Footer from '../../components/Footer';
 
 const resultTypeLabels: Record<string, string> = {
@@ -355,15 +355,15 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
                           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <div style={{
                               width: '4px', height: '32px', borderRadius: '2px',
-                              background: result.teamColor,
+                              background: resolveTeamColor(result),
                               flexShrink: 0,
                             }} />
                             <div>
                               <div style={{ fontSize: '0.95rem', fontWeight: 700, color: '#1a1b1f' }}>
-                                {result.driverName}
+                                {resolveDriverName(result)}
                               </div>
                               <div style={{ fontSize: '0.75rem', color: '#707785', marginTop: '1px' }}>
-                                {result.teamName}
+                                {resolveTeamName(result)}
                               </div>
                             </div>
                           </div>

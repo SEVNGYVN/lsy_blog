@@ -1,3 +1,5 @@
+import { getDriverName, getTeamColor, getTeamName } from '../drivers';
+
 export interface Session {
   day: number;
   month: string;
@@ -8,13 +10,17 @@ export interface Session {
 
 export interface RaceResult {
   pos: number;
-  driverName: string;
-  driverSlug: string;
-  teamName: string;
-  teamColor: string;
+  driver: string;  // 드라이버 약자 코드 (예: 'ANT', 'RUS')
   time: string;
   points: number;
 }
+
+/** RaceResult에서 드라이버 전체 이름 반환 */
+export function resolveDriverName(r: RaceResult): string { return getDriverName(r.driver); }
+/** RaceResult에서 팀 이름 반환 */
+export function resolveTeamName(r: RaceResult): string { return getTeamName(r.driver); }
+/** RaceResult에서 팀 컬러 반환 */
+export function resolveTeamColor(r: RaceResult): string { return getTeamColor(r.driver); }
 
 export interface CircuitInfo {
   name: string;
@@ -56,53 +62,51 @@ export const raceEvents: RaceEvent[] = [
     heroImage: '/circuits/australia.jpg',
     isCompleted: true,
     sessions: [
-      { day: 6, month: 'MAR', name: 'PRACTICE 1', startTime: '10:30', endTime: '11:30' },
-      { day: 6, month: 'MAR', name: 'PRACTICE 2', startTime: '14:00', endTime: '15:00' },
-      { day: 7, month: 'MAR', name: 'PRACTICE 3', startTime: '10:30', endTime: '11:30' },
-      { day: 7, month: 'MAR', name: 'QUALIFYING', startTime: '14:00', endTime: '15:00' },
-      { day: 8, month: 'MAR', name: 'RACE', startTime: '13:00' },
+      { day: 13, month: 'MAR', name: 'PRACTICE 1', startTime: '12:30', endTime: '13:30' },
+      { day: 13, month: 'MAR', name: 'PRACTICE 2', startTime: '16:00', endTime: '17:00' },
+      { day: 14, month: 'MAR', name: 'PRACTICE 3', startTime: '12:30', endTime: '13:30' },
+      { day: 14, month: 'MAR', name: 'QUALIFYING', startTime: '16:00', endTime: '17:00' },
+      { day: 15, month: 'MAR', name: 'RACE', startTime: '15:00' },
     ],
     circuit: {
       name: 'Albert Park Circuit',
-      image: 'https://media.formula1.com/image/upload/c_fit,h_704/q_auto/v1740000001/common/f1/2026/track/2026trackmelbournedetailed.webp',
+      image: '/circuits/australia_layout.png',
       length: '5.278km',
       firstGrandPrix: 1996,
       numberOfLaps: 58,
-      fastestLapTime: '1:19.813',
-      fastestLapHolder: 'Charles Leclerc (2024)',
+      fastestLapTime: '1:20.235',
+      fastestLapHolder: 'Charles Leclerc (2022)',
       raceDistance: '306.124km',
     },
     results: {
       race: [
-        { pos: 1, driverName: 'George Russell', driverSlug: 'RUS', teamName: 'Mercedes', teamColor: '#00D2BE', time: '1:23:06.801', points: 25 },
-        { pos: 2, driverName: 'Kimi Antonelli', driverSlug: 'ANT', teamName: 'Mercedes', teamColor: '#00D2BE', time: '+2.974s', points: 18 },
-        { pos: 3, driverName: 'Charles Leclerc', driverSlug: 'LEC', teamName: 'Ferrari', teamColor: '#DC0000', time: '+15.519s', points: 15 },
-        { pos: 4, driverName: 'Lewis Hamilton', driverSlug: 'HAM', teamName: 'Ferrari', teamColor: '#DC0000', time: '+16.144s', points: 12 },
-        { pos: 5, driverName: 'Lando Norris', driverSlug: 'NOR', teamName: 'McLaren', teamColor: '#FF8000', time: '+51.741s', points: 10 },
-        { pos: 6, driverName: 'Max Verstappen', driverSlug: 'VER', teamName: 'Red Bull', teamColor: '#3671C6', time: '+54.617s', points: 8 },
-        { pos: 7, driverName: 'Oliver Bearman', driverSlug: 'BEA', teamName: 'Haas', teamColor: '#B6BABD', time: '+1 lap', points: 6 },
-        { pos: 8, driverName: 'Arvid Lindblad', driverSlug: 'LIN', teamName: 'Racing Bulls', teamColor: '#003BD1', time: '+1 lap', points: 4 },
-        { pos: 9, driverName: 'Gabriel Bortoleto', driverSlug: 'BOR', teamName: 'Audi', teamColor: '#7D1600', time: '+1 lap', points: 2 },
-        { pos: 10, driverName: 'Pierre Gasly', driverSlug: 'GAS', teamName: 'Alpine', teamColor: '#0090FF', time: '+1 lap', points: 1 },
-        { pos: 11, driverName: 'Esteban Ocon', driverSlug: 'OCO', teamName: 'Haas', teamColor: '#B6BABD', time: '+1 lap', points: 0 },
-        { pos: 12, driverName: 'Alex Albon', driverSlug: 'ALB', teamName: 'Williams', teamColor: '#041E3C', time: '+1 lap', points: 0 },
-        { pos: 13, driverName: 'Liam Lawson', driverSlug: 'LAW', teamName: 'Racing Bulls', teamColor: '#003BD1', time: '+1 lap', points: 0 },
-        { pos: 14, driverName: 'Franco Colapinto', driverSlug: 'COL', teamName: 'Alpine', teamColor: '#0090FF', time: '+2 laps', points: 0 },
-        { pos: 15, driverName: 'Carlos Sainz', driverSlug: 'SAI', teamName: 'Williams', teamColor: '#041E3C', time: '+2 laps', points: 0 },
-        { pos: 16, driverName: 'Sergio Pérez', driverSlug: 'PER', teamName: 'Cadillac', teamColor: '#4B4C53', time: '+3 laps', points: 0 },
-        { pos: 17, driverName: 'Lance Stroll', driverSlug: 'STR', teamName: 'Aston Martin', teamColor: '#358C75', time: '+15 laps', points: 0 },
-        { pos: 18, driverName: 'Fernando Alonso', driverSlug: 'ALO', teamName: 'Aston Martin', teamColor: '#358C75', time: 'DNF', points: 0 },
-        { pos: 19, driverName: 'Valtteri Bottas', driverSlug: 'BOT', teamName: 'Cadillac', teamColor: '#4B4C53', time: 'DNF', points: 0 },
-        { pos: 20, driverName: 'Isack Hadjar', driverSlug: 'HAD', teamName: 'Red Bull', teamColor: '#3671C6', time: 'DNF', points: 0 },
-        { pos: 21, driverName: 'Oscar Piastri', driverSlug: 'PIA', teamName: 'McLaren', teamColor: '#FF8000', time: 'DNS', points: 0 },
-        { pos: 22, driverName: 'Nico Hülkenberg', driverSlug: 'HUL', teamName: 'Audi', teamColor: '#7D1600', time: 'DNS', points: 0 },
+        { pos: 1, driver: 'ANT', time: '1:33:15.607', points: 25 },
+        { pos: 2, driver: 'RUS', time: '+5.515s',     points: 18 },
+        { pos: 3, driver: 'HAM', time: '+25.267s',    points: 15 },
+        { pos: 4, driver: 'LEC', time: '+28.894s',    points: 12 },
+        { pos: 5, driver: 'BEA', time: '+57.268s',    points: 10 },
+        { pos: 6, driver: 'NOR', time: '+1:02.441s',  points: 8 },
+        { pos: 7, driver: 'PIA', time: '+1:15.882s',  points: 6 },
+        { pos: 8, driver: 'VER', time: '+1:28.114s',  points: 4 },
+        { pos: 9, driver: 'ALO', time: '+1:45.003s',  points: 2 },
+        { pos: 10, driver: 'STR', time: '+1 lap',     points: 1 },
+        { pos: 11, driver: 'GAS', time: '+1 lap',     points: 0 },
+        { pos: 12, driver: 'DOO', time: '+1 lap',     points: 0 },
+        { pos: 13, driver: 'TSU', time: '+2 laps',    points: 0 },
+        { pos: 14, driver: 'HUL', time: '+2 laps',    points: 0 },
+        { pos: 15, driver: 'BOR', time: '+2 laps',    points: 0 },
+        { pos: 16, driver: 'ALB', time: 'DNF',        points: 0 },
+        { pos: 17, driver: 'SAI', time: 'DNF',        points: 0 },
+        { pos: 18, driver: 'HAD', time: 'DNF',        points: 0 },
+        { pos: 19, driver: 'LAW', time: 'DNF',        points: 0 },
+        { pos: 20, driver: 'OCO', time: 'DNF',        points: 0 },
       ],
       qualifying: [
-        { pos: 1, driverName: 'Kimi Antonelli', driverSlug: 'ANT', teamName: 'Mercedes', teamColor: '#00D2BE', time: '1:18.518', points: 0 },
-        { pos: 2, driverName: 'George Russell', driverSlug: 'RUS', teamName: 'Mercedes', teamColor: '#00D2BE', time: '1:18.811', points: 0 },
-        { pos: 3, driverName: 'Isack Hadjar', driverSlug: 'HAD', teamName: 'Red Bull', teamColor: '#3671C6', time: '1:19.303', points: 0 },
-        { pos: 4, driverName: 'Charles Leclerc', driverSlug: 'LEC', teamName: 'Ferrari', teamColor: '#DC0000', time: '1:19.327', points: 0 },
-        { pos: 5, driverName: 'Oscar Piastri', driverSlug: 'PIA', teamName: 'McLaren', teamColor: '#FF8000', time: '1:19.380', points: 0 },
+        { pos: 1, driver: 'ANT', time: '1:15.096', points: 0 },
+        { pos: 2, driver: 'RUS', time: '+0.112s',  points: 0 },
+        { pos: 3, driver: 'LEC', time: '+0.284s',  points: 0 },
+        { pos: 4, driver: 'HAM', time: '+0.391s',  points: 0 },
+        { pos: 5, driver: 'NOR', time: '+0.512s',  points: 0 },
       ],
     },
   },
@@ -134,16 +138,16 @@ export const raceEvents: RaceEvent[] = [
     },
     results: {
       race: [
-        { pos: 1, driverName: 'Charles Leclerc', driverSlug: 'LEC', teamName: 'Ferrari', teamColor: '#DC0000', time: '1:31:05.234', points: 25 },
-        { pos: 2, driverName: 'Lewis Hamilton', driverSlug: 'HAM', teamName: 'Ferrari', teamColor: '#DC0000', time: '+3.112s', points: 18 },
-        { pos: 3, driverName: 'Kimi Antonelli', driverSlug: 'ANT', teamName: 'Mercedes', teamColor: '#00D2BE', time: '+12.445s', points: 15 },
-        { pos: 4, driverName: 'George Russell', driverSlug: 'RUS', teamName: 'Mercedes', teamColor: '#00D2BE', time: '+18.771s', points: 12 },
-        { pos: 5, driverName: 'Lando Norris', driverSlug: 'NOR', teamName: 'McLaren', teamColor: '#FF8000', time: '+34.882s', points: 10 },
-        { pos: 6, driverName: 'Oscar Piastri', driverSlug: 'PIA', teamName: 'McLaren', teamColor: '#FF8000', time: '+41.003s', points: 8 },
-        { pos: 7, driverName: 'Max Verstappen', driverSlug: 'VER', teamName: 'Red Bull', teamColor: '#3671C6', time: '+55.114s', points: 6 },
-        { pos: 8, driverName: 'Oliver Bearman', driverSlug: 'BEA', teamName: 'Haas', teamColor: '#B6BABD', time: '+1:02.338s', points: 4 },
-        { pos: 9, driverName: 'Fernando Alonso', driverSlug: 'ALO', teamName: 'Aston Martin', teamColor: '#358C75', time: '+1:18.556s', points: 2 },
-        { pos: 10, driverName: 'Yuki Tsunoda', driverSlug: 'TSU', teamName: 'Red Bull', teamColor: '#3671C6', time: '+1:25.771s', points: 1 },
+        { pos: 1, driver: 'LEC', time: '1:31:05.234', points: 25 },
+        { pos: 2, driver: 'HAM', time: '+3.112s',     points: 18 },
+        { pos: 3, driver: 'ANT', time: '+12.445s',    points: 15 },
+        { pos: 4, driver: 'RUS', time: '+18.771s',    points: 12 },
+        { pos: 5, driver: 'NOR', time: '+34.882s',    points: 10 },
+        { pos: 6, driver: 'PIA', time: '+41.003s',    points: 8 },
+        { pos: 7, driver: 'VER', time: '+55.114s',    points: 6 },
+        { pos: 8, driver: 'BEA', time: '+1:02.338s',  points: 4 },
+        { pos: 9, driver: 'ALO', time: '+1:18.556s',  points: 2 },
+        { pos: 10, driver: 'TSU', time: '+1:25.771s', points: 1 },
       ],
     },
   },
@@ -175,11 +179,11 @@ export const raceEvents: RaceEvent[] = [
     },
     results: {
       race: [
-        { pos: 1, driverName: 'Charles Leclerc', driverSlug: 'LEC', teamName: 'Ferrari', teamColor: '#DC0000', time: '1:29:44.112', points: 25 },
-        { pos: 2, driverName: 'Kimi Antonelli', driverSlug: 'ANT', teamName: 'Mercedes', teamColor: '#00D2BE', time: '+8.334s', points: 18 },
-        { pos: 3, driverName: 'Lewis Hamilton', driverSlug: 'HAM', teamName: 'Ferrari', teamColor: '#DC0000', time: '+15.667s', points: 15 },
-        { pos: 4, driverName: 'George Russell', driverSlug: 'RUS', teamName: 'Mercedes', teamColor: '#00D2BE', time: '+22.441s', points: 12 },
-        { pos: 5, driverName: 'Lando Norris', driverSlug: 'NOR', teamName: 'McLaren', teamColor: '#FF8000', time: '+38.115s', points: 10 },
+        { pos: 1, driver: 'LEC', time: '1:29:44.112', points: 25 },
+        { pos: 2, driver: 'ANT', time: '+8.334s',     points: 18 },
+        { pos: 3, driver: 'HAM', time: '+15.667s',    points: 15 },
+        { pos: 4, driver: 'RUS', time: '+22.441s',    points: 12 },
+        { pos: 5, driver: 'NOR', time: '+38.115s',    points: 10 },
       ],
     },
   },
