@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
    - flag: 국기 이모지 (포디움 카드에 표시)
    ─────────────────────────────────────────── */
 const driverStandings = [
-  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: 'By <a href="//commons.wikimedia.org/wiki/User:Zscout370" title="User:Zscout370">Zscout370</a> - Own work based on: <a rel="nofollow" class="external free" href="https://www.nstda.or.th/th/nstda-knowledge/11557-thaiflag-color">https://www.nstda.or.th/th/nstda-knowledge/11557-thaiflag-color</a><a href="//commons.wikimedia.org/wiki/File:Flag_of_Thailand_(construction).svg" class="mw-file-description"></a>Construction sheet of the flag of Thailand, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=381489">Link</a>' },
+  { pos: 1, firstName: 'Kimi', lastName: 'Antonelli', team: 'Mercedes', points: 72, color: '#38d2b8', image: '/M_ANT_NB.png', flag: '🇮🇹' },
   { pos: 2, firstName: 'George', lastName: 'Russell', team: 'Mercedes', points: 63, color: '#38d2b8', image: '/M_RUS_NB.png', flag: '🇬🇧' },
   { pos: 3, firstName: 'Charles', lastName: 'Leclerc', team: 'Ferrari', points: 49, color: '#DC0000', image: '/F_LEC_NB.png', flag: '🇲🇨' },
   { pos: 4, firstName: 'Lewis', lastName: 'Hamilton', team: 'Ferrari', points: 41, color: '#DC0000', image: '/F_HAM_NB.png', flag: '🇬🇧' },
