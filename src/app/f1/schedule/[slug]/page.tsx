@@ -113,7 +113,11 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
                     }}>예정</span>
                   )}
                 </div>
-                <div style={{ fontSize: '2.5rem', marginBottom: '0.25rem' }}>{event.flag}</div>
+                <img
+                  src={`https://flagcdn.com/w80/${event.flag}.png`}
+                  alt={event.country}
+                  style={{ height: '36px', width: 'auto', borderRadius: '4px', marginBottom: '0.5rem', display: 'block' }}
+                />
                 <h1 style={{
                   color: 'white', fontSize: '2.8rem', fontWeight: 900,
                   letterSpacing: '-0.03em', lineHeight: 1.1, margin: '0 0 0.5rem 0',
