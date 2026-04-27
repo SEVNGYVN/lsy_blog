@@ -112,7 +112,7 @@ export default function Blog() {
 
           {/* Hero */}
           <div className="max-w-7xl mx-auto px-8 mb-16">
-            <span className="text-secondary label-md uppercase tracking-widest text-xs font-semibold mb-4 block">뉴스룸</span>
+            <span className="text-secondary label-md uppercase tracking-widest text-xs font-semibold mb-4 block"> </span>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight max-w-3xl leading-[1.1]" style={{ letterSpacing: '-0.02em', color: 'black' }}>
                 모터스포츠의 <span className="text-primary">정점</span>을 향한 깊이 있는 분석.
@@ -448,7 +448,7 @@ export default function Blog() {
 
               {/* Brand */}
               <div>
-                <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>F1 에디토리얼</p>
+                <p style={{ color: 'white', fontSize: '1.1rem', fontWeight: 800, letterSpacing: '-0.02em', marginBottom: '0.8rem' }}>F1 Overtake Lab</p>
                 <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', lineHeight: 1.7 }}>
                   모터스포츠의 정점을 향한 깊이 있는 분석과 인사이트를 제공합니다.
                 </p>
@@ -512,7 +512,7 @@ export default function Blog() {
             {/* Divider & Copyright */}
             <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
-                &copy; 2026 F1 에디토리얼. 모든 권리 보유. F1CREW로부터 컨텐츠 사용 허가. 이 사이트는 Formula 1과 공식적으로 관련이 없습니다.
+                &copy; F1 Overtake Lab. 모든 권리 보유. F1CREW로부터 컨텐츠 사용 허가. 이 사이트는 Formula 1과 공식적으로 관련이 없습니다.
               </p>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
                 포트폴리오 프로젝트
