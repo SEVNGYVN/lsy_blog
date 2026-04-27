@@ -112,7 +112,7 @@ export default function Blog() {
 
           {/* Hero */}
           <div className="max-w-7xl mx-auto px-8 mb-16">
-            <span className="text-secondary label-md uppercase tracking-widest text-xs font-semibold mb-4 block">뉴스룸</span>
+            
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight max-w-3xl leading-[1.1]" style={{ letterSpacing: '-0.02em', color: 'black' }}>
                 모터스포츠의 <span className="text-primary">정점</span>을 향한 깊이 있는 분석.
