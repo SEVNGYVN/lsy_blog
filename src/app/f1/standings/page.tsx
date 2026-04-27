@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /* ───────────────────────────────────────────
    드라이버 순위 데이터 (1~22위)
@@ -401,6 +402,7 @@ export default function StandingsPage() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

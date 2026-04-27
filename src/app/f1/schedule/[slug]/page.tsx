@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import { raceEvents } from '../data';
+import Footer from '../../components/Footer';
 
 const resultTypeLabels: Record<string, string> = {
   race: 'Race Result',
@@ -412,18 +413,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
         </div>
 
         {/* Footer */}
-        <footer style={{ background: '#0a0a10', padding: '2.5rem 0 1.5rem 0', marginTop: '3rem' }}>
-          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
-            <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', margin: 0 }}>
-                &copy; 2026 F1 에디토리얼. 모든 권리 보유.
-              </p>
-              <Link href="/f1" style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', textDecoration: 'none' }}>
-                메인으로 돌아가기
-              </Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
 
       </div>
     </>

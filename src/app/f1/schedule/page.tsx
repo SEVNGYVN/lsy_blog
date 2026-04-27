@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 /* ───────────────────────────────────────────
    2026 F1 레이스 캘린더 데이터
@@ -377,7 +378,7 @@ export default function CircuitPage() {
           })}
         </div>
       </div>
-
+      <Footer />
     </div>
   );
 }

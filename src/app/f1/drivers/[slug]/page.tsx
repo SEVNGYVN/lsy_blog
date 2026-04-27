@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 /* ───────────────────────────────────────────
    드라이버 데이터 (커리어 스탯 수정은 여기서!)
@@ -402,6 +403,7 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
