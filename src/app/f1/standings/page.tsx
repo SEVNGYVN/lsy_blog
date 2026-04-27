@@ -264,11 +264,11 @@ export default function StandingsPage() {
                 </div>
 
                 {/* 국기 */}
-                <img
+                {/*<img
                   src={`https://flagcdn.com/w40/${driver.flag}.png`}
                   alt={driver.firstName}
                   style={{ width: '22px', height: 'auto', borderRadius: '2px', flexShrink: 0 }}
-                />
+                />*/}
 
                 {/* 포인트 */}
                 <span style={{ color: 'white', fontSize: '1.05rem', fontWeight: 800 }}>{driver.points}</span>
