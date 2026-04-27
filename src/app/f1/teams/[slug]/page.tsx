@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 /* ───────────────────────────────────────────
    팀 데이터 (팀별 스탯 + 소속 드라이버 매핑)
@@ -571,6 +572,7 @@ export default async function TeamDetailPage({ params }: { params: Promise<{ slu
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
