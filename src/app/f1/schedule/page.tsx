@@ -35,7 +35,7 @@ const races = [
     round: 3, name: 'Japan', flag: 'jp', slug: 'japan-2026',
     fullName: 'FORMULA 1 ARAMCO JAPANESE GRAND PRIX 2026',
     dates: '27 – 29 MAR', status: 'done',
-    image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Japan.webp',
+    /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Japan.webp',*/
     podium: [
       { pos: 1, code: 'ANT', time: '1:28:03.403', color: '#38d2b8' },
       { pos: 2, code: 'PIA', time: '+13.722', color: '#FF8000' },
@@ -45,15 +45,15 @@ const races = [
   {
     round: 4, name: 'Miami', flag: 'us', slug: 'miami-2026',
     fullName: 'FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026',
-    dates: '01 – 03 MAY', status: 'next',
-    image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
+    dates: '02 – 04 MAY', status: 'next',
+    /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',*/
     podium: null,
   },
   {
     round: 5, name: 'Canada', flag: 'ca', slug: 'canada-2026',
     fullName: 'FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026',
-    dates: '22 – 24 MAY', status: 'upcoming',
-    image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
+    dates: '23 – 25 MAY', status: 'upcoming',
+    /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',*/
     podium: null,
   },
   {
