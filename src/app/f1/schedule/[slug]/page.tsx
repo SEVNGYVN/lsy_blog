@@ -84,13 +84,13 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
                 style={{
                   width: '100%', height: '100%',
                   objectFit: 'cover', objectPosition: 'center',
-                  opacity: 0.25,
+                  opacity: 0.55,
                 }}
               />
               {/* 텍스트 가독성을 위한 오버레이 */}
               <div style={{
                 position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-                background: 'linear-gradient(to right, rgba(18,18,26,0.85) 40%, rgba(18,18,26,0.3) 100%)',
+                background: 'linear-gradient(to right, rgba(18,18,26,0.6) 40%, rgba(18,18,26,0.15) 100%)',
               }} />
             </div>
           )}
