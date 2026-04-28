@@ -59,7 +59,7 @@ export const raceEvents: RaceEvent[] = [
     flag: 'au',
     raceName: 'Australian Grand Prix',
     location: 'Melbourne',
-    heroImage: 'Australia.avif',
+    heroImage: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Australia.webp',
     isCompleted: true,
     sessions: [
       { day: '06', month: 'MAR', name: 'PRACTICE 1', startTime: '10:30', endTime: '11:30' },
