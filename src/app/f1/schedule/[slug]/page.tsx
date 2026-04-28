@@ -76,7 +76,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
           {event.heroImage && (
             <div style={{
               position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-              pointerEvents: 'none',
+              pointerEvents: 'none', zIndex: 0,
             }}>
               <img
                 src={event.heroImage}
@@ -96,7 +96,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
             background: 'linear-gradient(135deg, transparent 0%, rgba(220,0,0,0.08) 100%)',
             pointerEvents: 'none',
           }} />
-          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '2rem 2rem 0' }}>
+          <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '2rem 2rem 0', position: 'relative', zIndex: 2 }}>
             {/* 뒤로가기 */}
             <Link href="/f1/schedule" style={{
               color: 'rgba(255,255,255,0.9)', fontSize: '0.8rem', fontWeight: 600,
