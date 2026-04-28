@@ -72,6 +72,28 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
           position: 'relative',
           overflow: 'hidden',
         }}>
+          {/* 히어로 이미지 배경 */}
+          {event.heroImage && (
+            <div style={{
+              position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+              pointerEvents: 'none',
+            }}>
+              <img
+                src={event.heroImage}
+                alt={event.raceName}
+                style={{
+                  width: '100%', height: '100%',
+                  objectFit: 'cover', objectPosition: 'center',
+                  opacity: 0.25,
+                }}
+              />
+              {/* 텍스트 가독성을 위한 오버레이 */}
+              <div style={{
+                position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+                background: 'linear-gradient(to right, rgba(18,18,26,0.85) 40%, rgba(18,18,26,0.3) 100%)',
+              }} />
+            </div>
+          )}
           {/* 배경 장식 */}
           <div style={{
             position: 'absolute', top: 0, right: 0, width: '40%', height: '100%',
