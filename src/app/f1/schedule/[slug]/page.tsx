@@ -90,7 +90,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
               {/* 텍스트 가독성을 위한 오버레이 */}
               <div style={{
                 position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
-                background: 'linear-gradient(to right, rgba(18,18,26,0.6) 40%, rgba(18,18,26,0.15) 100%)',
+                background: 'linear-gradient(to right, rgba(18,18,26,0.75) 50%, rgba(18,18,26,0.35) 100%)',
               }} />
             </div>
           )}
@@ -103,7 +103,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
           <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '2rem 2rem 0' }}>
             {/* 뒤로가기 */}
             <Link href="/f1/schedule" style={{
-              color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 500,
+              color: 'rgba(255,255,255,0.9)', fontSize: '0.8rem', fontWeight: 600,
               textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '6px',
               marginBottom: '1.5rem',
             }}>
@@ -114,24 +114,25 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '0.75rem' }}>
                   <span style={{
-                    background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)',
+                    background: 'rgba(255,255,255,0.2)', color: 'white',
                     fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.1em',
                     padding: '4px 12px', borderRadius: '999px', textTransform: 'uppercase',
+                    border: '1px solid rgba(255,255,255,0.3)',
                   }}>ROUND {event.round}</span>
                   {event.isCompleted && (
                     <span style={{
-                      background: 'rgba(0,200,100,0.15)', color: '#00c864',
+                      background: 'rgba(0,200,100,0.25)', color: '#00ff7f',
                       fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em',
                       padding: '4px 12px', borderRadius: '999px', textTransform: 'uppercase',
-                      border: '1px solid rgba(0,200,100,0.3)',
+                      border: '1px solid rgba(0,255,127,0.5)',
                     }}>완료</span>
                   )}
                   {!event.isCompleted && (
                     <span style={{
-                      background: 'rgba(0,92,171,0.2)', color: '#4da6ff',
+                      background: 'rgba(0,92,171,0.35)', color: '#7ec8ff',
                       fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em',
                       padding: '4px 12px', borderRadius: '999px', textTransform: 'uppercase',
-                      border: '1px solid rgba(0,92,171,0.4)',
+                      border: '1px solid rgba(126,200,255,0.6)',
                     }}>예정</span>
                   )}
                 </div>
@@ -146,7 +147,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
                 }}>
                   {event.raceName}
                 </h1>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1rem', margin: 0 }}>
+                <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '1rem', margin: 0, fontWeight: 500 }}>
                   {event.location} · {event.circuit.name}
                 </p>
               </div>
