@@ -12,7 +12,7 @@ const races = [
   {
     round: 1, name: 'Australia', flag: 'au', slug: 'australia-2026',
     fullName: 'FORMULA 1 QATAR AIRWAYS AUSTRALIAN GRAND PRIX 2026',
-    dates: '14 – 16 MAR', status: 'done',
+    dates: '06 – 08 MAR', status: 'done',
     image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Australia.webp',
     podium: [
       { pos: 1, code: 'RUS', time: '1:23:06.801', color: '#38d2b8' },
