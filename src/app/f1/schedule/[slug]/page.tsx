@@ -84,7 +84,7 @@ export default function RaceDetailPage({ params }: { params: Promise<{ slug: str
                 style={{
                   width: '100%', height: '100%',
                   objectFit: 'cover', objectPosition: 'center',
-                  opacity: 0.55,
+                  opacity: 0.75,
                 }}
               />
               {/* 텍스트 가독성을 위한 오버레이 */}
