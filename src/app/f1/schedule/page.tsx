@@ -23,8 +23,8 @@ const races = [
   {
     round: 2, name: 'China', flag: 'cn', slug: 'china-2026',
     fullName: 'FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2026',
-    dates: '21 – 23 MAR', status: 'done',
-    image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/China.webp',
+    dates: '13 – 15 MAR', status: 'done',
+    /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/China.webp',*/
     podium: [
       { pos: 1, code: 'ANT', time: '1:33:15.607', color: '#38d2b8' },
       { pos: 2, code: 'RUS', time: '+5.515', color: '#38d2b8' },
