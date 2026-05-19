@@ -45,14 +45,18 @@ const races = [
   {
     round: 4, name: 'Miami', flag: 'us', slug: 'miami-2026',
     fullName: 'FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2026',
-    dates: '02 – 04 MAY', status: 'next',
+    dates: '02 – 04 MAY', status: 'done',
     /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',*/
-    podium: null,
+    podium: [
+      { pos: 1, code: 'ANT', time: '1:33:19.273', color: '#38d2b8' },
+      { pos: 2, code: 'NOR', time: '+3.264', color: '#FF8000' },
+      { pos: 3, code: 'PIA', time: '+27.092s', color: '#FF8000' },
+    ],
   },
   {
     round: 5, name: 'Canada', flag: 'ca', slug: 'canada-2026',
     fullName: 'FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026',
-    dates: '23 – 25 MAY', status: 'upcoming',
+    dates: '23 – 25 MAY', status: 'next',
     /*image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',*/
     podium: null,
   },

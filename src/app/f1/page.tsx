@@ -9,27 +9,21 @@ import { articles } from './articles/data';
 export default function Blog() {
   const schedule = {
     previous: {
-      round: 3, name: 'Japan', dates: '27 – 29 MAR',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Japan.webp',
-      highlightUrl: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
+      round: 4, name: 'Miami', dates: '02 – 04 MAY',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
+      highlightUrl: 'https://www.youtube.com/watch?v=5gYys4GL7S0',
     },
     next: {
-      round: 4, name: 'Miami', dates: '01 – 03 MAY',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
+      round: 5, name: 'Canada', dates: '23 – 25 MAY',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
     },
     upcoming: {
-      round: 5, name: 'Canada', dates: '22 – 24 MAY',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
+      round: 6, name: 'Monaco', dates: '05 – 07 JUN',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Monaco.webp',
     },
   };
 
   const highlights = [
-    {
-      round: 'Round 1 · Melbourne',
-      title: '2026 호주 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/watch?v=lL_d84cN1UY',
-      thumbnail: 'https://img.youtube.com/vi/lL_d84cN1UY/maxresdefault.jpg',
-    },
     {
       round: 'Round 2 · Shanghai',
       title: '2026 중국 그랑프리 하이라이트',
@@ -42,22 +36,29 @@ export default function Blog() {
       url: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
       thumbnail: 'https://img.youtube.com/vi/oAtYfF0_4-I/maxresdefault.jpg',
     },
+    {
+      round: 'Round 4 · Melbourne',
+      title: '2026 마이애미 그랑프리 하이라이트',
+      url: 'https://www.youtube.com/watch?v=5gYys4GL7S0',
+      thumbnail: 'https://img.youtube.com/vi/5gYys4GL7S0/maxresdefault.jpg',
+    },
   ];
 
   const standings = {
     drivers: [
-      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 72, color: '#27F4D2' },
-      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 63, color: '#27F4D2' },
-      { pos: 3, name: 'Charles Leclerc', team: 'Ferrari', points: 49, color: '#E8002D' },
-      { pos: 4, name: 'Lewis Hamilton', team: 'Ferrari', points: 41, color: '#E8002D' },
-      { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 25, color: '#FF8000' },
+      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 100, color: '#27F4D2' },
+      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 80, color: '#27F4D2' },
+      { pos: 3, name: 'Charles Leclerc', team: 'Ferrari', points: 59, color: '#E8002D' },
+      { pos: 4, name: 'Lando Norris', team: 'McLaren', points: 51, color: '#FF8000' },
+      { pos: 5, name: 'Lewis Hamilton', team: 'Ferrari', points: 51, color: '#E8002D' },
+      
     ],
     constructors: [
-      { pos: 1, name: 'Mercedes', points: 135, color: '#27F4D2' },
-      { pos: 2, name: 'Ferrari', points: 90, color: '#E8002D' },
-      { pos: 3, name: 'McLaren', points: 46, color: '#FF8000' },
-      { pos: 4, name: 'Haas F1 Team', points: 18, color: '#5E6D75' },
-      { pos: 5, name: 'Alpine', points: 16, color: '#0090FF' },
+      { pos: 1, name: 'Mercedes', points: 180, color: '#27F4D2' },
+      { pos: 2, name: 'Ferrari', points: 110, color: '#E8002D' },
+      { pos: 3, name: 'McLaren', points: 94, color: '#FF8000' },
+      { pos: 4, name: 'Red Bull Racing', points: 30, color: '#3671C6' },
+      { pos: 5, name: 'Alpine', points: 23, color: '#0090FF' },
     ],
   };
 
@@ -138,8 +139,8 @@ export default function Blog() {
                 {/* Previous */}
                 <a href={schedule.previous.highlightUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                   <div style={{ position: 'relative', borderRadius: '14px', overflow: 'hidden', aspectRatio: '4/3', cursor: 'pointer', opacity: 0.75, transition: 'opacity 0.2s, transform 0.2s' }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
+                    /*onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}*/
                   >
                     <img src={schedule.previous.image} alt="Japan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
@@ -175,8 +176,8 @@ export default function Blog() {
 
                 {/* Upcoming */}
                 <div style={{ position: 'relative', borderRadius: '14px', overflow: 'hidden', aspectRatio: '4/3', opacity: 0.75, transition: 'opacity 0.2s, transform 0.2s' }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}
+                  /* onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = '1'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-4px)'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }} */
                 >
                   <img src={schedule.upcoming.image} alt="Canada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
@@ -237,7 +238,7 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-8">
               <div className="flex items-center justify-between mb-8">
                 <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 챔피언십 순위</h2>
-                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Round 3 이후 기준</span>
+                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Round 4 이후 기준</span>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
                 <div style={{ background: '#1e1e2a', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.06)' }}>
