@@ -13,7 +13,7 @@ const driversData: Record<string, {
   number: number;
   color: string;
   image: string;
-  flag: string; // flagcdn을 위한 국가 코드 (예: 'mc', 'gb')
+  flag: string;
   nationality: string;
   season: {
     position: string;
@@ -48,7 +48,7 @@ const driversData: Record<string, {
   LEC: {
     firstName: 'Charles', lastName: 'Leclerc',
     team: 'Ferrari', number: 16, color: '#DC0000',
-    image: '/F_LEC_NB.png', flag: 'mc', nationality: 'Monégasque',
+    image: '/F_LEC_NB.png', flag: '🇲🇨', nationality: 'Monégasque',
     season: { position: '3rd', points: 49, races: 3, gpPoints: 42, wins: 0, podiums: 2, poles: 0, top10s: 3, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 7, sprintWins: 0, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 174, careerPoints: 1721, highestRaceFinish: '1 (x8)', podiums: 52, highestGridPosition: '1 (x27)', polePositions: 27, 
@@ -57,7 +57,7 @@ const driversData: Record<string, {
   HAM: {
     firstName: 'Lewis', lastName: 'Hamilton',
     team: 'Ferrari', number: 44, color: '#DC0000',
-    image: '/F_HAM_NB.png', flag: 'gb', nationality: 'British',
+    image: '/F_HAM_NB.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '4th', points: 41, races: 3, gpPoints: 35, wins: 0, podiums: 1, poles: 0, top10s: 3, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 6, sprintWins: 0, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 383, careerPoints: 5059.5, highestRaceFinish: '1 (x105)', podiums: 203, highestGridPosition: '1 (x104)', polePositions: 104, 
@@ -66,7 +66,7 @@ const driversData: Record<string, {
   RUS: {
     firstName: 'George', lastName: 'Russell',
     team: 'Mercedes', number: 63, color: '#38d2b8',
-    image: '/M_RUS_NB.png', flag: 'gb', nationality: 'British',
+    image: '/M_RUS_NB.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '2nd', points: 63, races: 3, gpPoints: 55, wins: 1, podiums: 2, poles: 1, top10s: 3, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 8, sprintWins: 1, sprintPodiums: 1, sprintPoles: 1, sprintTop10s: 1 },
     career: { grandPrixEntered: 155, careerPoints: 1096, highestRaceFinish: '1 (x6)', podiums: 26, highestGridPosition: '1 (x9)', polePositions: 8, 
@@ -75,7 +75,7 @@ const driversData: Record<string, {
   ANT: {
     firstName: 'Kimi', lastName: 'Antonelli',
     team: 'Mercedes', number: 12, color: '#38d2b8',
-    image: '/M_ANT_NB.png', flag: 'it', nationality: 'Italian',
+    image: '/M_ANT_NB.png', flag: '🇮🇹', nationality: 'Italian',
     season: { position: '1st', points: 72, races: 3, gpPoints: 68, wins: 2, podiums: 3, poles: 2, top10s: 3, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 4, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 27, careerPoints: 222, highestRaceFinish: '1 (x2)', podiums: 6, highestGridPosition: '1 (x2)', polePositions: 2, 
@@ -84,7 +84,7 @@ const driversData: Record<string, {
   NOR: {
     firstName: 'Lando', lastName: 'Norris',
     team: 'McLaren', number: 4, color: '#FF8000',
-    image: '/ML_NOR_NB.png', flag: 'gb', nationality: 'British',
+    image: '/ML_NOR_NB.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '5th', points: 25, races: 3, gpPoints: 20, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 5, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 155, careerPoints: 1455, highestRaceFinish: '1 (x11)', podiums: 44, highestGridPosition: '1 (x16)', polePositions: 16, 
@@ -93,7 +93,7 @@ const driversData: Record<string, {
   PIA: {
     firstName: 'Oscar', lastName: 'Piastri',
     team: 'McLaren', number: 81, color: '#FF8000',
-    image: '/ML_PIA_NB.png', flag: 'au', nationality: 'Australian',
+    image: '/ML_PIA_NB.png', flag: '🇦🇺', nationality: 'Australian',
     season: { position: '6th', points: 21, races: 3, gpPoints: 18, wins: 0, podiums: 1, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 3, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 73, careerPoints: 820, highestRaceFinish: '1 (x9)', podiums: 27, highestGridPosition: '1 (x6)', polePositions: 6, 
@@ -102,7 +102,7 @@ const driversData: Record<string, {
   VER: {
     firstName: 'Max', lastName: 'Verstappen',
     team: 'Red Bull Racing', number: 3, color: '#26508C',
-    image: '/R_VER_NB.png', flag: 'nl', nationality: 'Dutch',
+    image: '/R_VER_NB.png', flag: '🇳🇱', nationality: 'Dutch',
     season: { position: '9th', points: 12, races: 3, gpPoints: 12, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 1, dnfs: 1, 
     sprintRaces: 1, sprintPoints: 7, sprintWins: 0, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 236, careerPoints: 3456.5, highestRaceFinish: '1 (x71)', podiums: 127, highestGridPosition: '1 (x48)', polePositions: 48, 
@@ -111,7 +111,7 @@ const driversData: Record<string, {
   HAD: {
     firstName: 'Isack', lastName: 'Hadjar',
     team: 'Red Bull Racing', number: 6, color: '#26508C',
-    image: '/R_HAD_NB.png', flag: 'fr', nationality: 'French',
+    image: '/R_HAD_NB.png', flag: '🇫🇷', nationality: 'French',
     season: { position: '12th', points: 4, races: 3, gpPoints: 4, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 1, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 26, careerPoints: 55, highestRaceFinish: '3 (x1)', podiums: 1, highestGridPosition: '3 (x1)', polePositions: 0, 
@@ -120,7 +120,7 @@ const driversData: Record<string, {
   GAS: {
     firstName: 'Pierre', lastName: 'Gasly',
     team: 'Alpine', number: 10, color: '#0090FF',
-    image: '/A_GAS_NB.png', flag: 'fr', nationality: 'French',
+    image: '/A_GAS_NB.png', flag: '🇫🇷', nationality: 'French',
     season: { position: '8th', points: 15, races: 3, gpPoints: 15, wins: 0, podiums: 0, poles: 0, top10s: 3, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 180, careerPoints: 473, highestRaceFinish: '1 (x1)', podiums: 5, highestGridPosition: '2 (x1)', polePositions: 0, 
@@ -129,7 +129,7 @@ const driversData: Record<string, {
   COL: {
     firstName: 'Franco', lastName: 'Colapinto',
     team: 'Alpine', number: 43, color: '#0090FF',
-    image: '/A_COL_NB.png', flag: 'ar', nationality: 'Argentine',
+    image: '/A_COL_NB.png', flag: '🇦🇷', nationality: 'Argentine',
     season: { position: '16th', points: 1, races: 3, gpPoints: 1, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 30, careerPoints: 6, highestRaceFinish: '8 (x1)', podiums: 0, highestGridPosition: '8 (x1)', polePositions: 0, 
@@ -138,7 +138,7 @@ const driversData: Record<string, {
   SAI: {
     firstName: 'Carlos', lastName: 'Sainz',
     team: 'Williams', number: 55, color: '#041E3C',
-    image: '/W_SAI_NB.png', flag: 'es', nationality: 'Spanish',
+    image: '/W_SAI_NB.png', flag: '🇪🇸', nationality: 'Spanish',
     season: { position: '14th', points: 2, races: 3, gpPoints: 2, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 233, careerPoints: 1338.5, highestRaceFinish: '1 (x4)', podiums: 29, highestGridPosition: '1 (x6)', polePositions: 6, 
@@ -147,7 +147,7 @@ const driversData: Record<string, {
   ALB: {
     firstName: 'Alexander', lastName: 'Albon',
     team: 'Williams', number: 23, color: '#041E3C',
-    image: '/W_ALB_NB.png', flag: 'th', nationality: 'Thai',
+    image: '/W_ALB_NB.png', flag: '🇹🇭', nationality: 'Thai',
     season: { position: '18th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 131, careerPoints: 313, highestRaceFinish: '3 (x2)', podiums: 2, highestGridPosition: '4 (x5)', polePositions: 0, 
@@ -156,7 +156,7 @@ const driversData: Record<string, {
   OCO: {
     firstName: 'Esteban', lastName: 'Ocon',
     team: 'Haas F1 Team', number: 31, color: '#5E6D75',
-    image: '/H_OCO_NB.png', flag: 'fr', nationality: 'French',
+    image: '/H_OCO_NB.png', flag: '🇫🇷', nationality: 'French',
     season: { position: '15th', points: 1, races: 3, gpPoints: 1, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 183, careerPoints: 484, highestRaceFinish: '1 (x1)', podiums: 4, highestGridPosition: '3 (x3)', polePositions: 0, 
@@ -165,7 +165,7 @@ const driversData: Record<string, {
   BEA: {
     firstName: 'Oliver', lastName: 'Bearman',
     team: 'Haas F1 Team', number: 87, color: '#5E6D75',
-    image: '/H_BEA_NB.png', flag: 'gb', nationality: 'British',
+    image: '/H_BEA_NB.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '7th', points: 17, races: 3, gpPoints: 16, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 0, dnfs: 1, 
     sprintRaces: 1, sprintPoints: 1, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 30, careerPoints: 65 , highestRaceFinish: '4 (x1)', podiums: 0, highestGridPosition: '8 (x2)', polePositions: 0, 
@@ -174,7 +174,7 @@ const driversData: Record<string, {
   LAW: {
     firstName: 'Liam', lastName: 'Lawson',
     team: 'Racing Bulls', number: 30, color: '#003BD1',
-    image: '/RB_LAW_NB.png', flag: 'nz', nationality: 'New Zealander',
+    image: '/RB_LAW_NB.png', flag: '🇳🇿', nationality: 'New Zealander',
     season: { position: '10th', points: 10, races: 3, gpPoints: 8, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 2, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 1 },
     career: { grandPrixEntered: 38, careerPoints: 54, highestRaceFinish: '5 (x1)', podiums: 0, highestGridPosition: '3 (x1)', polePositions: 0, 
@@ -183,7 +183,7 @@ const driversData: Record<string, {
   LIN: {
     firstName: 'Arvid', lastName: 'Lindblad',
     team: 'Racing Bulls', number: 41, color: '#003BD1',
-    image: '/RB_LIN_NB.png', flag: 'gb', nationality: 'British',
+    image: '/RB_LIN_NB.png', flag: '🇬🇧', nationality: 'British',
     season: { position: '11th', points: 4, races: 3, gpPoints: 4, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 3, careerPoints: 4, highestRaceFinish: '8 (x1)', podiums: 0, highestGridPosition: '9 (x1)', polePositions: 0, 
@@ -192,7 +192,7 @@ const driversData: Record<string, {
   HUL: {
     firstName: 'Nico', lastName: 'Hülkenberg',
     team: 'Audi', number: 27, color: '#7D1600',
-    image: '/AD_HUL_NB.png', flag: 'de', nationality: 'German',
+    image: '/AD_HUL_NB.png', flag: '🇩🇪', nationality: 'German',
     season: { position: '17th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 254, careerPoints: 622, highestRaceFinish: '3 (x1)', podiums: 1, highestGridPosition: '1 (x1)', polePositions: 1, 
@@ -201,7 +201,7 @@ const driversData: Record<string, {
   BOR: {
     firstName: 'Gabriel', lastName: 'Bortoleto',
     team: 'Audi', number: 5, color: '#7D1600',
-    image: '/AD_BOR_NB.png', flag: 'br', nationality: 'Brazilian',
+    image: '/AD_BOR_NB.png', flag: '🇧🇷', nationality: 'Brazilian',
     season: { position: '13th', points: 2, races: 3, gpPoints: 2, wins: 0, podiums: 0, poles: 0, top10s: 1, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 27, careerPoints: 21, highestRaceFinish: '6 (x1)', podiums: 0, highestGridPosition: '7 (x3)', polePositions: 0, 
@@ -210,7 +210,7 @@ const driversData: Record<string, {
   ALO: {
     firstName: 'Fernando', lastName: 'Alonso',
     team: 'Aston Martin', number: 14, color: '#358C75',
-    image: '/AM_ALO_NB.png', flag: 'es', nationality: 'Spanish',
+    image: '/AM_ALO_NB.png', flag: '🇪🇸', nationality: 'Spanish',
     season: { position: '21th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 2, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 430, careerPoints: 2393, highestRaceFinish: '1 (x32)', podiums: 106, highestGridPosition: '1 (x22)', polePositions: 22, 
@@ -219,7 +219,7 @@ const driversData: Record<string, {
   STR: {
     firstName: 'Lance', lastName: 'Stroll',
     team: 'Aston Martin', number: 18, color: '#358C75',
-    image: '/AM_STR_NB.png', flag: 'ca', nationality: 'Canadian',
+    image: '/AM_STR_NB.png', flag: '🇨🇦', nationality: 'Canadian',
     season: { position: '22th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 2, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 193, careerPoints: 325, highestRaceFinish: '3 (x3)', podiums: 3, highestGridPosition: '1 (x1)', polePositions: 1, 
@@ -228,7 +228,7 @@ const driversData: Record<string, {
   PER: {
     firstName: 'Sergio', lastName: 'Pérez',
     team: 'Cadillac', number: 11, color: '#4B4C53',
-    image: '/C_PER_NB.png', flag: 'mx', nationality: 'Mexican',
+    image: '/C_PER_NB.png', flag: '🇲🇽', nationality: 'Mexican',
     season: { position: '20th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 0, 
     sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 284, careerPoints: 1638, highestRaceFinish: '1 (x6)', podiums: 39, highestGridPosition: '1 (x3)', polePositions: 3, 
@@ -237,7 +237,7 @@ const driversData: Record<string, {
   BOT: {
     firstName: 'Valtteri', lastName: 'Bottas',
     team: 'Cadillac', number: 77, color: '#4B4C53',
-    image: '/C_BOT_NB.png', flag: 'fi', nationality: 'Finnish',
+    image: '/C_BOT_NB.png', flag: '🇫🇮', nationality: 'Finnish',
     season: { position: '19th', points: 0, races: 3, gpPoints: 0, wins: 0, podiums: 0, poles: 0, top10s: 0, fastestLaps: 0, dnfs: 1, sprintRaces: 1, sprintPoints: 0, sprintWins: 0, sprintPodiums: 0, sprintPoles: 0, sprintTop10s: 0 },
     career: { grandPrixEntered: 249, careerPoints: 1797, highestRaceFinish: '1 (x10)', podiums: 67, highestGridPosition: '1 (x20)', polePositions: 20, worldChampionships: 0, dnfs: 29 },
   },
@@ -302,34 +302,9 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
           position: 'relative', zIndex: 2,
         }}>
           <div>
-            {/* 국기 + 나라 이름 + 팀 이름 결합 */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
-              <img
-                src={`https://flagcdn.com/w40/${driver.flag}.png`}
-                alt={driver.nationality}
-                style={{ width: '28px', height: 'auto', borderRadius: '3px', display: 'block' }}
-              />
-              <p style={{
-                color: 'white',
-                fontSize: '1.5rem',
-                fontWeight: 900,
-                letterSpacing: '-0.02em',
-                margin: 0, lineHeight: 1,
-              }}>
-                {driver.nationality}
-              </p>
-              <span style={{ color: 'rgba(255,255,255,0.4)', margin: '0 6px', fontSize: '1.5rem', fontWeight: 900 }}>·</span>
-              <p style={{
-                color: 'rgba(255,255,255,0.7)',
-                fontSize: '1.5rem',
-                fontWeight: 900,
-                letterSpacing: '-0.02em',
-                margin: 0, lineHeight: 1,
-              }}>
-                {driver.team}
-              </p>
-            </div>
-
+            <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', margin: '0 0 8px 0' }}>
+              {driver.flag} {driver.nationality} · {driver.team}
+            </p>
             <h1 style={{ color: 'white', fontSize: '4rem', fontWeight: 900, letterSpacing: '-0.03em', margin: '0', lineHeight: 1 }}>
               {driver.firstName}
             </h1>
