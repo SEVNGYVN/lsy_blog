@@ -58,7 +58,7 @@ const races = [
   {
     round: 6, name: 'Monaco', flag: 'mc', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
-    dates: '05 – 07 JUN', status: 'next',
+    dates: '05 – 07 JUN', status: 'upcoming',
     podium: null,
   },
   {
@@ -207,7 +207,7 @@ export default function CircuitPage() {
                 style={{
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  background: isLive ? '#00A9FF' : isNext ? '#e10600' : '#1a1a28',
+                  background: isLive ? '#0067B1' : isNext ? '#e10600' : '#1a1a28',
                   border: isHighlight
                     ? 'none'
                     : isDone
@@ -272,11 +272,11 @@ export default function CircuitPage() {
                       {isLive && (
                         <span style={{
                           background: 'white',
-                          color: '#00A9FF',
+                          color: '#0067B1',
                           fontSize: '0.6rem', fontWeight: 800,
                           padding: '3px 10px', borderRadius: '4px',
                           letterSpacing: '0.06em',
-                        }}>LIVE 🔴</span>
+                        }}>LIVE 🔵</span>
                       )}
                       {isNext && (
                         <span style={{
@@ -367,7 +367,7 @@ export default function CircuitPage() {
                       <p style={{
                         color: 'rgba(255,255,255,0.9)',
                         fontSize: '0.8rem', fontWeight: 700, margin: 0,
-                      }}>🔴 진행 중</p>
+                      }}>🔵 진행 중</p>
                     </div>
                   )}
 
