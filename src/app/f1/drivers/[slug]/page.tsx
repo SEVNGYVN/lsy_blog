@@ -101,7 +101,7 @@ const driversData: Record<string, {
   },
   VER: {
     firstName: 'Max', lastName: 'Verstappen',
-    team: 'Red Bull Racing', number: 3, color: '#0600EF',
+    team: 'Red Bull Racing', number: 3, color: '#26508C',
     image: '/R_VER_NB.png', flag: 'nl', nationality: 'Dutch',
     season: { position: '9th', points: 12, races: 3, gpPoints: 12, wins: 0, podiums: 0, poles: 0, top10s: 2, fastestLaps: 1, dnfs: 1, 
     sprintRaces: 1, sprintPoints: 7, sprintWins: 0, sprintPodiums: 1, sprintPoles: 0, sprintTop10s: 1 },
@@ -351,7 +351,7 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
           <img
             src={driver.image}
             alt={`${driver.firstName} ${driver.lastName}`}
-            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center' }}
+            style={{ width: '90%', height: '90%', objectFit: 'contain', objectPosition: 'top center' }}
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
           />
         </div>
