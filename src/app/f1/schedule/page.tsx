@@ -46,19 +46,23 @@ const races = [
     podium: [
       { pos: 1, code: 'ANT', time: '1:33:19.273', color: '#38d2b8' },
       { pos: 2, code: 'NOR', time: '+3.264', color: '#FF8000' },
-      { pos: 3, code: 'PIA', time: '+27.092s', color: '#FF8000' },
+      { pos: 3, code: 'PIA', time: '+27.092', color: '#FF8000' },
     ],
   },
   {
     round: 5, name: 'Canada', flag: 'ca', slug: 'canada-2026',
     fullName: 'FORMULA 1 LENOVO GRAND PRIX DU CANADA 2026',
-    dates: '23 – 25 MAY', status: 'live', // 🔵 테스트를 위해 live로 변경
-    podium: null,
+    dates: '23 – 25 MAY', status: 'done', // 🔵 테스트를 위해 live로 변경
+    podium: [
+      { pos: 1, code: 'ANT', time: '1:28:15.758', color: '#38d2b8' },
+      { pos: 2, code: 'HAM', time: '+10.768', color: '#DC0000' },
+      { pos: 3, code: 'VER', time: '+11.276', color: '#0600EF' },
+    ],
   },
   {
     round: 6, name: 'Monaco', flag: 'mc', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
-    dates: '05 – 07 JUN', status: 'upcoming',
+    dates: '05 – 07 JUN', status: 'next',
     podium: null,
   },
   {
