@@ -351,7 +351,7 @@ export default async function DriverDetailPage({ params }: { params: Promise<{ s
           <img
             src={driver.image}
             alt={`${driver.firstName} ${driver.lastName}`}
-            style={{ width: '90%', height: '90%', objectFit: 'contain', objectPosition: 'top center' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
             onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
           />
         </div>
