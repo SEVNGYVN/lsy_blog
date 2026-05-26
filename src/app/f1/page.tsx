@@ -18,7 +18,7 @@ export default function Blog() {
       image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Monaco.webp',
     },
     upcoming: {
-      round: 7, name: 'Barcelona-Catalunya', dates: '12 – 14 MAY',
+      round: 7, name: 'Barcelona-Catalunya', dates: '12 – 14  JUN',
       image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
       
     },
