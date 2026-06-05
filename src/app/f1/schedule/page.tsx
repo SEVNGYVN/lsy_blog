@@ -62,7 +62,7 @@ const races = [
   {
     round: 6, name: 'Monaco', flag: 'mc', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
-    dates: '05 – 07 JUN', status: 'next',
+    dates: '05 – 07 JUN', status: 'live',
     podium: null,
   },
   {
