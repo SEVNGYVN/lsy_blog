@@ -62,13 +62,13 @@ const races = [
   {
     round: 6, name: 'Monaco', flag: 'mc', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
-    dates: '05 – 07 JUN', status: 'live',
+    dates: '05 – 07 JUN', status: 'done',
     podium: null,
   },
   {
     round: 7, name: 'Barcelona-Catalunya', flag: 'es', slug: 'barcelona-catalunya-2026',
     fullName: 'FORMULA 1 MSC CRUISES GRAN PREMIO DE BARCELONA-CATALUNYA 2026',
-    dates: '12 – 14 JUN', status: 'upcoming',
+    dates: '12 – 14 JUN', status: 'live',
     podium: null,
   },
   {
