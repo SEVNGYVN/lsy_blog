@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { articles } from './articles/data';
 
 
+
 export default function Blog() {
   const schedule = {
     previous: {
@@ -241,7 +242,7 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-8">
               <div className="flex items-center justify-between mb-8">
                 <h2 style={{ color: 'white', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '-0.01em' }}>2026 챔피언십 순위</h2>
-                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Round 4 이후 기준</span>
+                <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Round 7 이후 기준</span>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
                 <div style={{ background: '#1e1e2a', borderRadius: '16px', padding: '1.5rem', border: '1px solid rgba(255,255,255,0.06)' }}>
