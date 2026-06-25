@@ -63,18 +63,26 @@ const races = [
     round: 6, name: 'Monaco', flag: 'mc', slug: 'monaco-2026',
     fullName: 'FORMULA 1 LOUIS VUITTON GRAND PRIX DE MONACO 2026',
     dates: '05 – 07 JUN', status: 'done',
-    podium: null,
+    podium:[
+      { pos: 1, code: 'ANT', time: '2:23:31.243', color: '#38d2b8' },
+      { pos: 2, code: 'HAM', time: '+6.271', color: '#DC0000' },
+      { pos: 3, code: 'GAS', time: '+20.369', color: '#0090FF' },
+    ],
   },
   {
     round: 7, name: 'Barcelona-Catalunya', flag: 'es', slug: 'barcelona-catalunya-2026',
     fullName: 'FORMULA 1 MSC CRUISES GRAN PREMIO DE BARCELONA-CATALUNYA 2026',
-    dates: '12 – 14 JUN', status: 'live',
-    podium: null,
+    dates: '12 – 14 JUN', status: 'done',
+    podium:[
+      { pos: 1, code: 'HAM', time: '1:32:28.105', color: '#DC0000' },
+      { pos: 2, code: 'RUS', time: '+19.561', color: '#38d2b8' },
+      { pos: 3, code: 'NOR', time: '+23.719', color: '#FF8000' },
+    ],
   },
   {
     round: 8, name: 'Austria', flag: 'at', slug: 'austria-2026',
     fullName: 'FORMULA 1 LENOVO AUSTRIAN GRAND PRIX 2026',
-    dates: '26 – 28 JUN', status: 'upcoming',
+    dates: '26 – 28 JUN', status: 'live',
     podium: null,
   },
   {

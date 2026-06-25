@@ -9,17 +9,17 @@ import { articles } from './articles/data';
 export default function Blog() {
   const schedule = {
     previous: {
-      round: 5, name: 'Canada', dates: '23 – 25 MAY',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Canada.webp',
-      highlightUrl: 'https://www.youtube.com/watch?v=QrRh2vOJQbw',
+      round: 7, name: 'Barcelona-Catalunya', dates: '12 – 14  JUN',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Spain.webp',
+      highlightUrl: 'https://www.youtube.com/watch?v=Ey8j_BlLvFM',
     },
     next: {
-      round: 6, name: 'Monaco', dates: '05 – 07 JUN',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Monaco.webp',
-    },
+      round: 8, name: 'Austria', dates: '26 – 28 JUN',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Austria.webp',
+      },
     upcoming: {
-      round: 7, name: 'Barcelona-Catalunya', dates: '12 – 14  JUN',
-      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Miami.webp',
+      round: 9, name: 'Great Britain', dates: '05 – 07 JUN',
+      image: 'https://media.formula1.com/image/upload/c_lfill,w_3392/q_auto/v1740000001/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Great%20Britain.webp',
       
     },
     
@@ -27,41 +27,41 @@ export default function Blog() {
 
   const highlights = [
     {
-      round: 'Round 3 · Suzuka',
-      title: '2026 일본 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/watch?v=oAtYfF0_4-I',
-      thumbnail: 'https://img.youtube.com/vi/oAtYfF0_4-I/maxresdefault.jpg',
-    },
-    {
-      round: 'Round 4 · Miami',
-      title: '2026 마이애미 그랑프리 하이라이트',
-      url: 'https://www.youtube.com/watch?v=5gYys4GL7S0',
-      thumbnail: 'https://img.youtube.com/vi/5gYys4GL7S0/maxresdefault.jpg',
-    },
-    {
-      round: 'Round 5 · Canada',
-      title: '2026 캐나다 그랑프리 하이라이트',
+      round: 'Round 5',
+      title: '2026 Canadian Grand Prix Highlights',
       url: 'https://www.youtube.com/watch?v=QrRh2vOJQbw',
       thumbnail: 'https://img.youtube.com/vi/QrRh2vOJQbw/maxresdefault.jpg',
+    },
+    {
+      round: 'Round 6',
+      title: '2026 Monaco Grand Prix Highlights',
+      url: 'https://www.youtube.com/watch?v=ipOT9ruRobc',
+      thumbnail: 'https://img.youtube.com/vi/ipOT9ruRobc/maxresdefault.jpg',
+    },
+    {
+      round: 'Round 7',
+      title: '2026 Barcelona-Catalunya Grand Prix Highlights',
+      url: 'https://www.youtube.com/watch?v=Ey8j_BlLvFM',
+      thumbnail: 'https://img.youtube.com/vi/Ey8j_BlLvFM/maxresdefault.jpg',
     },
   ];
 
   const standings = {
     drivers: [
-      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 131, color: '#27F4D2' },
-      { pos: 2, name: 'George Russell', team: 'Mercedes', points: 88, color: '#27F4D2' },
-      { pos: 3, name: 'Charles Leclerc', team: 'Ferrari', points: 75, color: '#E8002D' },
-      { pos: 4, name: 'Lewis Hamilton', team: 'Ferrari', points: 72, color: '#E8002D' },
-      { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 58, color: '#FF8000' },
+      { pos: 1, name: 'Kimi Antonelli', team: 'Mercedes', points: 156, color: '#27F4D2' },
+      { pos: 2, name: 'Lewis Hamilton', team: 'Ferrari', points: 115, color: '#E8002D' },
+      { pos: 3, name: 'George Russell', team: 'Mercedes', points: 106, color: '#27F4D2' },
+      { pos: 4, name: 'Charles Leclerc', team: 'Ferrari', points: 75, color: '#E8002D' },
+      { pos: 5, name: 'Lando Norris', team: 'McLaren', points: 73, color: '#FF8000' },
       
       
     ],
     constructors: [
-      { pos: 1, name: 'Mercedes', points: 219, color: '#27F4D2' },
-      { pos: 2, name: 'Ferrari', points: 147, color: '#E8002D' },
-      { pos: 3, name: 'McLaren', points: 106, color: '#FF8000' },
-      { pos: 4, name: 'Red Bull Racing', points: 57, color: '#3671C6' },
-      { pos: 5, name: 'Alpine', points: 35, color: '#0090FF' },
+      { pos: 1, name: 'Mercedes', points: 262, color: '#27F4D2' },
+      { pos: 2, name: 'Ferrari', points: 190, color: '#E8002D' },
+      { pos: 3, name: 'McLaren', points: 141, color: '#FF8000' },
+      { pos: 4, name: 'Red Bull Racing', points: 89, color: '#3671C6' },
+      { pos: 5, name: 'Alpine', points: 57, color: '#0090FF' },
     ],
   };
 
