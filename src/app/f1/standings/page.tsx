@@ -40,17 +40,18 @@ const driverStandings = [
    팀(컨스트럭터) 순위 데이터 (1~11위)
    ─────────────────────────────────────────── */
 const teamStandings = [
-  { pos: 1, name: 'Mercedes', points: 219, color: '#38d2b8', image: '/M_CAR_NB.png', drivers: 'Antonelli · Russell' },
-  { pos: 2, name: 'Ferrari', points: 147, color: '#DC0000', image: '/F_CAR_NB.png', drivers: 'Leclerc · Hamilton' },
-  { pos: 3, name: 'McLaren', points: 106, color: '#FF8000', image: '/ML_CAR_NB.png', drivers: 'Norris · Piastri' },
-  { pos: 6, name: 'Red Bull Racing', points: 57, color: '#3671C6', image: '/R_CAR_NB.png', drivers: 'Verstappen · Hadjar' },
-  { pos: 5, name: 'Alpine', points: 35, color: '#0090FF', image: '/A_CAR_NB.png', drivers: 'Gasly · Colapinto' },
-  { pos: 7, name: 'Racing Bulls', points: 21, color: '#003BD1', image: '/RB_CAR_NB.png', drivers: 'Lawson · Lindblad' },
-  { pos: 4, name: 'Haas F1 Team', points: 19, color: '#5E6D75', image: '/H_CAR_NB.png', drivers: 'Ocon · Bearman' },
-  { pos: 9, name: 'Williams', points: 7, color: '#041E3C', image: '/W_CAR_NB.png', drivers: 'Sainz · Albon' },
-  { pos: 8, name: 'Audi', points: 2, color: '#7D1600', image: '/AD_CAR_NB.png', drivers: 'Hülkenberg · Bortoleto' },
-  { pos: 10, name: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_CAR_NB.png', drivers: 'Pérez · Bottas' },
-  { pos: 11, name: 'Aston Martin', points: 0, color: '#358C75', image: '/AM_CAR_NB.png', drivers: 'Alonso · Stroll' },
+  { pos: 1, name: 'Mercedes', points: 262, color: '#38d2b8', image: '/M_CAR_NB.png', drivers: 'Antonelli · Russell' },
+  { pos: 2, name: 'Ferrari', points: 190, color: '#DC0000', image: '/F_CAR_NB.png', drivers: 'Leclerc · Hamilton' },
+  { pos: 3, name: 'McLaren', points: 141, color: '#FF8000', image: '/ML_CAR_NB.png', drivers: 'Norris · Piastri' },
+  { pos: 4, name: 'Red Bull Racing', points: 89, color: '#3671C6', image: '/R_CAR_NB.png', drivers: 'Verstappen · Hadjar' },
+  { pos: 5, name: 'Alpine', points: 57, color: '#0090FF', image: '/A_CAR_NB.png', drivers: 'Gasly · Colapinto' },
+  { pos: 6, name: 'Racing Bulls', points: 41, color: '#003BD1', image: '/RB_CAR_NB.png', drivers: 'Lawson · Lindblad' },
+  { pos: 7, name: 'Haas F1 Team', points: 21, color: '#5E6D75', image: '/H_CAR_NB.png', drivers: 'Ocon · Bearman' },
+  { pos: 8, name: 'Williams', points: 11, color: '#041E3C', image: '/W_CAR_NB.png', drivers: 'Sainz · Albon' },
+  { pos: 9, name: 'Audi', points: 2, color: '#7D1600', image: '/AD_CAR_NB.png', drivers: 'Hülkenberg · Bortoleto' },
+  { pos: 10, name: 'Aston Martin', points: 1, color: '#358C75', image: '/AM_CAR_NB.png', drivers: 'Alonso · Stroll' },
+  { pos: 11, name: 'Cadillac', points: 0, color: '#4B4C53', image: '/C_CAR_NB.png', drivers: 'Pérez · Bottas' },
+  
 ];
 
 /* ───────────────────────────────────────────

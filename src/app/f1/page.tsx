@@ -146,7 +146,7 @@ export default function Blog() {
                     onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }}*/
                   >
                     <img src={schedule.previous.image} alt="Japan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 80%, transparent 100%)' }} />
                     <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <div>
                         <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>Previous</p>
@@ -164,7 +164,7 @@ export default function Blog() {
                 {/* Next */}
                 <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', aspectRatio: '4/3', cursor: 'default', boxShadow: '0 0 0 3px #E10600, 0 20px 60px rgba(225,6,0,0.3)' }}>
                   <img src={schedule.next.image} alt="Miami" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, transparent 100%)' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 80%, transparent 100%)' }} />
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.4rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
                       <p style={{ color: '#E10600', fontSize: '0.7rem', fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', margin: 0 }}>Next Race</p>
@@ -183,7 +183,7 @@ export default function Blog() {
                   onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = '0.75'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)'; }} */
                 >
                   <img src={schedule.upcoming.image} alt="Canada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%)' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 80%, transparent 100%)' }} />
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, padding: '1.2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
                       <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', margin: 0 }}>Upcoming</p>
